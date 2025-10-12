@@ -17,8 +17,6 @@ Each of the above is deployed separately at the following links:
 
 I apologize if any of these pages doesn't look write on your device, I simply did not have the time to make them responsive.
 
----
-
 ## Running the project
 
 Before attending the workshop, you should clone this repo and make sure it works for you locally.
@@ -33,8 +31,6 @@ npm run dev
 
 If you encounter any issues while trying to run the project, feel free to contact me.
 
----
-
 ## Workshop structure
 
 The workshop is split into two parts:
@@ -46,8 +42,6 @@ The workshop is split into two parts:
 2. **Water Surface Generation**:
 
    We will learn what shaders are and how to write a shader program that creates interesting visuals.
-
----
 
 ## Prerequisites
 
