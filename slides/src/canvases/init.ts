@@ -1,5 +1,4 @@
 import { ambient } from './ambient';
-import { animation } from './animation';
 import { camera } from './camera';
 import { cube } from './cube';
 import { lighting } from './lighting';
@@ -23,7 +22,6 @@ export default function init() {
         '.world-canvas': world,
         '.camera-canvas': camera,
         '.cube-canvas': cube,
-        '.animation-canvas': animation,
         '.sphere-canvas': sphere,
         '.mesh-canvas': mesh,
         '.plane-canvas': plane,
