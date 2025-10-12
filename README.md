@@ -19,6 +19,8 @@ I apologize if any of these pages doesn't look write on your device, I simply di
 
 ---
 
+### Running the project
+
 Before attending the workshop, you should clone this repo and make sure it works for you locally.
 To do so, run the following commands:
 
@@ -32,6 +34,8 @@ npm run dev
 If you encounter any issues while trying to run the project, feel free to contact me.
 
 ---
+
+### Workshop structure
 
 The workshop is split into two parts:
 
