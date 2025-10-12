@@ -15,10 +15,12 @@ Each of the above is deployed separately at the following links:
 * [Final Project](https://final-project-intro-to-cg.vercel.app)
 * [Template Project](https://template-project-intro-to-cg.vercel.app)
 
+I apologize if any of these pages doesn't look write on your device, I simply did not have the time to make them responsive.
+
 ---
 
-Before attending the workshop, you should clone this repo and make sure it works locally.
-Run the following commands:
+Before attending the workshop, you should clone this repo and make sure it works for you locally.
+To do so, run the following commands:
 
 ```bash
 git clone git@github.com:khlkarim/intro-to-cg.git
@@ -33,10 +35,12 @@ If you encounter any issues while trying to run the project, feel free to contac
 
 The workshop is split into two parts:
 
-1. **Mesh Generation**
+1. **Mesh Generation**:
+
    We will define what a mesh is, and then try to procedurally generate our own generic meshes (planes, spheres, cubes...).
 
-2. **Water Surface Generation**
+2. **Water Surface Generation**:
+
    We will learn what shaders are and how to write a shader program that creates interesting visuals.
 
 ---
@@ -61,7 +65,7 @@ project/template/src/helpers/input.ts
 We won't be doing any heavy math or constructing any matrices, but understanding these concepts will come in handy:
 
 * What multiplying a vector by a matrix does.
-* What is a basis of a vector space and what is a change of basis.
+* What a basis of a vector space is and what is a change of basis.
 * What the dot product of two vectors is.
 
 ---
