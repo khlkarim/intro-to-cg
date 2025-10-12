@@ -1,0 +1,2771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Introduction to Computer Graphics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <section style="height: 100%;">
+                <!-- Intro Slide -->
+                <section style="height: 100%;">
+                    <div style="height: 100%; position: relative;">
+                        <canvas class="hero-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></canvas>
+        
+                        <div style="position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: space-between; align-items: center; height: 100%;">
+                            <h1 class="intro-title" style="font-size: 6.5rem;margin-top: 14rem;">
+                                Introduction to<br />Computer Graphics
+                            </h1>
+                            <p class="intro-subtitle" style="font-size: 1.5rem;">
+                                Presented by <strong style="color: #ffd166;">KARIM KHILI</strong>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <!-- /Intro Slide -->
+            </section>  
+
+            <!-- Computer Graphics -->
+            <section style="height: 100%;">
+                <section data-auto-animate>
+                    <div>
+                        <h2 style="text-transform: capitalize;">Computer Graphics</h2>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%; display: flex; flex-direction: column;height: 100%;justify-content: space-around;">
+                        <h2 style="text-transform: capitalize;">Computer Graphics</h2>
+        
+                        <div style="display: flex;align-items: start;font-size: 2rem;">
+                            <ul>
+                                <li style="margin-bottom: 1rem;">Started in the <strong style="color: #06d6a0;">1960s</strong> with major breakthroughs:</li>
+                                <ul>
+                                    <li style="color: #6fc5ff;"><a target="_blank" href="https://www.wikiwand.com/en/articles/Whirlwind_I" style="color: #6fc5ff;font-weight: 600;">Whirlwind I - 1951</a></li>
+                                </ul>
+                            </ul>
+                        </div>
+
+                        <div style="display: flex;justify-content: space-around;font-size: 2rem;">
+                            <div style="display: flex;align-items: center;">
+                                <video src="./public/assets/videos/mit-whirlwind-computer-1951.mp4" width="480" height="320" autoplay loop controls style="object-fit: cover; border-radius: 10px;"></video>
+                                <ul>
+                                    <li>The first <strong style="color: #f95d6f;">bit parallel</strong> computer.</li>
+                                    <li>One of the first <strong style="color: #f95d6f;">real-time digital computers.</strong></li>
+                                    <li>Used for <strong style="color: #f95d6f;">radar</strong> and <strong style="color: #f95d6f;">aircraft tracking.</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%; display: flex; flex-direction: column;height: 100%;justify-content: space-around;">
+                        <h2 style="text-transform: capitalize;">Computer Graphics</h2>
+        
+                        <div style="display: flex;align-items: start;font-size: 2rem;">
+                            <ul>
+                                <li style="margin-bottom: 1rem;">Started in the <strong style="color: #06d6a0;">1960s</strong> with major breakthroughs:</li>
+                                <ul>
+                                    <li style="color: #6fc5ff;"><a target="_blank" href="https://www.wikiwand.com/en/articles/Whirlwind_I" style="color: #6fc5ff;font-weight: 600;">Whirlwind I - 1951</a></li>
+                                    <li style="color: #6fc5ff;"><a target="_blank" href="https://www.wikiwand.com/en/articles/Whirlwind_I" style="color: #6fc5ff;font-weight: 600;">Sketchpad - 1963</a></li>
+                                    <li style="color: #6fc5ff;"><a target="_blank" href="https://www.wikiwand.com/en/articles/Whirlwind_I" style="color: #6fc5ff;font-weight: 600;">...</a></li>
+                                </ul>
+                            </ul>
+                        </div>
+
+                        <div style="display: flex;justify-content: space-around;">
+                            <div style="display: flex;align-items: center;font-size: 2rem;">
+                                <video src="./public/assets/videos/Ivan-Sutherland's-Sketchpad.mp4" width="480" height="320" autoplay loop controls style="object-fit: cover; border-radius: 10px;"></video>
+                                <ul>
+                                    <li>One of the first <strong style="color: #f95d6f;">CAD</strong> programs.</li>
+                                    <li>Developed by <strong style="color: #f95d6f;">Ivan Sutherland</strong> for his dissertation.</li>
+                                    <li>Featured the first <strong style="color: #f95d6f;">GUI.</strong></li>
+                                    <li>Introduced fundamental concepts from <strong style="color: #f95d6f;">OOP.</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%; display: flex; flex-direction: column;height: 100%;justify-content: space-around;">
+                        <h2 style="text-transform: capitalize;">Computer Graphics</h2>
+        
+                        <div style="display: flex;align-items: start;font-size: 2rem;">
+                            <ul>
+                                <li style="margin-bottom: 1rem;">Started in the <strong style="color: #06d6a0;">1960s</strong> with major breakthroughs:</li>
+                                <ul>
+                                    <li style="color: #6fc5ff;"><a target="_blank" href="https://www.wikiwand.com/en/articles/Whirlwind_I" style="color: #6fc5ff;font-weight: 600;">Whirlwind I - 1951</a></li>
+                                    <li style="color: #6fc5ff;"><a target="_blank" href="https://www.wikiwand.com/en/articles/Whirlwind_I" style="color: #6fc5ff;font-weight: 600;">Sketchpad - 1963</a></li>
+                                    <li style="color: #6fc5ff;"><a target="_blank" href="https://www.wikiwand.com/en/articles/Whirlwind_I" style="color: #6fc5ff;font-weight: 600;">...</a></li>
+                                </ul>
+                                <li style="margin-top: 1rem;">Covers <strong style="color: #06d6a0;">topics</strong> such as:</li>
+                            </ul>
+                        </div>
+
+                        <div style="display: flex;justify-content: space-around;">
+                            <div class="fragment">
+                                <video src="./public/assets/videos/animated-hand (2).mp4" width="300" height="300" autoplay loop style="object-fit: cover; aspect-ratio: 1 / 1; border-radius: 10px;"></video>
+                                <p style="font-size: 2rem; margin: 0; font-weight: 600;color: #f95d6f;">Animation</p>
+                            </div>
+        
+                            <div class="fragment">
+                                <video src="./public/assets/videos/cellular-automata.webm" width="300" height="300" autoplay loop style="object-fit: cover; aspect-ratio: 1 / 1; border-radius: 10px;"></video>
+                                <p style="font-size: 2rem; margin: 0; font-weight: 600;color: #f95d6f;">Simulation</p>
+                            </div>
+        
+                            <div class="fragment">
+                                <canvas class="cube-canvas" width="300" height="300" style="border-radius: 10px"></canvas>
+                                <p style="font-size: 2rem; margin: 0; font-weight: 600;color: #f95d6f;">Rendering</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section data-auto-animate>
+                    <div>
+                        <h2 style="text-transform: capitalize;">Rendering</h2>
+                    </div>
+                </section>
+
+                <!-- Rendering Slide -->
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height:100%;display:flex;flex-direction:column;justify-content:space-around;align-items:stretch;box-sizing:border-box;">
+                        <h2 style="text-transform: capitalize;">Rendering</h2>
+
+                        <!-- Main content row -->
+                        <div style="display:flex;flex-wrap:wrap;gap:5rem;align-items:center;justify-content:center;">
+                            <!-- Code column -->
+                            <div style="min-width:100px;max-width:20%;flex:1 1 320px;box-sizing:border-box;">
+                                <div>
+                                    <pre style="margin:0;overflow:auto;padding:0.5rem;border-radius:8px;max-height:40vh;background-color: rgb(11, 11, 11);">
+                                        <code data-trim data-line-numbers class="language-javascript" style="display:block;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace;font-size:0.9rem;line-height:1.45;color:#dbeafe;white-space:pre;color-scheme:dark;background-color: black;">
+                                            const data = [
+                                                -1.0, -1.0, -1.0,
+                                                1.0, -1.0, -1.0,
+                                                -1.0,  1.0, -1.0,
+                                                1.0,  1.0, -1.0,
+                                                -1.0, -1.0,  1.0,
+                                                1.0, -1.0,  1.0,
+                                                -1.0,  1.0,  1.0,
+                                                1.0,  1.0,  1.0,
+                                            ];
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#e3e3e3"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+
+                            <div>
+                                <img style="margin: 0;border-radius: 8px;" src="./public/assets/images/renderer-illustration.png" width="100px">
+                                <p style="margin: 0;text-align: center;font-size: 1rem;">renderer.js</p>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#e3e3e3"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+
+                            <!-- Canvas column -->
+                            <div style="min-width:200px;max-width:20%;flex:1 1 320px;display:flex;align-items:center;justify-content:center;">
+                                <canvas class="rotating-cube"
+                                        style="width:360px;height:240px;max-width:72vw;max-height:36vh;">
+                                </canvas>
+                            </div>
+                        </div>
+
+                        <!-- Caption / bullet -->
+                        <ul class="fragment" style="padding:0;margin:1.25rem 0 0 0;display:flex;justify-content:center;">
+                            <li style="font-size: 2rem;">The <strong style="color: #06d6a0;">visualization of data (3D)</strong> using <strong style="color: #6fc5ff;">Computer Generated Images (CGI).</strong></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Plan Slide -->
+                <section style="height: 100%;">
+                    <h2 style="text-transform: capitalize;">Plan</h2>
+                    <div style="height: 100%; display: flex; flex-direction: column;align-items: center;margin-top: 8rem;">
+                        <ul style="display: flex;flex-direction: column;justify-content: center;height: 50%;">
+                            <li class="fragment" 
+                                style="font-size: 2rem; margin: 1rem 0; padding: 1rem 1.5rem;color: #6fc5ff;">
+                                <strong>The Rendering Process</strong>
+                                <ul>
+                                    <li class="fragment" 
+                                        style="font-size: 2rem; margin: 1rem 0; padding: 1rem 1.5rem;">
+                                        <strong>Mesh Generation</strong>
+                                        <ul style="color: white;">
+                                            <li>What is a mesh?</li>
+                                            <li>How to represent a mesh in code?</li>
+                                            <li>Defining standard meshes.</li>
+                                        </ul>
+                                    </li>
+                                    <li class="fragment" 
+                                        style="font-size: 2rem; margin: 1rem 0; padding: 1rem 1.5rem;">
+                                        <strong>Water surface generation</strong> 
+                                        <ul style="color: white;">
+                                            <li>The Rendering Pipeline.</li>
+                                            <li>Shaders and GPU programming.</li>
+                                            <li>Coordinate systems.</li>
+                                            <li>Lighting Models.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+            <!-- / Computer Graphics -->
+
+            <section style="height: 100%;">
+                <section style="height: 100%;">
+                    <div style="height: 100%; position: relative;">
+                        <canvas class="mesh-generation-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></canvas>
+        
+                        <div style="position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: space-between; align-items: center; height: 100%;">
+                            <h1 class="intro-title" style="font-size: 6.5rem;margin-top: 8rem;">
+                                <span>Part I</span><br />Mesh Generation
+                            </h1>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Mesh Generation -->
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: capitalize;">Mesh Representation</h2>
+
+                        <div class="fragment" style="display: flex; flex-direction: column;align-items: start;padding-left: 5rem;margin-top: 5rem;">
+                            <h4 style="text-transform: capitalize;"><a target="_blank" href="https://www.wikiwand.com/en/articles/Polygon_mesh" style="color: #6fc5ff;">Mesh:</a></h4>
+                            <div>
+                                <ul>
+                                    <li style="font-size: 2rem;">A collection of <strong style="color: #06d6a0;">vertices</strong> describing <strong style="color: #06d6a0;">the surface of a 3D object.</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div style="display: flex;gap: 6rem;margin-top: 5rem;">
+                            <div class="fragment" style="display: flex;flex-direction: column;align-items: start;padding-left: 5rem;">
+                                <h4 style="text-transform: capitalize;color: #6fc5ff;">Vertex:</h4>
+                                <div>
+                                    <ul>
+                                        <li style="font-size: 2rem;">Encapsulates the data describing <strong style="color: #06d6a0;">a point on the surface:</strong></li>
+                                        <ul style="margin-top: 1.5rem;margin-left: 7rem;">
+                                            <li class="fragment" style="font-size: 2rem;">
+                                                position: <strong style="color: #6fc5ff;">Vector3</strong>
+                                            </li>
+                                            <li class="fragment" style="font-size: 2rem;">
+                                                color: <strong style="color: #f95d6f;">RGBA</strong>
+                                            </li>
+                                            <li class="fragment" style="font-size: 2rem;">
+                                                normal: <strong style="color: #06d6a0;">Vector3</strong>
+                                            </li>
+                                            <li class="fragment" style="font-size: 2rem;">...</li>
+                                        </ul>
+                                        <a target="_blank" href="https://wikis.khronos.org/opengl/vertex_Specification" style="color: #6fc5ff;"><strong class="fragment" style="font-size: 2rem;margin-left: 7.6rem;"><span style="font-size:1em;">⟹</span> Vertex Attributes</strong></a>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div>
+                                <canvas class="mesh-canvas" width="300px" height="300px" style="border-radius: 8px;"></canvas>
+                                <p style="font-size: 1rem;color: grey;margin: 0;">(Double Click)</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: capitalize;">Mesh Representation</h2>
+
+                        <div style="width: 100%; display: flex; justify-content: space-around;flex-direction: column;align-items: start;padding-left: 5rem;">
+
+                            <div style="display: flex;margin-top: 5rem;">
+                                <img src="./public/assets/images/vertex-vertex-mesh-representation.png" width="600px" style="filter: invert(1);border-radius: 8px;" alt="">
+                                <div style="display: flex;flex-direction: column;align-items: start;">
+                                    <p style="font-size: 2.5rem;color: #6fc5ff;text-align: center;width: 100%;"><strong>Vertex-Vertex Representation</strong></p>
+                                    <ul style="margin: 0;padding-left: 5rem;">
+                                        <li style="font-size: 1.6rem;">To each vertex, we associate the vertices <strong style="color:#06d6a0;">connected</strong> to it.</li>
+                                    </ul>
+                                    <p class="fragment" style="font-size: 2rem;color: #06d6a0;text-align: start;padding-left: 3.4rem;">Pros:</p>
+                                    <ul style="font-size: 1.6rem;padding-left: 6rem;">
+                                        <li class="fragment">Small <strong style="color: #06d6a0;">storage</strong> space.</li>
+                                    </ul>
+                                    <p class="fragment" style="font-size: 2rem;color:#f95d6f; text-align: start;padding-left: 3.4rem;">Cons:</p>
+                                    <ul style="font-size: 1.6rem;padding-left: 6rem;">
+                                        <li class="fragment">the <strong style="color: #f95d6f;">face</strong> and <strong style="color: #f95d6f;">edge</strong> information is <strong style="color: #f95d6f;">implicit.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%;display: flex;flex-direction: column;gap:4rem;">
+                        <h2 style="text-transform: capitalize;">Mesh Representation</h2>
+
+                        <div style="width: 100%; display: flex; justify-content: space-around;flex-direction: column;align-items: start;padding-left: 5rem;">
+
+                            <div style="display: flex;">
+                                <img src="./public/assets/images/vertex-vertex-mesh-representation.png" width="600px" style="filter: invert(1);border-radius: 8px;" alt="">
+                                <div style="display: flex;flex-direction: column;align-items: start;">
+                                    <p style="font-size: 2.5rem;color: #6fc5ff;text-align: center;width: 100%;"><strong>Vertex-Vertex Representation</strong></p>
+                                    <ul style="margin: 0;padding-left: 5rem;">
+                                        <li style="font-size: 1.6rem;">To each vertex, we associate the vertices <strong style="color:#06d6a0;">connected</strong> to it.</li>
+                                    </ul>
+                                    <p style="font-size: 2rem;color: #06d6a0;text-align: start;padding-left: 3.4rem;">Pros:</p>
+                                    <ul style="font-size: 1.6rem;padding-left: 6rem;">
+                                        <li>Small <strong style="color: #06d6a0;">storage</strong> space.</li>
+                                    </ul>
+                                    <p style="font-size: 2rem;color:#f95d6f; text-align: start;padding-left: 3.4rem;">Cons:</p>
+                                    <ul style="font-size: 1.6rem;padding-left: 6rem;">
+                                        <li>the <strong style="color: #f95d6f;">face</strong> and <strong style="color: #f95d6f;">edge</strong> information is <strong style="color: #f95d6f;">implicit.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="text-align:start;padding-left: 5rem;">
+                            <ul style="margin: 0;">
+                                <li style="font-size: 1.6rem;">Why would we need the <strong style="color: #06d6a0;">face information?</strong></li>
+                                <ul>
+                                    <li class="fragment" style="font-size: 1.6rem;">For rendering, <strong style="color: #06d6a0;">modern graphics hardware</strong> expects a collection of faces as <strong style="color: #06d6a0;">input.</strong></li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: capitalize;">Mesh Representation</h2>
+
+                        <div style="width: 100%; display: flex; justify-content: space-around;flex-direction: column;align-items: start;padding-left: 5rem;">
+
+                            <div style="display: flex;align-items: center;margin-top: 5rem;">
+                                <img src="./public/assets/images/face-vertex-mesh-representation.jpg" width="600px" style="filter: invert(1);border-radius: 8px;" alt="">
+                                <div style="display: flex;flex-direction: column;align-items: start;">
+                                    <p style="font-size: 2.5rem;color: #6fc5ff;text-align: center;width: 100%;"><strong>Face-Vertex Representation</strong></p>
+                                    <ul style="margin: 0;padding-left: 5rem;">
+                                        <li style="font-size: 1.6rem;">A face is a <strong style="color: #06d6a0;">polygon</strong>, generally a <strong style="color: #06d6a0;">triangle</strong>.</li>
+                                        <li style="font-size: 1.6rem;">To each face, we associate the vertices that <strong style="color: #06d6a0;">compose</strong> it.</li>
+                                    </ul>
+                                    <p class="fragment" style="font-size: 2rem;color: #06d6a0;text-align: start;padding-left: 3.4rem;">Pros:</p>
+                                    <ul style="font-size: 1.6rem;padding-left: 6rem;">
+                                        <li class="fragment">
+                                            Allows explicit lookup of:
+                                        </li>
+                                        <ul>
+                                            <li class="fragment" style="color: #06d6a0;font-weight: 600;">The vertices of a face.</li>
+                                            <li class="fragment" style="color: #06d6a0;font-weight: 600;">The faces surrounding a vertex.</li>
+                                        </ul>
+                                    </ul>
+                                    <p class="fragment" style="font-size: 2rem;color:#f95d6f; text-align: start;padding-left: 3.4rem;">Cons:</p>
+                                    <ul style="font-size: 1.6rem;padding-left: 6rem;">
+                                        <li class="fragment">More <strong style="color: #f95d6f;">storage</strong> space required.</li>
+                                        <li class="fragment">The <strong style="color: #f95d6f;">edges</strong> are <strong style="color: #f95d6f;">implicit.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: capitalize;">Mesh Representation</h2>
+
+                        <div style="width: 100%; display: flex; justify-content: space-around;flex-direction: column;align-items: start;padding-left: 5rem;">
+
+                            <div style="display: flex;align-items: center;margin-bottom: 1rem;">
+                                <img src="./public/assets/images/face-vertex-mesh-representation.jpg" width="600px" style="filter: invert(1);border-radius: 8px;" alt="">
+                                <div style="display: flex;flex-direction: column;align-items: start;">
+                                    <p style="font-size: 2.5rem;color: #6fc5ff;text-align: center;width: 100%;"><strong>Face-Vertex Representation</strong></p>
+                                    <ul style="margin: 0;padding-left: 5rem;">
+                                        <li style="font-size: 1.6rem;">A face is a <strong style="color: #06d6a0;">polygon</strong>, generally a <strong style="color: #06d6a0;">triangle</strong>.</li>
+                                        <li style="font-size: 1.6rem;">To each face, we associate the vertices that <strong style="color: #06d6a0;">compose</strong> it.</li>
+                                    </ul>
+                                    <p style="font-size: 2rem;color: #06d6a0;text-align: start;padding-left: 3.4rem;">Pros:</p>
+                                    <ul style="font-size: 1.6rem;padding-left: 6rem;">
+                                        <li>
+                                            Allows explicit lookup of:
+                                        </li>
+                                        <ul>
+                                            <li style="color: #06d6a0;font-weight: 600;">The vertices of a face.</li>
+                                            <li style="color: #06d6a0;font-weight: 600;">The faces surrounding a vertex.</li>
+                                        </ul>
+                                    </ul>
+                                    <p style="font-size: 2rem;color:#f95d6f; text-align: start;padding-left: 3.4rem;">Cons:</p>
+                                    <ul style="font-size: 1.6rem;padding-left: 6rem;">
+                                        <li>More <strong style="color: #f95d6f;">storage</strong> space required.</li>
+                                        <li>The <strong style="color: #f95d6f;">edges</strong> are <strong style="color: #f95d6f;">implicit.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div>
+                                <ul style="margin: 0;">
+                                    <li style="font-size: 1.6rem;"><strong style="color: #06d6a0;">Most widely used</strong> mesh representation:</li>
+                                    <ul>
+                                        <li class="fragment" style="font-size: 1.6rem;">Typically, the <strong style="color: #06d6a0;">input</strong> expected by <strong style="color: #06d6a0;">modern graphics hardware.</strong></li>
+                                        <li class="fragment" style="font-size: 1.6rem;">Standard <strong style="color: #06d6a0;">mesh transportation formats,</strong> such as <strong style="color: #06d6a0;">.obj</strong></li>
+                                    </ul>
+                                    <a class="fragment" href="" style="color: #f95d6f;font-weight: 600;"><li style="font-size: 1.6rem;">Other Mesh Representations.</li></a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section data-auto-animate>
+                    <div style=" display: flex; flex-direction: column; justify-content: space-between;">
+                        <h2 style="text-transform: capitalize;"><a target="_blank" href="https://threejs.org/" style="color: #6fc5ff;">Three.js</a></h2>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%; display: flex; flex-direction: column;gap: 6rem;">
+                        <h2 style="text-transform: capitalize;"><a target="_blank" href="https://threejs.org/" style="color: #6fc5ff;">Three.js</a></h2>
+
+                        <div style="text-align: start;">
+                            <ul style="font-size: 2rem;">
+                                <li>A <strong style="color: #6fc5ff;">JavaScript library</strong> for creating 3D graphics.</li>
+                                <li class="fragment">The library is <strong style="color: #06d6a0;">organized into packages.</strong></li>
+                                <li class="fragment">Each package has a set <strong style="color: #06d6a0;">responsibilities.</strong></li>
+                            </ul>
+                        </div>
+
+                        <div class="fragment">
+                            <h4 style="text-transform: none;text-align: start;padding-left: 3rem;margin-bottom: 3rem;">The main components:</h4>
+    
+                            <div style="display: flex;margin-bottom: 5rem;text-align: center; justify-content: space-around;">
+    
+                                <div style="border: 1px solid #6fc5ff;border-radius: 8px;padding: 24px;background-color: #6fc5ff22;">
+                                    <h4>Core</h4>
+                                    <hr>
+                                    <ul style="font-size: 1.7rem;list-style: none;margin: 0;padding: 0;">
+                                        <li>BufferAttribute</li>
+                                        <li>BufferGeometry</li>
+                                    </ul>
+                                </div>
+    
+                                <div style="border: 1px solid #6fc5ff;border-radius: 8px;padding: 24px;background-color: #6fc5ff22;">
+                                    <h4>Renderers</h4>
+                                    <hr>
+                                    <p style="font-size: 1.7rem;">WebGLRenderer</p>
+                                </div>
+    
+                                <div style="border: 1px solid #6fc5ff;border-radius: 8px;padding: 24px;background-color: #6fc5ff22;">
+                                    <h4>Scenes</h4>
+                                    <hr>
+                                    <p style="font-size: 1.7rem;">Scene</p>
+                                </div>
+    
+                                <div style="border: 1px solid #6fc5ff;border-radius: 8px;padding: 24px;background-color: #6fc5ff22;">
+                                    <h4>Cameras</h4>
+                                    <hr>
+                                    <p style="font-size: 1.7rem;margin: 0;padding: 0;">PrespectiveCamera</p>
+                                    <p style="font-size: 1.7rem;margin: 0;padding: 0;">OrthographicCamera</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%; display: flex; flex-direction: column;gap: 3rem;">
+                        <h2 style="text-transform: capitalize;"><a target="_blank" href="https://threejs.org/" style="color: #6fc5ff;">Three.js</a></h2>
+
+                        <div style="text-align: start;">
+                            <ul style="font-size: 2rem;">
+                                <li>A <strong style="color: #6fc5ff;">JavaScript library</strong> for creating 3D graphics.</li>
+                                <li>The library is <strong style="color: #06d6a0;">organized into packages.</strong></li>
+                                <li>Each package has a set <strong style="color: #06d6a0;">responsibilities.</strong></li>
+                            </ul>
+                        </div>
+
+                        <div style="text-align: start;margin-left: 3rem;">
+                            <h4 style="text-transform: capitalize; margin-bottom: 1rem;">Meshes in Three.js:</h4>
+
+                            <div style="display: flex; justify-content: space-around; gap: 2rem;padding: 2rem;text-align: center;">
+                                <div style="flex: 1;border: 1px solid #6fc5ff;border-radius: 8px;padding: 24px;background-color: #6fc5ff22;">
+                                    <p style="font-weight: bold; margin-top: 0;">Geometry</p>
+                                    <hr>
+                                    <ul style="margin: 0; padding-left: 1.2rem;font-size: 2rem;">
+                                        <li>Defines the vertex attributes.</li>
+                                    </ul>
+                                </div>
+
+                                <div style="flex: 1;border: 1px solid #6fc5ff;border-radius: 8px;padding: 24px;background-color: #6fc5ff22;">
+                                    <p style="font-weight: bold; margin-top: 0;">Material</p>
+                                    <hr>
+                                    <ul style="margin: 0; padding-left: 1.2rem;font-size: 2rem;">
+                                        <li>Defines how to display the data:</li>
+                                        <ul>
+                                            <li>Wireframe / Filled</li>
+                                            <li>Transparency</li>
+                                            <li>Color</li>
+                                        </ul>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+           
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Mesh Generation</h2>
+
+                        <div style="margin-top: 4rem;text-align: start;font-size: 2rem;">
+                            <ul>
+                                <li>We can <strong style="color: rgb(192, 124, 255);">represent</strong> meshes in various ways. <strong style="color: rgb(192, 124, 255);">(V-V, F-V, etc...)</strong></li>
+                                <li class="fragment">But how do we get that <strong  style="color: rgb(192, 124, 255);">data</strong> in the first place? <strong  style="color: rgb(192, 124, 255);">(Vertex Attributes)</strong></li>
+                            </ul>
+                        </div>
+
+                        <div style="display: flex;margin-top: 5rem;">
+                            <div class="fragment" style="width: 600px;">
+                                <h4 style="text-transform: none;color: #06d6a0;">Manual Contruction</h4>
+                                <ul>
+                                    <li style="font-size: 1.6rem;width: 380px;">The lists of vertices and indices are <strong>mesured and inputed by hand.</strong></li>
+                                </ul>
+                                <div>
+                                    <img src="./public/assets/images/manual-mesh-generation.webp" width="350" style="border-radius: 8px;" alt="">
+                                </div>
+                            </div>
+                            <div class="fragment" style="width: 500px;border-left: 1px solid grey;">
+                                <h4 style="text-transform: none;color: #6fc5ff;">3D Scanning</h4>
+                                <ul>
+                                    <li style="font-size: 1.6rem;width: 300px;"><strong>3D scanners</strong> where introduced in the <strong>1980s.</strong></li>
+                                </ul>
+                                <div>
+                                    <img src="./public/assets/images/stanford-bunny.gif" width="270" style="border-radius: 8px;margin-top: 3.5rem;" alt="">
+                                </div>
+                            </div>
+                            <div class="fragment" style="width: 600px;border-left: 1px solid grey;">
+                                <h4 style="text-transform: none;color: #f95d6f;">Procedural Generation</h4>
+                                <ul style="font-size: 1.6rem;width: 380px;">
+                                    <li><strong>We write a program</strong> that generates the lists of vertices and indices.</li>
+                                </ul>
+                                <div>
+                                    <img src="./public/assets/images/procedural-mesh.png" width="350" style="border-radius: 8px;margin-top: 1.8rem;" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Plane</h2>
+
+                        <div style="margin-top: 5rem;font-size: 2rem;display: flex;justify-content: space-around;align-items: center;">
+                            <div>
+                                <img src="./public/assets/images/plane-mesh.png" width="500px" style="border-radius: 8px;" alt="">
+                            </div>
+                            <div>
+                                <pre style="margin:0;overflow:hidden;border-radius:8px;background-color: rgb(23, 22, 22);">
+                                    <code data-trim data-line-numbers="|1-14|2|4-6|8-11|13|22-45|23-24|26-39|40-41|43|" class="language-javascript" style="background-color: black;display:block;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace;font-size:0.9rem;line-height:1.45;">
+/**
+ * Generates the vertex positions for a plane mesh centered at the origin.
+ * 
+ * The plane lies on the XY-plane (Z = 0) extending from:
+ *      -width/2 to +width/2 along the X-axis
+ *      -height/2 to +height/2 along the Y-axis.
+ * 
+ * @param {number} [width=1] - Total width of the plane in world units.
+ * @param {number} [height=1] - Total height of the plane in world units.
+ * @param {number} [widthSegments=10] - Number of subdivisions along the X-axis (width direction).
+ * @param {number} [heightSegments=10] - Number of subdivisions along the Y-axis (height direction).
+ * 
+ * @returns {Float32Array} A flat array of 3D vertex coordinates (x, y, z) for the plane.
+ */
+function PlaneVertices(
+    width: number = 1,
+    height: number = 1,
+    widthSegments: number = 10,
+    heightSegments: number = 10
+) {}
+
+/**
+ * Generates the triangle indices that define the faces of the plane mesh.
+ * The indices refer to the vertex array produced by `PlaneVertices()`
+ * 
+ * Each quad cell is divided into two triangles:
+ * ```
+ *  tl ---- tr
+ *   |    / |
+ *   |   /  |
+ *   |  /   |
+ *  bl ---- br
+ * ```
+ * where:
+ * - `bl`: bottom-left vertex
+ * - `br`: bottom-right vertex
+ * - `tl`: top-left vertex
+ * - `tr`: top-right vertex
+ * 
+ * @param {number} [widthSegments=10] - Number of subdivisions along the X-axis (width direction).
+ * @param {number} [heightSegments=10] - Number of subdivisions along the Y-axis (height direction).
+ * 
+ * @returns {number[]} An array of vertex indices forming triangles for the entire plane mesh.
+ */
+function PlaneIndices(
+    widthSegments: number = 10,
+    heightSegments: number = 10
+) {}
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Plane</h2>
+
+                        <div style="margin-top: 5rem;font-size: 2rem;display: flex;justify-content: space-around;align-items: center;">
+                            <div>
+                                <img src="./public/assets/images/plane-mesh.png" width="500px" style="border-radius: 8px;" alt="">
+                            </div>
+                            <div>
+                                <pre style="margin:0;overflow:hidden;border-radius:8px;background-color: rgb(23, 22, 22);">
+                                    <code data-line-numbers="|20|22-23|25-26|27-29|33|64|66-67|68|70-73|75-78|82" data-trim class="language-javascript" style="background-color: black;display:block;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace;font-size:0.9rem;line-height:1.45;">
+/**
+ * Generates the vertex positions for a plane mesh centered at the origin.
+ * 
+ * The plane lies on the XY-plane (Z = 0), extending from -width/2 to +width/2 along the X-axis
+ * and from -height/2 to +height/2 along the Y-axis.
+ * 
+ * @param {number} [width=1] - Total width of the plane in world units.
+ * @param {number} [height=1] - Total height of the plane in world units.
+ * @param {number} [widthSegments=10] - Number of subdivisions along the X-axis (width direction).
+ * @param {number} [heightSegments=10] - Number of subdivisions along the Y-axis (height direction).
+ * 
+ * @returns {Float32Array} A flat array of 3D vertex coordinates (x, y, z) for the plane.
+ */
+function PlaneVertices(
+    width: number = 1,
+    height: number = 1,
+    widthSegments: number = 10,
+    heightSegments: number = 10
+) {
+    const vertexPositions: number[] = [];
+
+    const widthStep = width / widthSegments;
+    const heightStep = height / heightSegments;
+
+    for (let i = 0; i <= widthSegments; i++) {
+        for (let j = 0; j <= heightSegments; j++) {
+            const x = i * widthStep - width / 2;
+            const y = j * heightStep - height / 2;
+            vertexPositions.push(x, y, 0);
+        }
+    }
+
+    return new Float32Array(vertexPositions);
+}
+
+/**
+ * Generates the triangle indices that define the faces of the plane mesh.
+ * 
+ * The indices refer to the vertex array produced by `PlaneVertices()`
+ * 
+ * Each quad cell is divided into two triangles:
+ * ```
+ *  tl ---- tr
+ *   |    / |
+ *   |   /  |
+ *   |  /   |
+ *  bl ---- br
+ * ```
+ * where:
+ * - `bl`: bottom-left vertex
+ * - `br`: bottom-right vertex
+ * - `tl`: top-left vertex
+ * - `tr`: top-right vertex
+ * 
+ * @param {number} [widthSegments=10] - Number of subdivisions along the X-axis (width direction).
+ * @param {number} [heightSegments=10] - Number of subdivisions along the Y-axis (height direction).
+ * 
+ * @returns {number[]} An array of vertex indices forming triangles for the entire plane mesh.
+ */
+function PlaneIndices(
+    widthSegments: number = 10,
+    heightSegments: number = 10
+) {
+    const indices: number[] = [];
+
+    for (let w = 0; w < widthSegments; w++) {
+        for (let h = 0; h < heightSegments; h++) {
+            const curr = w * (heightSegments + 1) + h;
+
+            const bl = curr;
+            const br = bl + 1;
+            const tl = curr + (heightSegments + 1);
+            const tr = tl + 1;
+
+            // bottom-left triangle
+            indices.push(bl, br, tl);
+            // top-right triangle
+            indices.push(br, tr, tl);
+        }
+    }
+
+    return indices;
+}
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Sphere</h2>
+
+                        <div style="margin-top: 5rem;font-size: 2rem;display: flex;justify-content: space-around;align-items: center;">
+                            <div>
+                                <img src="./public/assets/images/sphere-mesh.png" width="500px" style="border-radius: 8px;" alt="">
+                            </div>
+                            <div>
+                                <pre style="margin:0;overflow:hidden;border-radius:8px;background-color: rgb(23, 22, 22);">
+                                    <code data-trim data-line-numbers="|1-14|2|4-7|9-11|13|21-34|22|24-28|30-31|33" class="language-javascript" style="background-color: black;display:block;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace;font-size:0.9rem;line-height:1.45;">
+/**
+ * Generates vertex positions for a sphere mesh centered at the origin.
+ * 
+ * The vertices are generated in the following order:
+ *      1. The north pole vertex (0, 0, +radius)
+ *      2. Rings of vertices arranged by increasing θ (from north to south)
+ *      3. The south pole vertex (0, 0, -radius)
+ * 
+ * @param {number} [radius=1] - Radius of the sphere.
+ * @param {number} [rings=8] - Number of horizontal subdivisions (latitude lines, excluding poles).
+ * @param {number} [segments=16] - Number of vertical subdivisions (longitude lines).
+ *
+ * @returns {Float32Array} A flat array of 3D vertex coordinates (x, y, z) for the sphere mesh.
+ */
+function SphereVertices(
+    radius: number = 1, 
+    rings: number = 8, 
+    segments: number = 16,
+) {}
+
+/**
+ * Generates triangle indices for the sphere mesh.
+ * 
+ * The indices define triangles connecting the vertices produced by `SphereVertices()`.
+ * The sphere consists of:
+ * - A **top cap** (connecting the north pole to the first ring)
+ * - Multiple **middle rings** (connecting adjacent rings)
+ * - A **bottom cap** (connecting the last ring to the south pole)
+ * 
+ * @param {number} [rings=8] - Number of horizontal subdivisions (latitude lines, excluding poles).
+ * @param {number} [segments=16] - Number of vertical subdivisions (longitude lines).
+ * 
+ * @returns {number[]} A flat array of vertex indices representing the sphere’s triangle faces.
+ */
+function SphereIndices(
+    rings: number = 8, 
+    segments: number = 16
+) {}
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Sphere</h2>
+
+                        <div style="margin-top: 5rem;font-size: 2rem;display: flex;justify-content: space-around;align-items: center;">
+                            <div>
+                                <img src="./public/assets/images/sphere-mesh.png" width="700" style="border-radius: 8px;" alt="">
+                            </div>
+                            <div style="font-size: 1.6rem;text-align: start;">
+                                <ul>
+                                    <li>A <strong style="color: #06d6a0;">sphere</strong> is defined by a <strong style="color: #06d6a0;">center</strong> and a <strong style="color: #06d6a0;">radius.</strong></li>
+                                </ul>
+                                <ul style="margin-top: 2rem;">
+                                    <li class="fragment">A spherical mesh is an <strong style="color: #f95d6f;">approximation</strong> of a spherical surface.</li>
+                                    <div class="fragment">
+                                        <li style="margin-top: 2rem;">How are we going to <strong>choose those point?</strong></li>
+                                        <li>How is a <strong>spherical mesh structured?</strong></li>
+                                    </div>
+                                    <ul style="margin-top: 2rem;">
+                                        <div class="fragment">
+                                            <li>A <strong style="color: #06d6a0;">stack of circles</strong> called <strong style="color: #06d6a0;">rings.</strong></li>
+                                            <li>The <strong style="color: #06d6a0;">number of rings</strong> defines the <strong style="color: #06d6a0;">vertical resolution.</strong></li>
+                                            <li style="margin-top: 2rem;">Each ring is an <strong style="color: #f95d6f;">approximation</strong> of a cercle.</li>
+                                        </div>
+                                        <div class="fragment">
+                                            <li style="margin-top: 2rem;">Each ring is composed of <strong style="color: #06d6a0;">segments.</strong></li>
+                                            <li>The <strong style="color: #06d6a0;">number of segment</strong> in a ring defines the <strong style="color: #06d6a0;">horizontal resolution.</strong></li>
+                                        </div>
+                                        <li class="fragment" style="margin-top: 2rem;">the <strong style="color: #6fc5ff;">radius of each ring</strong> depends on its <strong style="color: #6fc5ff;">elevation.</strong></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h3 style="text-transform: none;">Spherical Coordinates</h3>
+
+                        <div style="font-size: 1.8rem;text-align: start;margin-top: 7rem;">
+                            <ul style="width: 100%;">
+                                <li>Lets us <strong style="color: #06d6a0;">linearly traverse the surface of a sphere.</strong></li>
+                                <div style="display: flex;justify-content: space-between;align-items: center;width: 100%;">
+                                    <div>
+                                        <li class="fragment">The <strong style="color: #06d6a0;">spherical coordinates</strong> are:</li>
+                                        <ul style="margin-top: 2rem;">
+                                            <li class="fragment">\( r: \) the <strong style="color: #6fc5ff;">distance from the origin:</strong> <strong style="color: #f95d6f;">The radial distance.</strong></li>
+                                            <li class="fragment" style="margin-top: 0.3rem;">\( \theta: \) the <strong style="color: #6fc5ff;">angle from the north pole:</strong> <strong style="color: #f95d6f;">The polar angle.</strong></li>
+                                            <li class="fragment" style="margin-top: 0.3rem;">\( \phi: \)  the <strong style="color: #6fc5ff;">angle of rotation around the polar axis:</strong> <strong style="color: #f95d6f;">The azimuthal angle.</strong></li> 
+                                        </ul>
+                                    </div>
+                                    <div style="padding-right: 5rem;">
+                                        <img src="./public/assets/images/spherical-coordinates.png" width="300" style="border: none;" alt="">
+                                    </div>
+                                </div>
+                                <li class="fragment">Vertex positions <strong style="color: #f95d6f;">NEED</strong> to be expressed in <strong style="color: #06d6a0;">Cartisean coordinates!</strong></li>
+                                <ul>
+                                    <li class="fragment">We <strong style="color: #6fc5ff;">traverse the surface of the sphere</strong> using <strong style="color: #6fc5ff;">spherical coordinates.</strong></li>
+                                    <li class="fragment">We <strong style="color: #6fc5ff;">convert to cartisean coordinates</strong> to store the vertex positions.</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Sphere</h2>
+
+                        <div style="margin-top: 5rem;font-size: 2rem;display: flex;justify-content: space-around;align-items: center;">
+                            <div>
+                                <img src="./public/assets/images/sphere-mesh.png" width="500px" style="border-radius: 8px;" alt="">
+                            </div>
+                            <div>
+                                <pre style="margin:0;overflow:hidden;border-radius:8px;background-color: rgb(23, 22, 22);">
+                                    <code data-trim data-line-numbers="|20|22-23|25-26|28-30|28-33|35-39|43-44|46|67|69-72|74-76|77-80|82-83|87-93|95" class="language-javascript" style="background-color: black;display:block;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace;font-size:0.9rem;line-height:1.45;">
+/**
+ * Generates vertex positions for a sphere mesh centered at the origin.
+ * 
+ * The vertices are generated in the following order:
+ *      1. The north pole vertex (0, 0, +radius)
+ *      2. Rings of vertices arranged by increasing θ (from north to south)
+ *      3. The south pole vertex (0, 0, -radius)
+ * 
+ * @param {number} [radius=1] - Radius of the sphere.
+ * @param {number} [rings=8] - Number of horizontal subdivisions (latitude lines, excluding poles).
+ * @param {number} [segments=16] - Number of vertical subdivisions (longitude lines).
+ *
+ * @returns {Float32Array} A flat array of 3D vertex coordinates (x, y, z) for the sphere mesh.
+ */
+function SphereVertices(
+    radius: number = 1, 
+    rings: number = 8, 
+    segments: number = 16,
+) {
+    const vertexPositions: number[] = [];
+
+    // North pole
+    vertexPositions.push(0, 0, radius);
+
+    const thetaStep = Math.PI / (rings + 1);
+    const phiStep = 2 * Math.PI / segments;
+
+    // Rings between poles
+    for (let ring = 1; ring <= rings; ring++) {
+        const theta = thetaStep * ring;
+
+        for (let segment = 1; segment <= segments; segment++) {
+            const phi = phiStep * segment;
+
+            const x = radius * Math.sin(theta) * Math.cos(phi);
+            const y = radius * Math.sin(theta) * Math.sin(phi);
+            const z = radius * Math.cos(theta);
+
+            vertexPositions.push(x, y, z);
+        }
+    }
+
+    // South pole
+    vertexPositions.push(0, 0, -radius);
+
+    return new Float32Array(vertexPositions);
+}
+
+/**
+ * Generates triangle indices for the sphere mesh.
+ * 
+ * The indices define triangles connecting the vertices produced by `SphereVertices()`.
+ * The sphere consists of:
+ * - A **top cap** (connecting the north pole to the first ring)
+ * - Multiple **middle rings** (connecting adjacent rings)
+ * - A **bottom cap** (connecting the last ring to the south pole)
+ * 
+ * @param {number} [rings=8] - Number of horizontal subdivisions (latitude lines, excluding poles).
+ * @param {number} [segments=16] - Number of vertical subdivisions (longitude lines).
+ * 
+ * @returns {number[]} A flat array of vertex indices representing the sphere’s triangle faces.
+ */
+function SphereIndices(
+    rings: number = 8, 
+    segments: number = 16
+) {
+    const indices: number[] = [];
+
+    // Top cap (north pole)
+    for (let segment = 0; segment < segments; segment++) {
+        indices.push(0, 1 + segment, 1 + (segment + 1) % segments);
+    }
+
+    // Middle rings
+    for (let ring = 0; ring < rings - 1; ring++) {
+        for (let segment = 0; segment < segments; segment++) {
+            const bl = 1 + ring * segments + segment;
+            const br = 1 + ring * segments + (segment + 1) % segments;
+            const tl = bl + segments;
+            const tr = br + segments;
+
+            indices.push(bl, tl, br);
+            indices.push(br, tl, tr);
+        }
+    }
+
+    // Bottom cap (south pole)
+    const lastIdx = (2 + rings * segments) - 1;
+    const base = 1 + (rings - 1) * segments;
+
+    for (let segment = 0; segment < segments; segment++) {
+        indices.push(lastIdx, base + (segment + 1) % segments, base + segment);
+    }
+
+    return indices;
+}
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Cylinder</h2>
+
+                        <div style="margin-top: 5rem;font-size: 2rem;display: flex;justify-content: space-around;align-items: center;">
+                            <div>
+                                <img src="./public/assets/images/cylinder-mesh.png" width="500px" style="border-radius: 8px;" alt="">
+                            </div>
+                            <div>
+                                <pre style="margin:0;overflow:hidden;border-radius:8px;background-color: rgb(23, 22, 22);">
+                                    <code data-trim data-line-numbers="|1-16|2-3|5-8|10-13|15|24-37|25-26|28-31|33-34|36" class="language-javascript" style="background-color: black;display:block;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace;font-size:0.9rem;line-height:1.45;">
+/**
+ * Generates vertex positions for a cylinder mesh centered at the origin.
+ * The cylinder extends along the Z-axis, from -height/2 to +height/2
+ * 
+ * Vertices are ordered as follows:
+ *      1. The top center vertex (north cap)
+ *      2. Rings of vertices evenly spaced along the height
+ *      3. The bottom center vertex (south cap)
+ * 
+ * @param {number} [radius=1] - Radius of the cylinder in world units.
+ * @param {number} [height=1] - Total height of the cylinder.
+ * @param {number} [rings=10] - Number of subdivisions along the cylinder’s height (excluding caps).
+ * @param {number} [segments=10] - Number of subdivisions around the cylinder’s circumference.
+ *
+ * @returns {Float32Array} A flat array of 3D vertex coordinates (x, y, z) representing the cylinder mesh.
+ */
+function CylinderVertices(
+    radius: number = 1,
+    height: number = 1,
+    rings: number = 10,
+    segments: number = 10
+) {}
+
+/**
+ * Generates triangle indices for the cylinder mesh.
+ * The indices define the top cap, bottom cap, and side wall of the cylinder.
+ * 
+ * The mesh structure is divided into:
+ * - **Top cap:** Triangles fan out from the top center vertex to the first ring of vertices.
+ * - **Body:** Each rectangular section between rings is split into two triangles.
+ * - **Bottom cap:** Triangles fan inward to the bottom center vertex.
+ * 
+ * @param {number} [rings=10] - Number of height subdivisions (excluding caps).
+ * @param {number} [segments=10] - Number of angular subdivisions around the cylinder.
+ * 
+ * @returns {number[]} An array of vertex indices forming triangles for the cylinder mesh.
+ */
+function CylinderIndices(
+    rings: number = 10,
+    segments: number = 10
+) {}
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Cylinder</h2>
+
+                        <div style="margin-top: 5rem;font-size: 2rem;display: flex;justify-content: space-around;align-items: center;">
+                            <div>
+                                <img src="./public/assets/images/cylinder-mesh.png" width="700" style="border-radius: 8px;" alt="">
+                            </div>
+                            <div style="font-size: 1.6rem;text-align: start;">
+                                <ul>
+                                    <li>A <strong style="color: #06d6a0;">cylinder</strong> is defined by a <strong style="color: #06d6a0;">center</strong>, a <strong style="color: #06d6a0;">radius.</strong> and a <strong style="color: #06d6a0;">height.</strong></li>
+                                </ul>
+                                <ul style="margin-top: 2rem;">
+                                    <li class="fragment">A cylindrical mesh is an <strong style="color: #f95d6f;">approximation</strong> of a cylindrical surface.</li>
+                                    <div class="fragment">
+                                        <li style="margin-top: 2rem;">How are we going to <strong>choose those point?</strong></li>
+                                        <li>How is a <strong>cylinderical mesh structured?</strong></li>
+                                    </div>
+                                    <ul style="margin-top: 2rem;">
+                                        <div class="fragment">
+                                            <li>A <strong style="color: #06d6a0;">stack of circles</strong> called <strong style="color: #06d6a0;">rings.</strong></li>
+                                            <li>The <strong style="color: #06d6a0;">number of rings</strong> defines the <strong style="color: #06d6a0;">vertical resolution.</strong></li>
+                                        </div>
+                                        <div class="fragment">
+                                            <li style="margin-top: 2rem;">Each ring is an <strong style="color: #f95d6f;">approximation</strong> of a cercle.</li>
+                                            <li style="margin-top: 2rem;">Each ring is composed of <strong style="color: #06d6a0;">segments.</strong></li>
+                                            <li>The <strong style="color: #06d6a0;">number of segment</strong> in a ring defines the <strong style="color: #06d6a0;">horizontal resolution.</strong></li>
+                                        </div>
+                                        <li class="fragment" style="margin-top: 2rem;text-decoration: line-through;"><span style="color: white;">the <strong style="color: #6fc5ff;">radius of each ring</strong> depends on its <strong style="color: #6fc5ff;">elevation.</strong></span></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h3 style="text-transform: none;">Cylindrical Coordinates</h3>
+
+                        <div style="font-size: 1.8rem;text-align: start;margin-top: 7rem;">
+                            <ul style="width: 100%;">
+                                <li>Lets us <strong style="color: #06d6a0;">linearly traverse the surface of a cylinder.</strong></li>
+                                <div style="display: flex;justify-content: space-between;align-items: center;width: 100%;">
+                                    <div>
+                                        <li class="fragment">The <strong style="color: #06d6a0;">cylindrical coordinates</strong> are:</li>
+                                        <ul style="margin-top: 2rem;">
+                                            <li class="fragment">\( \rho : \) the <strong style="color: #6fc5ff;">distance from the z-axis:</strong> <strong style="color: #f95d6f;">The radial distance.</strong></li>
+                                            <li class="fragment" style="margin-top: 0.3rem;">\( z: \) the <strong style="color: #6fc5ff;">height of the point:</strong> <strong style="color: #f95d6f;">The height.</strong></li>
+                                            <li class="fragment" style="margin-top: 0.3rem;">\( \phi: \)  the <strong style="color: #6fc5ff;">angle of rotation around the polar axis:</strong> <strong style="color: #f95d6f;">The azimuthal angle.</strong></li> 
+                                        </ul>
+                                    </div>
+                                    <div style="padding-right: 6rem;">
+                                        <div style="border-radius: 8px;background-color: black;">
+                                            <img src="./public/assets/images/cylindrical-coordinates.png" width="300" style="border: none;filter: invert(1);" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <li class="fragment">Vertex positions <strong style="color: #f95d6f;">NEED</strong> to be expressed in <strong style="color: #06d6a0;">Cartisean coordinates!</strong></li>
+                                <ul>
+                                    <li class="fragment">We <strong style="color: #6fc5ff;">traverse the surface of the cylinder</strong> using <strong style="color: #6fc5ff;">cylindrical coordinates.</strong></li>
+                                    <li class="fragment">We <strong style="color: #6fc5ff;">convert to cartisean coordinates</strong> to store the vertex positions.</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Cylinder</h2>
+
+                        <div style="margin-top: 5rem;font-size: 2rem;display: flex;justify-content: space-around;align-items: center;">
+                            <div>
+                                <img src="./public/assets/images/cylinder-mesh.png" width="500px" style="border-radius: 8px;" alt="">
+                            </div>
+                            <div>
+                                <pre style="margin:0;overflow:hidden;border-radius:8px;background-color: rgb(23, 22, 22);">
+                                    <code data-trim data-line-numbers="|24|26-27|29|31-33|34-40|44-45|47|69|71-74|76-78|79-85|89-95|97" class="language-javascript" style="background-color: black;display:block;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace;font-size:0.9rem;line-height:1.45;">
+/**
+ * Generates vertex positions for a cylinder mesh centered at the origin.
+ * 
+ * The cylinder extends along the Z-axis, from -height/2 to +height/2, with its circular caps 
+ * 
+ * Vertices are ordered as follows:
+ *      1. The top center vertex (north cap)
+ *      2. Rings of vertices evenly spaced along the height
+ *      3. The bottom center vertex (south cap)
+ * 
+ * @param {number} [radius=1] - Radius of the cylinder in world units.
+ * @param {number} [height=1] - Total height of the cylinder.
+ * @param {number} [rings=10] - Number of subdivisions along the cylinder’s height (excluding caps).
+ * @param {number} [segments=10] - Number of subdivisions around the cylinder’s circumference.
+ *
+ * @returns {Float32Array} A flat array of 3D vertex coordinates (x, y, z) representing the cylinder mesh.
+ */
+function CylinderVertices(
+    radius: number = 1,
+    height: number = 1,
+    rings: number = 10,
+    segments: number = 10
+) {
+    const vertexPositions: number[] = [];
+
+    // Top center vertex (north cap)
+    vertexPositions.push(0, 0, height / 2);
+
+    const phiStep = 2 * Math.PI / segments;
+
+    // Body vertices (interpolated between top and bottom)
+    for (let ring = 1; ring <= rings; ring++) {
+        for (let segment = 1; segment <= segments; segment++) {
+            const phi = phiStep * segment;
+
+            const x = radius * Math.cos(phi);
+            const y = radius * Math.sin(phi);
+            const z = height / 2 - (height * ring) / (rings + 1);
+
+            vertexPositions.push(x, y, z);
+        }
+    }
+
+    // Bottom center vertex (south cap)
+    vertexPositions.push(0, 0, -height / 2);
+
+    return new Float32Array(vertexPositions);
+}
+
+/**
+ * Generates triangle indices for the cylinder mesh.
+ * 
+ * The indices define the top cap, bottom cap, and side wall of the cylinder.
+ * 
+ * The mesh structure is divided into:
+ * - **Top cap:** Triangles fan out from the top center vertex to the first ring of vertices.
+ * - **Body:** Each rectangular section between rings is split into two triangles.
+ * - **Bottom cap:** Triangles fan inward to the bottom center vertex.
+ * 
+ * @param {number} [rings=10] - Number of height subdivisions (excluding caps).
+ * @param {number} [segments=10] - Number of angular subdivisions around the cylinder.
+ * 
+ * @returns {number[]} An array of vertex indices forming triangles for the cylinder mesh.
+ */
+function CylinderIndices(
+    rings: number = 10,
+    segments: number = 10
+) {
+    const indices: number[] = [];
+
+    // Top cap
+    for (let segment = 0; segment < segments; segment++) {
+        indices.push(0, 1 + segment, 1 + (segment + 1) % segments);
+    }
+
+    // Body (side walls)
+    for (let ring = 0; ring < rings - 1; ring++) {
+        for (let segment = 0; segment < segments; segment++) {
+            const bl = 1 + ring * segments + segment;
+            const br = 1 + ring * segments + (segment + 1) % segments;
+            const tl = bl + segments;
+            const tr = br + segments;
+
+            indices.push(bl, tl, br);
+            indices.push(br, tl, tr);
+        }
+    }
+
+    // Bottom cap
+    const lastIdx = (2 + rings * segments) - 1;
+    const base = 1 + (rings - 1) * segments;
+
+    for (let segment = 0; segment < segments; segment++) {
+        indices.push(lastIdx, base + (segment + 1) % segments, base + segment);
+    }
+
+    return indices;
+}
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Torus</h2>
+
+                        <div style="margin-top: 5rem;font-size: 2rem;display: flex;justify-content: space-around;align-items: center;">
+                            <div>
+                                <img src="./public/assets/images/torus-mesh.png" width="500px" style="border-radius: 8px;" alt="">
+                            </div>
+                            <div>
+                                <pre style="margin:0;overflow:hidden;border-radius:8px;background-color: rgb(23, 22, 22);">
+                                    <code data-trim data-line-numbers="|1-13|2|4-7|9|18-25|19|21-22|24" class="language-javascript" style="background-color: black;display:block;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace;font-size:0.9rem;line-height:1.45;">
+/**
+ * Generates the vertex positions for a torus mesh.
+ *
+ * @param {number} [majorRadius=1] Distance from the torus center to the center of the tube.
+ * @param {number} [minorRadius=1] Radius of the tube cross-section.
+ * @param {number} [radialSegments=10] Number of subdivisions around the main ring (major circle).
+ * @param {number} [tubularSegments=10] Number of subdivisions around the tube cross-section.
+ *
+ * @returns {Float32Array} A flat array of vertex coordinates.
+ */
+function TorusVertices(
+    majorRadius: number = 1,
+    minorRadius: number = 1,
+    radialSegments: number = 10,
+    tubularSegments: number = 10
+) {}
+
+/**
+ * Generates triangle indices defining the faces of a torus mesh.
+ *
+ * @param {number} [radialSegments=10] Number of subdivisions around the main ring (major circle).
+ * @param {number} [tubularSegments=10] Number of subdivisions around the tube cross-section.
+ *
+ * @returns {number[]} A flat array of triangle vertex indices.
+ */
+function TorusIndices(
+    radialSegments: number = 10,
+    tubularSegments: number = 10
+) {}
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Torus</h2>
+
+                        <div style="margin-top: 5rem;font-size: 2rem;display: flex;justify-content: space-around;align-items: center;">
+                            <div>
+                                <img src="./public/assets/images/torus-mesh.png" width="700" style="border-radius: 8px;" alt="">
+                            </div>
+                            <div style="font-size: 1.6rem;text-align: start;">
+                                <ul>
+                                    <li>A <strong style="color: #06d6a0;">torus</strong> is defined by a <strong style="color: #06d6a0;">center</strong>, a <strong style="color: #06d6a0;">major radius.</strong> and a <strong style="color: #06d6a0;">minor radius.</strong></li>
+                                </ul>
+                                <ul style="margin-top: 2rem;">
+                                    <li class="fragment">A toroidal mesh is an <strong style="color: #f95d6f;">approximation</strong> of a torus.</li>
+                                    <div class="fragment">
+                                        <li style="margin-top: 2rem;">How are we going to <strong>choose those point?</strong></li>
+                                        <li>How is a <strong>cylinderical mesh structured?</strong></li>
+                                    </div>
+                                    <ul style="margin-top: 2rem;">
+                                        <div class="fragment">
+                                            <li>A <strong style="color: #06d6a0;">stack of circles/rings</strong> rotated around an axis.</li>
+                                            <li>The <strong style="color: #06d6a0;">number of rings</strong> defines the <strong style="color: #06d6a0;">radial resolution.</strong></li>
+                                        </div>
+                                        <div class="fragment">
+                                            <li style="margin-top: 2rem;">Each ring is an <strong style="color: #f95d6f;">approximation</strong> of a cercle.</li>
+                                            <li style="margin-top: 2rem;">Each ring is composed of <strong style="color: #06d6a0;">segments.</strong></li>
+                                            <li>The <strong style="color: #06d6a0;">number of segment</strong> in a ring defines the <strong style="color: #06d6a0;">horizontal resolution.</strong></li>
+                                        </div>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Toroidal Coordinates</h2>
+
+                        <div style="font-size: 2rem;text-align: start;margin-top: 3rem;">
+                            <ul>
+                                <li><strong style="color: #f95d6f;">Too complex</strong> for generating a simple torus.</li>
+                                <li>We can accomplish the same result using <strong style="color: #06d6a0;">spherical coordinates.</strong></li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-top: 2rem;">
+                            <img src="./public/assets/images/torodial-coordinate-system.gif" width="500" style="filter: invert(1);" alt="">
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Toroidal Coordinates</h2>
+
+                        <div style="font-size: 2rem;text-align: start;margin-top: 3rem;">
+                            <ul>
+                                <li><strong style="color: #f95d6f;">Too complex</strong> for generating a simple torus.</li>
+                                <li>We can accomplish the same result using <strong style="color: #06d6a0;">spherical coordinates.</strong></li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-top: 2rem;display: flex;justify-content: space-around;">
+                            <img src="./public/assets/images/torodial-coordinate-system.gif" width="500" style="filter: invert(1);" alt="">
+                            <img src="./public/assets/images/spherical-torus.gif" width="500" style="filter: invert(1);" alt="">
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Torus</h2>
+
+                        <div style="margin-top: 5rem;font-size: 2rem;display: flex;justify-content: space-around;align-items: center;">
+                            <div>
+                                <img src="./public/assets/images/torus-mesh.png" width="500px" style="border-radius: 8px;" alt="">
+                            </div>
+                            <div>
+                                <pre style="margin:0;overflow:hidden;border-radius:8px;background-color: rgb(23, 22, 22);max-width: 800px;">
+                                    <code data-trim data-line-numbers="|18|20-21|23-24|26-30|32-33|35-41|43|47|63|65-66|67-70|72-73|77" class="language-javascript" style="background-color: black;display:block;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace;font-size:0.9rem;line-height:1.45;">
+/**
+ * Generates the vertex positions for a torus mesh.
+ *
+ * @param {number} [majorRadius=1] Distance from the torus center to the center of the tube.
+ * @param {number} [minorRadius=1] Radius of the tube cross-section.
+ * @param {number} [radialSegments=10] Number of subdivisions around the main ring (major circle).
+ * @param {number} [tubularSegments=10] Number of subdivisions around the tube cross-section.
+ *
+ * @returns {Float32Array} A flat array of vertex coordinates.
+ */
+function TorusVertices(
+    majorRadius: number = 1,
+    minorRadius: number = 1,
+    radialSegments: number = 10,
+    tubularSegments: number = 10
+)
+{
+    const vertexPositions: Array&lt;number&gt; = [];
+
+    const thetaStep = 2 * Math.PI / radialSegments;
+    const phiStep = 2 * Math.PI / tubularSegments;
+
+    for (let i = 1; i <= radialSegments; i++) {
+        const theta = thetaStep * i;
+
+        const base = new THREE.Vector3(
+            majorRadius * Math.cos(theta),
+            majorRadius * Math.sin(theta),
+            0
+        );
+
+        for (let j = 1; j <= tubularSegments; j++) {
+            const phi = phiStep * j;
+
+            const offset = new THREE.Vector3(
+                minorRadius * Math.sin(phi) * Math.cos(theta),
+                minorRadius * Math.sin(phi) * Math.sin(theta),
+                minorRadius * Math.cos(phi)
+            );
+
+            offset.add(base);
+
+            vertexPositions.push(offset.x, offset.y, offset.z);
+        }
+    }
+
+    return new Float32Array(vertexPositions);
+}
+
+/**
+ * Generates triangle indices defining the faces of a torus mesh.
+ *
+ * @param {number} [radialSegments=10] Number of subdivisions around the main ring (major circle).
+ * @param {number} [tubularSegments=10] Number of subdivisions around the tube cross-section.
+ *
+ * @returns {number[]} A flat array of triangle vertex indices.
+ */
+function TorusIndices(
+    radialSegments: number = 10,
+    tubularSegments: number = 10
+)
+{
+    const indices: Array&lt;number&gt; = [];
+
+    for (let i = 0; i < radialSegments; i++) {
+        for (let j = 0; j < tubularSegments; j++) {
+            const bl = i * tubularSegments + j;
+            const br = i * tubularSegments + ((j + 1) % tubularSegments);
+            const tl = ((i + 1) % radialSegments) * tubularSegments + j;
+            const tr = ((i + 1) % radialSegments) * tubularSegments + ((j + 1) % tubularSegments);
+
+            // Two triangles forming one quad
+            indices.push(br, tr, tl, br, tl, bl);
+        }
+    }
+
+    return indices;
+}
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Cube</h2>
+
+                        <div style="margin-top: 5rem;font-size: 2rem;display: flex;gap: 3rem;align-items: center;justify-content: center;">
+                            <div>
+                                <img src="./public/assets/images/homework-cube.png" width="500px" style="border-radius: 8px;" alt="">
+                            </div>
+                            <div>
+                                <ul>
+                                    <li style="color: #f95d6f;"><strong>Homework!</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h3 style="text-transform: none; margin-top: 2rem;">Mesh generation <strong style="color: #f95d6f;">in practice</strong></h3>
+
+                        <div style="text-align: start;margin-top: 5rem;">
+                            <ul style="font-size: 2rem;">
+                                <li class="fragment" style="color: #6fc5ff;"><strong>Data Visualization:</strong></li>
+                                <ul>
+                                    <li class="fragment" style="color: #06d6a0;"><strong>Function plotting:</strong> <strong style="color: white;">Desmos 3D...</strong></li>
+                                    <li class="fragment" style="color: #06d6a0;"><strong>Signal visualization:</strong> <strong style="color: white;">3D Music Visualizer</strong></li>
+                                </ul>
+
+                                <li class="fragment" style="color: #6fc5ff;margin-top: 3rem;"><strong>Terrain Generation:</strong></li>
+                                <div style="display: flex;gap: 5rem;">
+                                    <ul>
+                                        <li class="fragment" style="color: #06d6a0;"><strong>Procedural landscapes</strong> <span style="color: white;">in games and simulations:</span></li>
+                                        <ul>
+                                            <li style="list-style-type:square;" class="fragment">Mountains in <strong>Death Stranding.</strong></li>
+                                        </ul>
+                                    </ul>
+                                    <div>
+                                        <canvas class="terrain-canvas" style="border-radius: 8px;"></canvas>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section data-auto-animate>
+                    <div>
+                        <h2 style="text-transform: none;color: #6fc5ff;">Thank you for your time!</h2>
+                    </div>
+                </section>
+                <section data-auto-animate>
+                    <div>
+                        <h2 style="text-transform: none;color: #6fc5ff;">Thank you for your time!</h2>
+                        <h3 style="text-transform: none;color: #f95d6f;">To be continued... つづく</h3>
+                    </div>
+                </section>
+            </section>
+
+            
+            <section style="height: 100%;">
+                <section style="height: 100%;">
+                    <div style="height: 100%; position: relative;">
+                        <canvas class="hero-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></canvas>
+        
+                        <div style="position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: space-between; align-items: center; height: 100%;">
+                            <h1 class="intro-title" style="font-size: 6.5rem;margin-top: 10rem;">
+                                <span>Part II</span><br /><span style="font-size: 5.3rem;">Water surface generation</span>
+                            </h1>
+                        </div>
+                    </div>
+                </section>
+
+                <section data-auto-animate>
+                    <div>
+                        <h2 style="text-transform: capitalize; margin-bottom: 2rem;">3D Accelerators</h2>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%; display: flex; flex-direction: column;gap: 2rem;">
+                        <h2 style="text-transform: capitalize; margin-bottom: 2rem;">3D Accelerators</h2>
+
+                        <div style="display: flex; justify-content: space-between; padding: 2rem;align-items: center;">
+                            <div>
+                                <ul style="font-size: 2rem;">
+                                    <li>Used in the <strong style="color: #6fc5ff;">1980s</strong> and <strong style="color: #6fc5ff;">1990s</strong></li>
+                                    <li><strong style="color: #6fc5ff;">Application-Specific</strong> Integrated Circuit (ASIC)</li>
+                                    <li>Implements the <a href="https://wikis.khronos.org/opengl/Fixed_Function_Pipeline"><strong style="color:#06d6a0">Fixed-Function Rendering Pipeline</strong></a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <img style="margin: 0;" src="./public/assets/images/3dfx-voodoo-graphics.png" width="300px">
+                                <p style="font-size: 1rem;margin: 0;">3dfx Voodoo Graphics</p>
+                            </div>
+                        </div>
+
+                        <div style="display:flex;justify-content: center;width: 100%;" class="fragment">
+                            <div style="display: flex;align-items: center;gap: 4rem;">
+                                <div>
+                                    <img src="./public/assets/images/clip-space-vertices.png" alt="" width="250px"  style="filter: invert(1);border-radius: 8px;">
+                                </div>
+                                
+                                <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#e3e3e3"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+    
+                                <div class="box blue" style="padding: 24px;font-size: 1.7rem;background: #02966e; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);"><strong>Rasterization</strong></div>
+    
+                                <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#e3e3e3"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+    
+                                <div>
+                                    <img src="./public/assets/images/colored-raster-image.png" alt="" width="250px" style="filter: invert(1);border-radius: 8px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%; display: flex; flex-direction: column;gap: 1.5rem;">
+                        <h2 style="text-transform: capitalize;">Rasterization</h2>
+
+                        <div style="text-align: start;margin-left: 3rem;">
+                            <ul style="font-size: 2rem;margin-top: 2.5rem;">
+                                <li>Gets executed on every <strong style="color: #6fc5ff;">face</strong>.</li>
+                                <li><strong style="color: #06d6a0;">Input:</strong> <strong style="color: #6fc5ff;">2D vectors</strong> defined relative to the <strong style="color: #6fc5ff;">center of the screen</strong>.</li>
+                                <li><strong style="color: #06d6a0;">Ouput:</strong> A <strong  style="color: #6fc5ff;">grid of pixels</strong> where each is colored if its center falls in the face.</li>
+                            </ul>
+                        </div>
+
+                        <div style="text-align: start; margin-left: 5rem;margin-top: 3rem;">
+                            <h4 style="text-transform: capitalize;">Example:</h4>
+                            <div style="display: flex;justify-content: space-around;">
+                                <img style="border-radius: 8px;filter: invert(1);" src="./public/assets/images/rasterization-1.png" alt="">
+                                <img class="fragment" style="border-radius: 8px;filter: invert(1);" src="./public/assets/images/rasterization-2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div style="height: 100%; display: flex; flex-direction: column;gap: 1.5rem;">
+                        <h2 style="text-transform: capitalize;">The First GPUs</h2>
+
+                        
+                        <div style="display: flex; justify-content: space-between; padding: 2rem;align-items: center;">
+                            <div>
+                                <ul style="font-size: 2rem;">
+                                    <li>Nvidia Geforce 3 - 2001</li>
+                                    <li>Introduced the <strong style="color: #06d6a0;">Programmable Rendering pipeline</strong>.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <img src="./public/assets/images/nvidia-geforce-3.png" width="300px">
+                            </div>
+                        </div>
+
+                        <div class="fragment" style="display: flex; gap: 1.5rem; justify-content: center; align-items: center; margin: 2rem 0;">
+                            <div class="box grey" style="padding: 24px;font-size: 1.7rem;background: #333; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); color: #fff; display: flex; align-items: center; justify-content: center;">Mesh</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32" fill="#e3e3e3"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+                            <div class="box pink" style="padding: 24px;font-size: 1.7rem;background: #ff6f91; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);"><strong class="fragment">Vertex Shading</strong></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32" fill="#e3e3e3"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+                            <div class="box blue" style="padding: 24px;font-size: 1.7rem;background: #02966e; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);"><strong>Rasterization</strong></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32" fill="#e3e3e3"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+                            <div class="box green" style="padding: 24px;font-size: 1.7rem;background: #4d96ff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);"><strong class="fragment">Pixel Shading</strong></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32" fill="#e3e3e3"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+                            <canvas class="rotating-cube" width="300" height="250"></canvas>
+                        </div>
+                    </div> 
+                </section>
+
+                <section data-auto-animate>
+                    <div>
+                        <h2 style="text-transform: capitalize;">Shaders</h2>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: capitalize;">Shaders</h2>
+
+                            <div style="text-align: start;padding-left: 3rem;margin-top: 4.5rem;font-size: 2.3rem;">
+                                <ul>
+                                    <li>A <strong style="color: #06d6a0;">program running on the GPU</strong> (≃ Process)</li>
+                                    <div class="fragment">
+                                        <li>Running across <strong style="color: #6fc5ff;">thousands of threads:</strong></li>
+                                        <ul style="padding-left: 8rem;">
+                                            <li>CPU ≃ <span class="fragment">10-16 cores</span></li>
+                                            <li>GPU ≃ <span class="fragment">2000-20000 cores</span></li>
+                                        </ul>
+                                    </div>
+                                    <li class="fragment" style="margin-top: 3rem;">Shaders <strong style="color: #f95d6f;">shouldn't</strong> have:</li>
+                                    <ul style="padding-left: 8rem;">
+                                        <li class="fragment" style="color: #f95d6f;"><strong>Dynamic Allocation</strong></li>
+                                        <li class="fragment" style="color: #f95d6f;"><strong>Complex Recursion</strong></li>
+                                        <li class="fragment" style="color: #f95d6f;"><strong>Arbitrary Branching</strong></li>
+                                    </ul>
+                                    <li class="fragment" style="list-style: none;margin-top: 3rem;"><span style="font-size:1em;">⟹</span> We need a <strong style="color: #6fc5ff;">simple, light weight language.</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div>
+                            <h2 style="text-transform: capitalize;">Shading Languages</h2>
+                        </div>
+                    </section>
+
+                    <section style="height: 100%;" data-auto-animate>
+                        <div style="height: 100%;">
+                            <h2 style="text-transform: capitalize;">Shading Languages</h2>
+                            
+                            <div style="margin-top: 4rem;text-align: start;">
+                                <ul>
+                                    <li style="font-size: 2.3rem;">Used in coding <strong style="color: #6fc5ff;">Vertex</strong> and <strong style="color: #6fc5ff;">Pixel Shaders.</strong></li>
+                                </ul>
+                            </div>
+
+                            <div style="display: flex;justify-content: center;margin-top: 4rem;">
+                                <div style="display: flex; justify-content: space-around; width: 100%; gap: 2rem;">
+                                    <div class="fragment" style="display: flex; flex-direction: column; align-items: center;">
+                                        <img src="./public/assets/images/msl.png" alt="Metal Shading Language" style="margin: 0;" width="120px">
+                                        <p style="margin: 0; font-size: 2rem; font-weight: 600;">MSL</p>
+                                        <ul style="font-size: 1.8rem;margin-top: 3rem;">
+                                            <li>Metal Shading Language</li>
+                                            <li style="color: #f95d6f;"><strong>macOS / iOS</strong></li>
+                                            <li>API: Metal</li>
+                                            <li>C++14–like syntax, Apple-exclusive</li>
+                                        </ul>
+                                        <p>&#x274C;</p>
+                                    </div>
+                                    <!-- HLSL -->
+                                    <div class="fragment" style="display: flex; flex-direction: column; align-items: center;">
+                                        <img src="./public/assets/images/hlsl.png" alt="High-Level Shading Language" style="margin: 0;" width="160px">
+                                        <p style="margin: 0; font-size: 2rem; font-weight: 600;">HLSL</p>
+                                        <ul style="font-size: 1.8rem;margin-top: 3rem;">
+                                            <li>High-Level Shading Language</li>
+                                            <li style="color: #f95d6f;"><strong>Windows / Xbox</strong></li>
+                                            <li>API: Direct3D (DirectX)</li>
+                                            <li>C-like syntax, Microsoft’s standard</li>
+                                        </ul>
+                                        <p>&#x274C;</p>
+                                    </div>
+                                    <!-- GLSL -->
+                                    <div class="fragment" style="display: flex; flex-direction: column; align-items: center;">
+                                        <img src="./public/assets/images/glsl.png" alt="OpenGL Shading Language" style="margin: 0;" width="180px">
+                                        <p style="margin: 0; font-size: 2rem; font-weight: 600;">GLSL</p>
+                                        <ul style="font-size: 1.8rem;margin-top: 3rem;">
+                                            <li>OpenGL Shading Language</li>
+                                            <li style="color: #06d6a0;"><strong>Cross-platform</strong></li>
+                                            <li>API: OpenGL / OpenGL ES / Vulkan*</li>
+                                            <li style="color: #06d6a0;"><strong>C-like syntax, open standard</strong></li>
+                                        </ul>
+                                        <p>&#x2705;</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: capitalize;">Graphics APIs</h2>
+                        
+                        <div style="margin-top: 4rem;text-align: start;">
+                            <ul style="font-size: 2.3rem;">
+                                <li>Used when <strong style="color:#6fc5ff;">interfacing with the GPU.</strong></li>
+                            </ul>
+                        </div>
+
+                        <div style="display: flex;justify-content: center;margin-top: 6rem;">
+                            <div style="display: flex; justify-content: space-around; width: 100%; gap: 2rem;">
+                                <!-- OpenGL -->
+                                <div class="fragment" style="display: flex; flex-direction: column; align-items: center;">
+                                    <img src="./public/assets/images/opengl_logo.png" alt="OpenGL Shading Language" style="margin: 0;" width="200px">
+                                    <p style="margin: 0; font-size: 2rem; font-weight: 600;">OpenGL</p>
+                                    <ul style="font-size: 1.8rem;margin-top: 3rem;">
+                                        <li>Cross-platform (Windows, Linux, macOS*)</li>
+                                        <li style="color: #f95d6f;"><strong>Desktop-focused, full feature set.</strong></li>
+                                    </ul>
+                                    <p>&#x274C;</p>
+                                </div>
+
+                                <!-- OpenGL ES -->
+                                <div class="fragment" style="display: flex; flex-direction: column; align-items: center;">
+                                    <img src="./public/assets/images/OpenGL_ES_logo.png" alt="OpenGL ES Shading Language" style="margin: 0;" width="250px">
+                                    <p style="margin: 0; font-size: 2rem; font-weight: 600;">OpenGL ES</p>
+                                    <ul style="font-size: 1.8rem;margin-top: 3rem;">
+                                        <li>Lightweight, subset of OpenGL</li>
+                                        <li style="color: #f95d6f;"><strong>Mobile / Embedded (Android, iOS, consoles)</strong></li>
+                                    </ul>
+                                    <p>&#x274C;</p>
+                                </div>
+
+                                <!-- WebGL -->
+                                <div class="fragment" style="display: flex; flex-direction: column; align-items: center;">
+                                    <img src="./public/assets/images/WebGL_Logo.png" alt="WebGL Shading Language" style="margin: 0;" width="200px">
+                                    <p style="margin: 0; font-size: 2rem; font-weight: 600;">WebGL</p>
+                                    <ul style="font-size: 1.8rem;margin-top: 3rem;">
+                                        <li>Subset of OpenGL ES, sandboxed for web</li>
+                                        <li style="color: #06d6a0;"><strong>Runs in all major browsers.</strong></li>
+                                    </ul>
+                                    <p>&#x2705;</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%;display: flex;flex-direction: column;">
+                        <h2 style="text-transform: capitalize;">The Bigger Picture</h2>
+
+                        <div style="flex: 1;display: flex;justify-content: space-around;align-items: center;">
+                            <div style="flex: 1; height: 80%;display: flex;justify-content: space-around; flex-direction: column;align-items: center;">
+                                <div style="border: 1px solid #9c2231;border-radius: 8px;width: 250px;background-color: #9c223122;">
+                                    <p>Our Code</p>
+                                </div>
+
+                                <div style="border: 1px solid #555555;border-radius: 8px;width: 250px;background-color: #55555522;">
+                                    <p>Threejs</p>
+                                </div>
+
+                                <div style="border: 1px solid #555555;border-radius: 8px;width: 250px;background-color: #55555522;">
+                                    <p>WebGL</p>
+                                </div>
+
+                                <div style="border: 1px solid #555555;border-radius: 8px;width: 250px;background-color: #55555522;">
+                                    <p>The GPU</p>
+                                </div>
+                            </div>
+
+                            <div class="fragment" style="flex: 2;font-size:2.2rem;text-align: start;">
+                                <ul>
+                                    <li>
+                                        Scene setup:
+                                        <ul>
+                                            <li>Objects, lights and cameras</li>
+                                            <li class="fragment" style="color: #f95d6f;"><strong>Vertex Specification</strong></li>
+                                            <li class="fragment" style="color: #f95d6f;"><strong>Shader Definition</strong></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%;display: flex;flex-direction: column;">
+                        <h2 style="text-transform: capitalize;">The Bigger Picture</h2>
+
+                        <div style="flex: 1;display: flex;justify-content: space-around;align-items: center;">
+                            <div style="flex: 1; height: 80%;display: flex;justify-content: space-around; flex-direction: column;align-items: center;">
+                                <div style="border: 1px solid #555555;border-radius: 8px;width: 250px;background-color: #55555522;">
+                                    <p>Our Code</p>
+                                </div>
+
+                                <div style="border: 1px solid #9c2231;border-radius: 8px;width: 250px;background-color: #9c223122;">
+                                    <p>Threejs</p>
+                                </div>
+
+                                <div style="border: 1px solid #555555;border-radius: 8px;width: 250px;background-color: #55555522;">
+                                    <p>WebGL</p>
+                                </div>
+
+                                <div style="border: 1px solid #555555;border-radius: 8px;width: 250px;background-color: #55555522;">
+                                    <p>The GPU</p>
+                                </div>
+                            </div>
+
+                            <div style="flex: 2;text-align: start;font-size: 2rem;text-align: start;">
+                                <ul>
+                                    <li>
+                                        A high-level abstractions of WebGL:
+
+                                        <ul>
+                                            <li class="fragment" style="margin-top: 2.3rem;">
+                                                Manages <strong style="color: #f95d6f;">transformations matrices:</strong>
+                                                <ul>
+                                                    <li>Position <span style="font-size:1em;">⟹</span> Translation Matrix</li>
+                                                    <li>Rotation <span style="font-size:1em;">⟹</span> Rotation Matrix</li>
+                                                    <li>Scale <span style="font-size:1em;">⟹</span> Scale Matrix</li>
+                                                </ul>
+                                            </li>
+                                            <li class="fragment" style="margin-top: 1rem;">Provides <strong style="color: #f95d6f;">default geometries and materials.</strong></li>
+                                            <li class="fragment">...</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%;display: flex;flex-direction: column;">
+                        <h2 style="text-transform: capitalize;">The Bigger Picture</h2>
+
+                        <div style="flex: 1;display: flex;justify-content: space-around;align-items: center;">
+                            <div style="flex: 1; height: 80%;display: flex;justify-content: space-around; flex-direction: column;align-items: center;">
+                                <div style="border: 1px solid #555555;border-radius: 8px;width: 250px;background-color: #55555522;">
+                                    <p>Our Code</p>
+                                </div>
+                                
+                                <div style="border: 1px solid #555555;border-radius: 8px;width: 250px;background-color: #55555522;">
+                                    <p>Threejs</p>
+                                </div>
+                                
+                                <div style="border: 1px solid #9c2231;border-radius: 8px;width: 250px;background-color: #9c223122;">
+                                    <p>WebGL</p>
+                                </div>
+
+                                <div style="border: 1px solid #555555;border-radius: 8px;width: 250px;background-color: #55555522;">
+                                    <p>The GPU</p>
+                                </div>
+                            </div>
+
+                            <div style="flex: 2;text-align: start;font-size: 2.3rem;">
+                                <ul>
+                                    <li>Interfaces with the GPU.</li>
+                                    <li style="margin-top: 2rem;">
+                                        Manages:
+                                        <ul style="margin-top: 1rem;">
+                                            <li style="color: #f95d6f;" class="fragment"><strong>GPU memory allocations.</strong></li>
+                                            <li style="color: #f95d6f;" class="fragment"><strong>Shader compilation and linking.</strong></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%;display: flex;flex-direction: column;">
+                        <h2 style="text-transform: capitalize;">The Bigger Picture</h2>
+
+                        <div style="flex: 1;display: flex;justify-content: space-around;align-items: center;">
+                            <div style="flex: 1; height: 80%;display: flex;justify-content: space-around; flex-direction: column;align-items: center;">
+                                <div style="border: 1px solid #555555;border-radius: 8px;width: 250px;background-color: #55555522;">
+                                    <p>Our Code</p>
+                                </div>
+                                
+                                <div style="border: 1px solid #555555;border-radius: 8px;width: 250px;background-color: #55555522;">
+                                    <p>Threejs</p>
+                                </div>
+                                
+                                <div style="border: 1px solid #555555;border-radius: 8px;width: 250px;background-color: #55555522;">
+                                    <p>WebGL</p>
+                                </div>
+                                
+                                <div style="border: 1px solid #9c2231;border-radius: 8px;width: 250px;background-color: #9c223122;">
+                                    <p>The GPU</p>
+                                </div>
+                            </div>
+
+                            <div style="flex: 2;font-size: 2.3rem;">
+                                <ul>
+                                    <li>
+                                        Specialized <strong style="color: #f95d6f;">hardware for parallel computation:</strong>
+                                        <ul class="fragment" style="padding-left: 7rem;">
+                                            <li>A lot of cores</li>
+                                        </ul>
+                                    </li>
+                                    <li class="fragment" style="margin-top: 2rem;">
+                                        <strong style="color: #f95d6f;">User programmable</strong> processing:
+                                        <ul style="padding-left: 7rem;">
+                                            <li class="fragment">Shaders</li>
+                                            <li class="fragment">Programmable Rendering Pipeline</li>
+                                        </ul>
+                                    </li>
+                                    <li class="fragment" style="margin-top: 2rem;"><strong style="color: #f95d6f;">Optimized for rendering</strong> graphics and image processing.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section data-auto-animate>
+                    <div>
+                        <h2 style="text-transform: capitalize;">Vertex Shader</h2>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%; display: flex; flex-direction: column;gap: 3rem;">
+                        <h2 style="text-transform: capitalize;">Vertex Shader</h2>
+
+                        <div style="text-align: start;padding-left: 5rem;">
+                            <ul>
+                                <li>Gets executed for every <strong style="color: #6fc5ff;">Vertex.</strong></li>
+                                <li class="fragment" style="color: #06d6a0;"><strong>Input:</strong> <span style="color: white;">A vertex position in</span> <strong>local space.</strong></li>
+                                <li class="fragment" style="color: #06d6a0;"><strong>Output:</strong> <span style="color: white;">A vertex position in</span> <strong>clip space.</strong></li>
+                                <li class="fragment">Handles <strong style="color: #6fc5ff;">vertex-level transformation</strong> and detail.</li>
+                            </ul>
+                        </div>
+
+                        <div style="text-align: start;">
+                            <div style="display: flex;justify-content: center;align-items: center;">
+                                <div class="fragment">
+                                    <img src="./public/assets/images/coordinate-systems.png" height="300px" style="border-radius: 8px;filter: invert(1);" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;display: flex;flex-direction: column;justify-content: space-around;">
+                        <div>
+                            <pre>
+                                <code data-line-numbers="|3-5|7-10|12-19|13|15-16|18" style="background: black;border-radius:8px;font-size: 1.2rem;">// shaders/waves/wave-1.vert
+                                    
+uniform float uTime; // Uniforms are global parameters provided by the host application.
+attribute vec3 position; // Attributes are the vertex attributes specified by the geometry.
+varying vec3 vPosition; // Varyings are values computed in the vertex shader and passed to the pixel shader.
+
+// Standard transformation matrices provided by Three.js
+uniform mat4 modelMatrix;        // Model-to-world transform: object.matrixWorld
+uniform mat4 viewMatrix;         // Camera view transform: camera.matrixWorldInverse
+uniform mat4 projectionMatrix;   // Projection transform: camera.projectionMatrix
+
+void main() {
+    vPosition = position;
+
+    float x = 2 * 3.14 * uTime;
+    vPosition.z = sin(x);
+
+    gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(vPosition, 1.0);
+}
+                                </code>
+                            </pre>
+                        </div>
+                        <div>
+                            <pre>
+                                <code data-line-numbers="|3-5|7-10|8-9" style="background: black;border-radius: 8px;font-size: 1.3rem;">// shaders/waves/default.frag
+
+uniform float uTime;
+attribute vec3 position;
+varying vec3 vPosition;
+
+void main() {
+    vec3 color = vPosition;
+    gl_FragColor = vec4(color, 1.0);
+}
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Wave - 1</h2>
+                        <div style="display: flex;font-size: 2rem;justify-content: space-around;align-items: center;margin-top: 8rem;">
+                            <div style="flex:1">
+                                <img src="./public/assets/images/wave-1.png" style="border-radius: 8px;" width="600px" alt="">
+                            </div>
+                            <ul style="flex: 1;text-align: start;">
+                                <li style="color: #6fc5ff;"><strong>Sinusoidal wave:</strong></li>
+                                <ul style="margin-top: 1rem;">
+                                    <li style="color: #06d6a0;"><strong>Amplitude:</strong> <span style="color: white;">1.0</span></li>
+                                    <li style="color: #06d6a0;"><strong>Frequency:</strong></li>
+                                    <ul>
+                                        <li>Along the <strong style="color: #06d6a0;">x axes:</strong> <span>1.0</span></li>
+                                        <li>Along the <strong style="color: #06d6a0;">y axes:</strong> <span>1.0</span></li>
+                                    </ul>
+                                </ul>
+                                <li class="fragment" style="margin-top: 2rem;">Make the wave <strong style="color: #6fc5ff;">progress through time.</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Wave - 2</h2>
+                        <div style="display: flex;font-size: 2rem;justify-content: space-around;align-items: center;margin-top: 8rem;">
+                            <div style="flex:1">
+                                <img src="./public/assets/images/wave-2.png" style="border-radius: 8px;" width="600px" alt="">
+                            </div>
+                            <ul style="flex: 1;text-align: start;">
+                                <li style="color: #6fc5ff;"><strong>Sinusoidal wave:</strong></li>
+                                <ul style="margin-top: 1rem;">
+                                    <li style="color: #06d6a0;"><strong>Origin:</strong> <span style="color: white;">(0.0, 0.0)</span></li>
+                                    <li style="color: #06d6a0;"><strong>Amplitude:</strong> <span style="color: white;">1.0</span></li>
+                                    <li style="color: #06d6a0;"><strong>Frequency:</strong></li>
+                                    <ul>
+                                        <li>Through <strong style="color: #06d6a0;">space:</strong> <span>3.0</span></li>
+                                        <li>Through <strong style="color: #06d6a0;">time:</strong> <span>3.0</span></li>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Wave - 3</h2>
+                        <div style="display: flex;font-size: 2rem;justify-content: space-around;align-items: center;margin-top: 6rem;">
+                            <div style="flex:1">
+                                <img src="./public/assets/images/wave-3.png" style="border-radius: 8px;" width="600px" alt="">
+                            </div>
+                            <ul style="flex: 1;text-align: start;">
+                                <li style="color: #6fc5ff;"><strong>2 Sinusoidal waves:</strong></li>
+                                <ul>
+                                    <li style="margin-top: 1rem;">The first wave:</li>
+                                    <ul>
+                                        <li style="color: #06d6a0;"><strong>Direction:</strong> <span style="color: white;">(0.8, 1.0)</span></li>
+                                        <li style="color: #06d6a0;"><strong>Amplitude:</strong> <span style="color: white;">0.3</span></li>
+                                        <li style="color: #06d6a0;"><strong>Frequency:</strong></li>
+                                        <ul>
+                                            <li>Through <strong style="color: #06d6a0;">time:</strong> <span>-1.0</span></li>
+                                        </ul>
+                                    </ul>
+                                    <li style="margin-top: 1rem;">The second wave:</li>
+                                    <ul>
+                                        <li style="color: #06d6a0;"><strong>Direction:</strong> <span style="color: white;">(2.0, 0.8)</span></li>
+                                        <li style="color: #06d6a0;"><strong>Amplitude:</strong> <span style="color: white;">0.2</span></li>
+                                        <li style="color: #06d6a0;"><strong>Frequency:</strong></li>
+                                        <ul>
+                                            <li>Through <strong style="color: #06d6a0;">time:</strong> <span>-2.0</span></li>
+                                        </ul>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Water Waves</h2>
+                        <div style="display: flex;font-size: 1.6rem;justify-content: space-around;align-items: center;margin-top: 6rem;">
+                            <div>
+                                <img src="./public/assets/images/water-mesh.png" style="border-radius: 8px;" width="600px" alt="">
+                            </div>
+                            <ul style="flex: 1;text-align: start;">
+                                <li style="color: #6fc5ff;"><strong>\( N \) Sinusoidal waves:</strong></li>
+                                <ul>
+                                    <li style="margin-top: 1rem;">The initial wave:</li>
+                                    <ul>
+                                        <li style="color: #06d6a0;"><strong>Direction:</strong> <span style="color: white;">(0.8, 1.0)</span></li>
+                                        <li style="color: #06d6a0;"><strong>Amplitude:</strong> <span style="color: white;">0.3</span></li>
+                                        <li style="color: #06d6a0;"><strong>Frequency:</strong></li>
+                                        <ul>
+                                            <li>Through <strong style="color: #06d6a0;">time:</strong> <span>\( 2 \cdot \pi \cdot \text{uSpeed} \)</span></li>
+                                        </ul>
+                                    </ul>
+                                    <li style="margin-top: 1rem;">For each wave:</li>
+                                    <ul>
+                                        <li style="color: #06d6a0;"><strong>Direction:</strong> <span style="color: white;">randomly generated</span></li>
+                                        <li style="color: #06d6a0;"><strong>Amplitude:</strong> <span style="color: white;">\( \text{PrevAmplitude} \cdot \text{uAmplitudeMultiplier} \)</span></li>
+                                        <li style="color: #06d6a0;"><strong>Frequency:</strong></li>
+                                        <ul>
+                                            <li>Through <strong style="color: #06d6a0;">time:</strong> <strong>\( \text{PrevFrequency} \cdot \text{uFrequencyMultiplier} \)</strong></li>
+                                        </ul>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section data-auto-animate>
+                    <div>
+                        <h2 style="text-transform: capitalize;">Coordinate Systems</h2>
+                        <div style="text-align: start;">
+                            <div style="display: flex;justify-content: center;align-items: center;">
+                                <img src="./public/assets/images/coordinate-systems.png" height="500px" style="border-radius: 8px;filter: invert(1);" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%; display: flex;flex-direction: column;gap: 5rem;">
+                        <h2 style="text-transform: capitalize;">Coordinate Systems</h2>
+
+                        <div style="padding-left: 5rem;margin-top: 2rem;">
+                            <h4 style="text-align: start;text-transform: capitalize;color: #6fc5ff;">Local space:</h4>
+                            <div style="display: flex;align-items: center;font-size: 2rem;">
+                                <div>
+                                    <canvas style="border-radius: 8px;" class="cube-canvas" width="300px" height="300px"></canvas>
+                                </div>
+                                <div style="text-align: start;">
+                                    <ul>
+                                        <li>Each object has a <strong style="color: #06d6a0;">local bases.</strong></li>
+                                        <li>We <strong style="color: #06d6a0;">define the vertex positions relative to it.</strong></li>
+                                    </ul>
+                                    <ul style="margin-top: 2rem;">
+                                        <li class="fragment">
+                                            Often used in: 
+                                            <ul style="padding-left: 5rem;">
+                                                <li class="fragment" style="color: #06d6a0;"><strong>Asset creation tools:</strong> <span style="color: white;">(Blender, Maya, etc...)</span></li>
+                                                <li class="fragment" style="color: #06d6a0;"><strong>Model serialisation:</strong> <span style="color: white;">(.obj files, etc...)</span></li>
+                                            </ul>   
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%; display: flex;flex-direction: column;gap: 5rem;">
+                        <h2 style="text-transform: capitalize;">Coordinate Systems</h2>
+
+                        <div style="padding-left: 5rem;margin-top: 2rem;">
+                            <h4 style="text-align: start;text-transform: capitalize;color: #6fc5ff;">World space:</h4>
+                            <div style="display: flex;font-size: 2rem;align-items: center;">
+                                <div>
+                                    <canvas style="border-radius: 8px;" class="world-canvas" width="300px" height="300px"></canvas>
+                                </div>
+                                <div style="text-align: start;">
+                                    <ul>
+                                        <li>The <strong style="color: #06d6a0;">scene</strong> defines a <strong style="color: #06d6a0;">global bases.</strong></li>
+                                        <li>
+                                            Each object has a <strong style="color: #06d6a0;">world matrix</strong>, it defines how the object is: 
+                                            <ul>
+                                                <li style="color: #06d6a0;"><strong>placed, scaled, and rotated</strong> <span style="color: white;"> in the scene.</span></li>
+                                            </ul>
+                                        </li>
+                                        <li class="fragment" style="margin-top: 2rem;">
+                                            Often used in:
+                                            <ul>
+                                                <li>
+                                                    Computing <strong style="color: #06d6a0;">object-to-object interactions:</strong>
+                                                    <ul>
+                                                        <li>Lighting</li>
+                                                        <li>Collisions</li>
+                                                    </ul>
+                                                </li>
+                                            </ul> 
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%; display: flex;flex-direction: column;gap: 5rem;">
+                        <h2 style="text-transform: capitalize;">Coordinate Systems</h2>
+
+                        <div style="padding-left: 5rem;margin-top: 3rem;">
+                            <h4 style="text-align: start;text-transform: capitalize;color: #6fc5ff;">View space:</h4>
+                            <div style="display: flex;font-size: 2rem;align-items: center;">
+                                <div>
+                                    <canvas style="border-radius: 8px;" class="camera-canvas" width="300px" height="300px"></canvas>
+                                </div>
+                                <div>
+                                    <ul>
+                                        <li>The <strong style="color: #06d6a0;">camera</strong> defines the world's <strong style="color: #06d6a0;">origin and bases:</strong></li>
+                                        <ul style="margin-top: 1rem;">
+                                            <li style="color: #06d6a0;font-weight: 600;">X: <span style="color: white;font-weight: 500;">to the</span> right.</li>
+                                            <li style="color: #06d6a0;font-weight: 600;">Y: Upwards.</li>
+                                            <li style="color: #06d6a0;font-weight: 600;">Z: Backwards.</li>
+                                        </ul>
+                                        <li style="margin-top: 2rem;">This simplifies rendering and lighting calculations.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%; display: flex;flex-direction: column;">
+                        <h2 style="text-transform: capitalize;">Coordinate Systems</h2>
+
+                        <div style="padding-left: 5rem;">
+                            <h4 style="text-align: start;text-transform: capitalize;color: #6fc5ff;">Clip space:</h4>
+                            <div style="display: flex;font-size: 2rem;align-items: center;">
+                                <div>
+                                    <iframe id="camera-params-iframe" style="border-radius: 8px; scrollbar-width: none; -ms-overflow-style: none;border: none;" scrolling="no"></iframe>
+                                </div>
+                                <div>
+                                    <ul>
+                                        <div>
+                                            <li><strong style="color: #06d6a0;">A region of space</strong> defined by camera parameters: 
+                                            <ul style="padding-left: 5rem;">
+                                                <li style="color: #06d6a0;font-weight: 600;">field of view</li>
+                                                <li style="color: #06d6a0;font-weight: 600;">aspect ratio</li>
+                                                <li style="color: #06d6a0;font-weight: 600;">near and far planes</li>
+                                            </ul>
+                                        </div>
+                                        <li class="fragment" style="margin-top: 2rem;">Determines which <strong style="color: #06d6a0;">vertices</strong> are <strong style="color: #06d6a0;">within the camera’s view.</strong></li>
+                                        <li class="fragment" style="margin-top: 2rem;">Vertices outside the <strong style="color: #06d6a0;">canonical cube</strong> ([-1,1] in x, y, z) are <strong style="color: #06d6a0;">clipped.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section data-auto-animate>
+                    <div>
+                        <h2 style="text-transform: capitalize;">Pixel Shader</h2>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%; display: flex; flex-direction: column;gap: 5rem;">
+                        <h2 style="text-transform: capitalize;">Pixel Shader</h2>
+
+                        <div style="text-align: start;padding-left: 5rem;font-size: 2.3rem;">
+                            <ul>
+                                <li>Gets executed for every <strong style="color: #6fc5ff;">Pixel detected by the rasterizer.</strong></li>
+                                <li>Computes the <strong style="color: #06d6a0;">color</strong> of the pixel <strong style="color: #06d6a0;">based on the lighting</strong> of the scene.</li>
+                            </ul>
+                        </div>
+
+                        <div class="fragment">
+                            <div style="display: flex;justify-content: center;align-items: center;">
+                                    <img src="./public/assets/images/lighting.png" height="300px" style="border-radius: 8px;filter: invert(1);" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;display: flex;flex-direction: column;gap: 5rem;">
+                        <h2 style="text-transform: none;">Reflectance</h2>
+
+                        <div style="font-size: 2rem;text-align: start;">
+                            <ul>
+                                <li>A <strong style="color: #06d6a0;">physical property</strong> of a material.</li>
+                                <li>It defines <strong style="color: #6fc5ff;">how much of the light</strong> hitting a surface <strong style="color: #6fc5ff;">is relfected.</strong></li>
+                                <div class="fragment" style="margin-top: 2rem;">
+                                    <li>It is defined as:<span style="font-size: 2.2rem;padding-left: 2rem;">\( R = \frac{I_r}{I_i} \implies I_r = R \cdot I_i \)</span></li>
+                                    <li>Where:</li>
+                                    <ul>
+                                        <li><span style="font-size: 2.2rem;">\( I_i: \)</span> the amount of light <strong style="color: #f95d6f;">hiting the surface.</strong></li>
+                                        <li><span style="font-size: 2.2rem;">\( I_r: \)</span> the amount of light <strong style="color: #f95d6f;">reflected of the surface.</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="fragment">
+                                    <li style="margin-top: 3rem;">There are various <strong style="color: #06d6a0;">types of reflectance.</strong></li>
+                                    <li>Each type is defined by <strong style="color: #06d6a0;">the way we calculate the reflected light.</strong></li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Specular Reflectance</h2>
+
+                        <div style="font-size: 2rem;text-align: start;margin-top: 5rem;">
+                            <ul>
+                                <li>Defines how much the material is capable of <strong style="color: #06d6a0;">perfect reflection.</strong></li>
+                                <div class="fragment">
+                                    <li style="margin-top: 2rem;">For <strong style="color: #6fc5ff;">a single light ray \( I_i \)</strong> coming from a specific <strong style="color: #6fc5ff;">direction \( d_i \).</strong></li>
+                                    <li>How much of it is reflected in <strong style="color: #6fc5ff;">the direction of perfect reflection \( d_r \).</strong></li>
+                                </div>
+                            </ul>
+                            <div style="margin-top: 3rem;display: flex;justify-content: space-between;padding-right: 5rem;align-items: center;">
+                                <ul class="fragment">
+                                    <li>This ratio <span style="color: #f95d6f;">(\( S = \frac{I_r}{I_i}\))</span> is:</li>
+                                    <ul>
+                                        <li style="margin-top: 1rem;color: #06d6a0;"><strong>High for shiny surfaces:</strong></li>
+                                        <ul>
+                                            <li>A mirror.</li>
+                                            <li>Shiny metal.</li>
+                                        </ul>
+                                        <li style="margin-top: 2rem;color: #06d6a0;"><strong>Low for bumpy surfaces:</strong></li>
+                                        <ul>
+                                            <li>Wood.</li>
+                                        </ul>
+                                    </ul>
+                                </ul>
+                                <div>
+                                    <img src="./public/assets/images/specular-reflection.png" width="300" style="border-radius: 8px;filter: invert(1);" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Specular Reflectance</h2>
+
+                        <div style="font-size: 2rem;text-align: start;margin-top: 5rem;">
+                            <ul>
+                                <li>Defines how much the material is capable of <strong style="color: #06d6a0;">perfect reflection.</strong></li>
+                                <li style="margin-top: 2rem;">For <strong style="color: #6fc5ff;">a single light ray \( I_i \)</strong> coming from a specific <strong style="color: #6fc5ff;">direction \( d_i \).</strong></li>
+                                <li>How much of it is reflected in <strong style="color: #6fc5ff;">the direction of perfect reflection \( d_r \).</strong></li>
+                            </ul>
+                            <div style="margin-top: 3rem;display: flex;justify-content: space-between;padding-right: 5rem;align-items: center;">
+                                <ul>
+                                    <li>This ratio <span style="color: #f95d6f;">(\( S = \frac{I_r}{I_i}\))</span> is:</li>
+                                    <ul>
+                                        <li style="margin-top: 1rem;color: #06d6a0;"><strong>High for shiny surfaces:</strong></li>
+                                        <ul>
+                                            <li>A mirror.</li>
+                                            <li>Shiny metal.</li>
+                                        </ul>
+                                        <li style="margin-top: 2rem;color: #06d6a0;"><strong>Low for bumpy surfaces:</strong></li>
+                                        <ul>
+                                            <li>Wood.</li>
+                                        </ul>
+                                    </ul>
+                                </ul>
+                                <div>
+                                    <img src="./public/assets/images/specular-reflection.png" width="300" style="border-radius: 8px;filter: invert(1);" alt="">
+                                </div>
+                                <div>
+                                    <canvas class="specular-canvas" style="border-radius: 8px;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%; display: flex; flex-direction: column;">
+                        <h2 style="text-transform: capitalize;">Specular Reflectance</h2>
+
+                        <div style="display: flex;justify-content: space-between;padding-left: 5rem;padding-right: 5rem;margin-top: 3rem;align-items: center;">
+                            <div style="text-transform: none;text-align: start;">
+                                <h4 style="text-transform: none;">Implementation</h4>
+                                <ul style="font-size: 2rem;">
+                                    <li>For each material:</li>
+                                    <ul>
+                                        <li>\( k_s: \) <strong style="color: #06d6a0;">specular reflectance.</strong></li>
+                                    </ul>
+                                    <li style="margin-top: 1rem;">For each light source:</li>
+                                    <ul>
+                                        <li>\( i_s: \) <strong style="color: #06d6a0;">intensity</strong> of the <strong style="color: #06d6a0;">emitted specular light.</strong></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div>
+                                <canvas class="specular-canvas" style="border-radius: 8px;"></canvas>
+                            </div>
+                        </div>
+
+                        <div style="display: flex;justify-content: space-around;align-items: center;">
+                            <p class="fragment" style="font-size: 2rem;">
+                                \begin{align}
+                                    \text{specular} &= k_s \cdot i_s \cdot (\vec{R} \cdot \vec{V}) \\
+                                    &= k_s \cdot i_s \cdot \cos(\theta)
+                                \end{align}
+                            </p>
+                            <img src="./public/assets/images/lighting.png" height="250px" style="border-radius: 8px;filter: invert(1);" alt="">
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%; display: flex; flex-direction: column;">
+                        <h2 style="text-transform: capitalize;">Specular Reflectance</h2>
+
+                        <div style="display: flex;justify-content: space-between;padding-left: 5rem;padding-right: 5rem;margin-top: 3rem;align-items: center;">
+                            <div style="text-transform: none;text-align: start;">
+                                <h4 style="text-transform: none;">Implementation</h4>
+                                <ul style="font-size: 2rem;">
+                                    <li>For each material:</li>
+                                    <ul>
+                                        <li>\( k_s: \) <strong style="color: #06d6a0;">specular reflectance.</strong></li>
+                                        <li>\( \alpha: \) a <strong style="color: #06d6a0;">shininess constant</strong>, larger for surfaces that are more mirror-like.</li>
+                                    </ul>
+                                    <li style="margin-top: 1rem;">For each light source:</li>
+                                    <ul>
+                                        <li>\( i_s: \) <strong style="color: #06d6a0;">intensity</strong> of the <strong style="color: #06d6a0;">emitted specular light.</strong></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div>
+                                <canvas class="specular-canvas" style="border-radius: 8px;"></canvas>
+                            </div>
+                        </div>
+
+                        <div style="display: flex;justify-content: space-around;align-items: center;">
+                            <p class="fragment" style="font-size: 2rem;">
+                                \begin{align}
+                                    \text{specular} &= k_s \cdot i_s \cdot (\vec{R} \cdot \vec{V})^\alpha \\
+                                    &= k_s \cdot i_s \cdot (\cos(\theta))^\alpha
+                                \end{align}
+                            </p>
+                            <img src="./public/assets/images/lighting.png" height="250px" style="border-radius: 8px;filter: invert(1);" alt="">
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Diffuse Reflectance</h2>
+
+                        <div style="font-size: 2rem;text-align: start;margin-top: 5rem;">
+                            <ul>
+                                <li>Defines how much the material is capable of <strong style="color: #06d6a0;">scattering light.</strong></li>
+                                <div class="fragment">
+                                    <li style="margin-top: 2rem;">For <strong style="color: #6fc5ff;">a single light ray \( I_i \)</strong> coming from a specific <strong style="color: #6fc5ff;">direction \( d_i \).</strong></li>
+                                    <li>How much of it is <strong style="color: #6fc5ff;">scattered in many directions.</strong></li>
+                                </div>
+                            </ul>
+                            <div style="margin-top: 3rem;display: flex;justify-content: space-between;padding-right: 5rem;align-items: center;">
+                                <ul class="fragment">
+                                    <li>This ratio <span style="color: #f95d6f;">(\( D = \frac{I_r}{I_i}\))</span> is:</li>
+                                    <ul>
+                                        <li style="margin-top: 2rem;color: #06d6a0;"><strong>High for bumpy surfaces:</strong></li>
+                                        <ul>
+                                            <li>Wood.</li>
+                                        </ul>
+                                        <li style="margin-top: 2rem;color: #06d6a0;"><strong>Low for shiny surfaces:</strong></li>
+                                        <ul>
+                                            <li>A mirror.</li>
+                                            <li>Shiny metal.</li>
+                                        </ul>
+                                    </ul>
+                                </ul>
+                                <div>
+                                    <img src="./public/assets/images/diffuse-reflection.png" width="300" style="border-radius: 8px;filter: invert(1);" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Diffuse Reflectance</h2>
+
+                        <div style="font-size: 2rem;text-align: start;margin-top: 5rem;">
+                            <ul>
+                                <li>Defines how much the material is capable of <strong style="color: #06d6a0;">scattering light.</strong></li>
+                                <li style="margin-top: 2rem;">For <strong style="color: #6fc5ff;">a single light ray \( I_i \)</strong> coming from a specific <strong style="color: #6fc5ff;">direction \( d_i \).</strong></li>
+                                <li>How much of it is <strong style="color: #6fc5ff;">scattered in many directions.</strong></li>
+                            </ul>
+                            <div style="margin-top: 3rem;display: flex;justify-content: space-between;padding-right: 5rem;align-items: center;">
+                                <ul>
+                                    <li>This ratio <span style="color: #f95d6f;">(\( D = \frac{I_r}{I_i}\))</span> is:</li>
+                                    <ul>
+                                        <li style="margin-top: 2rem;color: #06d6a0;"><strong>High for bumpy surfaces:</strong></li>
+                                        <ul>
+                                            <li>Wood.</li>
+                                        </ul>
+                                        <li style="margin-top: 2rem;color: #06d6a0;"><strong>Low for shiny surfaces:</strong></li>
+                                        <ul>
+                                            <li>A mirror.</li>
+                                            <li>Shiny metal.</li>
+                                        </ul>
+                                    </ul>
+                                </ul>
+                                <div>
+                                    <img src="./public/assets/images/diffuse-reflection.png" width="300" style="border-radius: 8px;filter: invert(1);" alt="">
+                                </div>
+                                <div>
+                                    <canvas class="lighting-canvas" style="border-radius: 8px;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%; display: flex; flex-direction: column;">
+                        <h2 style="text-transform: capitalize;">Diffuse Reflectance</h2>
+
+                        <div style="display: flex;justify-content: space-between;padding-left: 5rem;padding-right: 5rem;margin-top: 3rem;align-items: center;">
+                            <div style="text-align: start;">
+                                <h4 style="text-transform: none;">Implementation</h4>
+                                <ul style="font-size: 2rem;">
+                                    <li>For each material:</li>
+                                    <ul>
+                                        <li>\( k_d: \) <strong style="color: #06d6a0;">diffuse reflection constant.</strong></li>
+                                    </ul>
+                                    <li style="margin-top: 1rem;">For each light source:</li>
+                                    <ul>
+                                        <li>\( i_d: \) <strong style="color: #06d6a0;">intensity</strong> of the <strong style="color: #06d6a0;">emitted diffuse light.</strong></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div>
+                                <canvas class="lighting-canvas" style="border-radius: 8px;"></canvas>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; flex-direction: row-reverse; justify-content: space-around; align-items: center;">
+                            <img class="fragment" src="./public/assets/images/lambert-cosine-law.png" height="180px" style="border-radius: 8px;filter: invert(1);margin-top: 4rem;" alt="">
+                            <p class="fragment" style="font-size: 2rem;">
+                                \begin{align}
+                                    \text{diffuse} &= k_d \cdot i_d \cdot (\vec{L} \cdot \vec{N}) \\
+                                    &= k_d \cdot i_d \cdot \cos(\theta)
+                                \end{align}
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Ambient Reflectance</h2>
+
+                        <div style="font-size: 2rem;text-align: start;margin-top: 5rem;">
+                            <ul>
+                                <li>In a scene with many objects:</li>
+                                <ul>
+                                    <li>The <strong style="color: #06d6a0;">light scattered by an object</strong> can <strong style="color: #06d6a0;">illuminate an other object.</strong></li>
+                                </ul>
+                                <div class="fragment">
+                                    <li style="margin-top: 2rem;">For light is <strong style="color: #6fc5ff;">hitting the surface from many directions.</strong></li>
+                                    <li>How much of it is <strong style="color: #6fc5ff;">reflected.</strong></li>
+                                </div>
+                            </ul>
+                            <div style="margin-top: 3rem;display: flex;justify-content: space-around;align-items: center;">
+                                <div>
+                                    <img src="./public/assets/images/ambient-reflectence.png" height="300" style="border-radius: 8px;filter: invert(1);" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Ambient Reflectance</h2>
+
+                        <div style="font-size: 2rem;text-align: start;margin-top: 5rem;">
+                            <ul>
+                                <li>In a scene with many objects:</li>
+                                <ul>
+                                    <li>The <strong style="color: #06d6a0;">light scattered by an object</strong> can <strong style="color: #06d6a0;">illuminate an other object.</strong></li>
+                                </ul>
+                                <li style="margin-top: 2rem;">For light is <strong style="color: #6fc5ff;">hitting the surface from many directions.</strong></li>
+                                <li>How much of it is <strong style="color: #6fc5ff;">reflected.</strong></li>
+                            </ul>
+                            <div style="margin-top: 3rem;display: flex;justify-content: space-around;align-items: center;">
+                                <div>
+                                    <img src="./public/assets/images/ambient-reflectence.png" height="300" style="border-radius: 8px;filter: invert(1);" alt="">
+                                </div>
+                                <div>
+                                    <canvas class="ambient-canvas" style="border-radius: 8px;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%; display: flex; flex-direction: column;">
+                        <h2 style="text-transform: capitalize;">Ambient Lighting</h2>
+
+                        <div style="display: flex;justify-content: space-between;padding-left: 5rem;padding-right: 5rem;margin-top: 3rem;align-items: center;">
+                            <div style="text-align: start;">
+                                <h4 style="text-transform: none;">Implementation</h4>
+                                <ul style="font-size: 2rem;">
+                                    <li>\( k_a: \) an <strong style="color: #06d6a0;">ambient reflectance.</strong></li>
+                                    <li>\( i_a: \) the <strong style="color: #06d6a0;">intensity of ambient light</strong> in the scene.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <canvas class="ambient-canvas" style="border-radius: 8px;"></canvas>
+                            </div>
+                        </div>
+
+                        <div style="display: flex;justify-content: space-around;align-items: center;">
+                            <p class="fragment" style="font-size: 2rem;">
+                                \begin{align}
+                                    \text{ambient} &= k_a \cdot i_a
+                                \end{align}
+                            </p>
+                            <img src="./public/assets/images/ambient-reflectence.png" height="200px" style="border-radius: 8px;filter: invert(1);margin-top: 4rem;" alt="">
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%; display: flex; align-items: center;">
+                        <div style="text-align: start;width: 100%;">
+                            <div style="display: flex;justify-content: center;margin-top: 2rem;">
+                                <div style="display: flex;justify-content: space-around;align-items: center;width: 85%;">
+                                    <div class="fragment" style="display: flex;align-items: center;flex-direction: column;">
+                                        <div>
+                                            <canvas class="ambient-canvas" style="border-radius: 8px;max-width: 230px;max-height: 230px;"></canvas>
+                                        </div>
+                                        <p style="font-size: 1.8rem;color: #06d6a0;"><strong>Ambient Lighting</strong></p>
+                                    </div>
+                                    <div class="fragment">+</div>
+                                    <div class="fragment" style="display: flex;align-items: center;flex-direction: column;">
+                                        <div>
+                                            <canvas class="lighting-canvas" style="border-radius: 8px;max-width: 230px;max-height: 230px;"></canvas>
+                                        </div>
+                                        <p style="font-size: 1.8rem; color: #6fc5ff;"><strong>Diffuse Lighting</strong></p>
+                                    </div>
+                                    <div class="fragment">+</div>
+                                    <div class="fragment" style="display: flex;align-items: center;flex-direction: column;">
+                                        <div>
+                                            <canvas class="specular-canvas" style="border-radius: 8px;max-width: 230px;max-height: 230px;"></canvas>
+                                        </div>
+                                        <p style="font-size: 1.8rem;color: #f95d6f;"><strong>Specular Lighting</strong></p>
+                                    </div>
+                                    <div class="fragment">=</div>
+                                    <div class="fragment" style="display: flex;align-items: center;flex-direction: column;">
+                                        <div>
+                                            <canvas class="result-canvas" style="border-radius: 8px;max-width: 230px;max-height: 230px;"></canvas>
+                                        </div>
+                                        <p style="font-size: 1.8rem;"><strong>Result</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%; display: flex; flex-direction: column">
+                        <h2 style="text-transform: capitalize;">Phong Lighting</h2>
+
+                        <div style="text-align: start;">
+                            
+                            <div style="display: flex;justify-content: space-between; align-items: center;width: 95%;">
+                                <div style="font-size: 2rem;padding-left: 3rem;">
+                                    <ul>
+                                        <li>An <strong style="color: #f95d6f;">emprical lighting model</strong> developed in 1973.</li>
+                                    </ul>
+                                </div>
+                                <div style="display: flex;flex-direction: column;align-items: center;">
+                                    <img style="margin: 0;padding: 0;border-radius: 8px;" src="./public/assets/images/bui-tuong-phong.jpg" width="180px" alt="">
+                                    <p style="font-size: 1.1rem;margin-top: 0.5rem;padding: 0;">Bui Tuong Phong (1942-1975)</p>
+                                </div>
+                            </div>
+
+                            <div style="display: flex;justify-content: center;margin-top: 2rem;">
+                                <div style="display: flex;justify-content: space-around;align-items: center;width: 85%;">
+                                    <div style="display: flex;align-items: center;flex-direction: column;">
+                                        <div>
+                                            <canvas class="ambient-canvas" style="border-radius: 8px;max-width: 230px;max-height: 230px;"></canvas>
+                                        </div>
+                                        <p style="font-size: 1.8rem;color: #06d6a0;"><strong>Ambient Lighting</strong></p>
+                                    </div>
+                                    <div>+</div>
+                                    <div style="display: flex;align-items: center;flex-direction: column;">
+                                        <div>
+                                            <canvas class="lighting-canvas" style="border-radius: 8px;max-width: 230px;max-height: 230px;"></canvas>
+                                        </div>
+                                        <p style="font-size: 1.8rem; color: #6fc5ff;"><strong>Diffuse Lighting</strong></p>
+                                    </div>
+                                    <div>+</div>
+                                    <div style="display: flex;align-items: center;flex-direction: column;">
+                                        <div>
+                                            <canvas class="specular-canvas" style="border-radius: 8px;max-width: 230px;max-height: 230px;"></canvas>
+                                        </div>
+                                        <p style="font-size: 1.8rem;color: #f95d6f;"><strong>Specular Lighting</strong></p>
+                                    </div>
+                                    <div>=</div>
+                                    <div style="display: flex;align-items: center;flex-direction: column;">
+                                        <div>
+                                            <canvas class="result-canvas" style="border-radius: 8px;max-width: 230px;max-height: 230px;"></canvas>
+                                        </div>
+                                        <p style="font-size: 1.8rem;"><strong>Result</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section data-auto-animate>
+                    <div>
+                        <h2 style="text-transform: capitalize;">Lighting Models</h2>
+                    </div>
+                </section>
+
+                <section style="height: 100%;" data-auto-animate>
+                    <div style="height: 100%; display: flex; flex-direction: column;gap: 5rem;">
+                        <h2 style="text-transform: capitalize;">Lighting Models</h2>
+
+                        <div style="text-align: start;padding-left: 3rem;">
+                            <ul style="font-size: 2rem">
+                                <li>A <strong style="color: #06d6a0;">mathematical model</strong> is <strong style="color: #6fc5ff;">a set of equations</strong> that describe a system.</li>
+                                <li><strong style="color: #06d6a0;">Lighting Models</strong> approximate <strong style="color: #6fc5ff;">how light interacts with surfaces.</strong></li>
+                            </ul>
+                        </div>
+
+                        <div class="fragment" style="text-align: start;">
+                            <h4 style="text-transform: none;margin-left: 5rem;">Examples:</h4>
+                            <div style="display: flex;justify-content: space-around;">
+                                <div style="display: flex;flex-direction: column;align-items: center;">
+                                    <img src="./public/assets/images/lambertian-lighting-model.png" width="300px" style="border-radius: 8px;" alt="">
+                                    <p style="font-size: 1.6rem;margin: 0;"><strong style="color: #f95d6f;">Lambertian Lighting</strong></p>
+                                </div>
+    
+                                <div style="display: flex;flex-direction: column;align-items: center;">
+                                    <img src="./public/assets/images/phong-lighting-model.png" width="300px" style="border-radius: 8px;" alt="">
+                                    <p style="font-size: 1.6rem;margin: 0;"><strong style="color: #f95d6f;">Phong Lighting</strong></p>
+                                </div>
+    
+                                <div style="display: flex;flex-direction: column;align-items: center;">
+                                    <img src="./public/assets/images/cook-torrance-lighting-model.png" width="300px" style="border-radius: 8px;" alt="">
+                                    <p style="font-size: 1.6rem;margin: 0;"><strong style="color: #f95d6f;">Cook Torrance Lighting</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;padding-top: 1rem;">
+                        <h3 style="text-transform: none;">Water surface generation <span style="color: #f95d6f;">in practice</span></h3>
+                        <div style="text-align: start;margin-top: 2rem;font-size: 2rem;">
+                            <ul style="width: 100%;">
+                                <div class="fragment" style="display: flex;justify-content: space-between;padding-right: 10rem;align-items: center;">
+                                    <li class="fragment">Steep Sin \( = e^{\sin(x)-1} \)</li>
+                                    <img src="./public/assets/images/steep-sin.png" height="145" style="border-radius: 8px;" alt="">
+                                </div>
+                                <div class="fragment" style="display: flex;justify-content: space-between;padding-right: 10rem;align-items: center;">
+                                    <div>
+                                        <li class="fragment" style="margin-top: 1rem;">Better lighting:</li>
+                                        <ul class="fragment">
+                                            <li style="color: #06d6a0;font-weight: 600;">Fresnel reflectance</li>
+                                            <li style="color: #06d6a0;font-weight: 600;">Schlick's Approximation</li>
+                                        </ul>
+                                    </div>
+                                    <a href="https://www.youtube.com/watch?v=PH9q0HNBjT4"><img src="./public/assets/images/final-acerola-water.png" height="190" style="border-radius: 8px;" alt=""></a>
+                                </div>
+                                <div class="fragment" style="display: flex;justify-content: space-between;padding-right: 10rem;align-items: center;">
+                                    <div>
+                                        <li class="fragment" style="margin-top: 1rem;">It tiles!</li>
+                                        <ul>
+                                            <li class="fragment">More waves: <strong style="color: #06d6a0;" class="fragment">Fast Fourier transform</strong></li>
+                                        </ul>
+                                    </div>
+                                    <a href="https://www.youtube.com/watch?v=yPfagLeUa7k" style="margin: 0;padding: 0;"><img class="fragment" src="./public/assets/images/final-acerola-fourier.png" height="190" style="border-radius: 8px;" alt=""></a>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div>
+                        <h2 style="text-transform: none;color: #6fc5ff;">Thank you for your time!</h2>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </div>
+    <script type="module" src="src/main.ts"></script>
+</body>
+</html>

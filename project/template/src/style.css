@@ -1,0 +1,171 @@
+:root {
+    --color-bg: #181818;
+    --color-root-bg: #232323;
+    --color-navbar-btn: #333;
+    --color-navbar-btn-active: #0078d4;
+    --color-navbar-btn-hover: #005ea6;
+    --color-text: #f0f0f0;
+    --color-config-bg: #1c1c1c;
+    --color-input-bg: #2a2a2a;
+    --color-input-border: #555;
+    --color-input-focus-border: #0078d4;
+    --color-canvas-bg: #111;
+    --color-border: #444;
+    --shadow-root: 0 4px 20px rgba(0,0,0,0.35);
+    --shadow-config: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+body {
+    margin: 0;
+    line-height: 1.5;
+    font-family: Geist, sans-serif;
+    color: var(--color-text);
+    background: var(--color-bg);
+}
+
+.root {
+    padding: 24px;
+    max-width: 90%;
+    margin: 32px auto;
+    border-radius: 12px;
+    background: var(--color-root-bg);
+    box-shadow: var(--shadow-root);
+}
+
+.navbar {
+    gap: 12px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.navbtn {
+    color: var(--color-text);
+    background: var(--color-navbar-btn);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    min-width: 160px;
+    text-align: center;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.navbtn.active {
+    background: var(--color-navbar-btn-active);
+}
+
+.navbtn:hover {
+    background: var(--color-navbar-btn-hover);
+    transform: translateY(-1px);
+}
+
+.tab {
+    display: none;
+}
+
+.tab.active {
+    gap: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.canvas-container {
+    flex: 3.5;
+    position: relative;
+}
+
+canvas {
+    display: block;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    background: var(--color-canvas-bg);
+}
+
+.config {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    background: var(--color-config-bg);
+    border-radius: 8px;
+    box-shadow: var(--shadow-config);
+    max-height: min(78vh, 600px);
+    overflow-y: auto;
+}
+
+.config fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border: 1px solid var(--color-input-border);
+    border-radius: 5px;
+    font-weight: 600;
+    color: #a8a8a8;
+}
+
+.config fieldset div {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.config label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ddd;
+}
+
+.config input[type="number"],
+.config input[type="file"],
+.config select,
+.config input[type="checkbox"] {
+    padding: 8px;
+    flex: 1;
+    border: 1px solid var(--color-input-border);
+    border-radius: 6px;
+    background: var(--color-input-bg);
+    color: var(--color-text);
+}
+
+.config input[type="number"]:focus,
+.config input[type="file"]:focus {
+    border-color: var(--color-input-focus-border);
+    outline: none;
+}
+
+.btn {
+    color: var(--color-text);
+    background: var(--color-navbar-btn);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    width: 100%;
+    text-align: center;
+    transition: background 0.2s, transform 0.1s;
+    margin-bottom: 0.5rem;
+}
+
+.btn.active {
+    background: var(--color-navbar-btn-active);
+}
+
+.btn:hover {
+    background: var(--color-navbar-btn-hover);
+    transform: translateY(-1px);
+}
+
+.slider-container
+{
+    display: flex;
+}
+
+.slider-container input[type=range]
+{
+    flex: 1;
+}
