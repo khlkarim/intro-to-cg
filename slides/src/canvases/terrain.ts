@@ -20,7 +20,7 @@ export function terrain(canvas: HTMLCanvasElement) {
     const planeRes = 256;
     const geometry = new THREE.PlaneGeometry(3, 3, planeRes, planeRes);
 
-    const heightMap = new THREE.TextureLoader().load('./public/assets/images/heightmap.png');
+    const heightMap = new THREE.TextureLoader().load('/assets/images/heightmap.png');
     heightMap.wrapS = heightMap.wrapT = THREE.ClampToEdgeWrapping;
 
     const material = new THREE.ShaderMaterial({
