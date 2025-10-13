@@ -15,7 +15,9 @@ Each of the above is deployed separately at the following links:
 * [Final Project](https://final-project-intro-to-cg.vercel.app)
 * [Template Project](https://template-project-intro-to-cg.vercel.app)
 
-I apologize if any of these pages doesn't look write on your device, I simply did not have the time to make them responsive.
+I apologize if any of these pages doesn't look write on your device, espacially the **Slides** page (it only works as it expected on firefox). 
+
+I simply did not have the time to fix some minor issues and to make the pages responsive.
 
 ## Running the project
 
