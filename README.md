@@ -9,15 +9,13 @@ project/
 slides/         # The presentation slides for the workshop.
 ```
 
-Each of the above is deployed separately at the following links:
+The final and template versions of the project are deployed separately at the following links:
 
-* [Slides](https://slides-intro-to-cg.vercel.app)
 * [Final Project](https://final-project-intro-to-cg.vercel.app)
 * [Template Project](https://template-project-intro-to-cg.vercel.app)
 
-I apologize if any of these pages doesn't look write on your device, espacially the **Slides** page (it only works as it expected on firefox). 
-
-I simply did not have the time to fix some minor issues and to make the pages responsive.
+I apologize if any of these pages doesn't look right on your device. 
+I simply did not have the time to make the pages responsive.
 
 ## Running the project
 
@@ -26,7 +24,7 @@ To do so, run the following commands:
 
 ```bash
 git clone git@github.com:khlkarim/intro-to-cg.git
-cd intro-to-cg/project/final   # or intro-to-cg/project/template or intro-to-cg/slides
+cd intro-to-cg/project/final   # or intro-to-cg/project/template
 npm install
 npm run dev
 ```

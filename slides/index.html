@@ -208,7 +208,6 @@
                                         <ul style="color: white;">
                                             <li>The Rendering Pipeline.</li>
                                             <li>Shaders and GPU programming.</li>
-                                            <li>Coordinate systems.</li>
                                             <li>Lighting Models.</li>
                                         </ul>
                                     </li>
@@ -334,7 +333,7 @@
                             <ul style="margin: 0;">
                                 <li style="font-size: 1.6rem;">Why would we need the <strong style="color: #06d6a0;">face information?</strong></li>
                                 <ul>
-                                    <li class="fragment" style="font-size: 1.6rem;">For rendering, <strong style="color: #06d6a0;">modern graphics hardware</strong> expects a collection of faces as <strong style="color: #06d6a0;">input.</strong></li>
+                                    <li class="fragment" style="font-size: 1.6rem;">Modern graphics hardware is <strong style="color: #06d6a0;">optimized</strong> for rendering a collection of faces.</li>
                                 </ul>
                             </ul>
                         </div>
@@ -424,19 +423,22 @@
 
                 <section data-auto-animate>
                     <div style=" display: flex; flex-direction: column; justify-content: space-between;">
-                        <h2 style="text-transform: capitalize;"><a target="_blank" href="https://threejs.org/" style="color: #6fc5ff;">Three.js</a></h2>
+                        <h2 style="text-transform: capitalize;"><a target="_blank" href="https://threejs.org/docs/" style="color: #6fc5ff;">Three.js</a></h2>
                     </div>
                 </section>
 
                 <section style="height: 100%;" data-auto-animate>
-                    <div style="height: 100%; display: flex; flex-direction: column;gap: 6rem;">
-                        <h2 style="text-transform: capitalize;"><a target="_blank" href="https://threejs.org/" style="color: #6fc5ff;">Three.js</a></h2>
+                    <div style="height: 100%; display: flex; flex-direction: column;gap: 5rem;">
+                        <h2 style="text-transform: capitalize;"><a target="_blank" href="https://threejs.org/docs/" style="color: #6fc5ff;">Three.js</a></h2>
 
                         <div style="text-align: start;">
                             <ul style="font-size: 2rem;">
                                 <li>A <strong style="color: #6fc5ff;">JavaScript library</strong> for creating 3D graphics.</li>
-                                <li class="fragment">The library is <strong style="color: #06d6a0;">organized into packages.</strong></li>
-                                <li class="fragment">Each package has a set <strong style="color: #06d6a0;">responsibilities.</strong></li>
+                                <li>Renders to a HTML <strong style="color: #06d6a0;">canvas element.</strong></li>
+                                <div class="fragment">
+                                    <li>The library is <strong style="color: #06d6a0;">organized into packages.</strong></li>
+                                    <li>Each package has a set <strong style="color: #06d6a0;">responsibilities.</strong></li>
+                                </div>
                             </ul>
                         </div>
 
@@ -444,22 +446,6 @@
                             <h4 style="text-transform: none;text-align: start;padding-left: 3rem;margin-bottom: 3rem;">The main components:</h4>
     
                             <div style="display: flex;margin-bottom: 5rem;text-align: center; justify-content: space-around;">
-    
-                                <div style="border: 1px solid #6fc5ff;border-radius: 8px;padding: 24px;background-color: #6fc5ff22;">
-                                    <h4>Core</h4>
-                                    <hr>
-                                    <ul style="font-size: 1.7rem;list-style: none;margin: 0;padding: 0;">
-                                        <li>BufferAttribute</li>
-                                        <li>BufferGeometry</li>
-                                    </ul>
-                                </div>
-    
-                                <div style="border: 1px solid #6fc5ff;border-radius: 8px;padding: 24px;background-color: #6fc5ff22;">
-                                    <h4>Renderers</h4>
-                                    <hr>
-                                    <p style="font-size: 1.7rem;">WebGLRenderer</p>
-                                </div>
-    
                                 <div style="border: 1px solid #6fc5ff;border-radius: 8px;padding: 24px;background-color: #6fc5ff22;">
                                     <h4>Scenes</h4>
                                     <hr>
@@ -472,18 +458,34 @@
                                     <p style="font-size: 1.7rem;margin: 0;padding: 0;">PrespectiveCamera</p>
                                     <p style="font-size: 1.7rem;margin: 0;padding: 0;">OrthographicCamera</p>
                                 </div>
+    
+                                <div style="border: 1px solid #6fc5ff;border-radius: 8px;padding: 24px;background-color: #6fc5ff22;">
+                                    <h4>Renderers</h4>
+                                    <hr>
+                                    <p style="font-size: 1.7rem;">WebGLRenderer</p>
+                                </div>
+
+                                <div style="border: 1px solid #6fc5ff;border-radius: 8px;padding: 24px;background-color: #6fc5ff22;">
+                                    <h4>Core</h4>
+                                    <hr>
+                                    <ul style="font-size: 1.7rem;list-style: none;margin: 0;padding: 0;">
+                                        <li>BufferAttribute</li>
+                                        <li>BufferGeometry</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 <section style="height: 100%;" data-auto-animate>
-                    <div style="height: 100%; display: flex; flex-direction: column;gap: 3rem;">
+                    <div style="height: 100%; display: flex; flex-direction: column;gap: 2rem;">
                         <h2 style="text-transform: capitalize;"><a target="_blank" href="https://threejs.org/" style="color: #6fc5ff;">Three.js</a></h2>
 
                         <div style="text-align: start;">
                             <ul style="font-size: 2rem;">
                                 <li>A <strong style="color: #6fc5ff;">JavaScript library</strong> for creating 3D graphics.</li>
+                                <li>Renders to a HTML <strong style="color: #06d6a0;">canvas element.</strong></li>
                                 <li>The library is <strong style="color: #06d6a0;">organized into packages.</strong></li>
                                 <li>Each package has a set <strong style="color: #06d6a0;">responsibilities.</strong></li>
                             </ul>
@@ -542,7 +544,7 @@
                             <div class="fragment" style="width: 500px;border-left: 1px solid grey;">
                                 <h4 style="text-transform: none;color: #6fc5ff;">3D Scanning</h4>
                                 <ul>
-                                    <li style="font-size: 1.6rem;width: 300px;"><strong>3D scanners</strong> where introduced in the <strong>1980s.</strong></li>
+                                    <li style="font-size: 1.6rem;width: 300px;"><strong>3D scanners</strong> evolved in the <strong>1980s.</strong></li>
                                 </ul>
                                 <div>
                                     <img src="/assets/images/stanford-bunny.gif" width="270" style="border-radius: 8px;margin-top: 3.5rem;" alt="">
@@ -826,7 +828,7 @@ function SphereIndices(
 
                         <div style="font-size: 1.8rem;text-align: start;margin-top: 7rem;">
                             <ul style="width: 100%;">
-                                <li>Lets us <strong style="color: #06d6a0;">linearly traverse the surface of a sphere.</strong></li>
+                                <li>Lets us <strong style="color: #06d6a0;">simply traverse the surface of a sphere.</strong></li>
                                 <div style="display: flex;justify-content: space-between;align-items: center;width: 100%;">
                                     <div>
                                         <li class="fragment">The <strong style="color: #06d6a0;">spherical coordinates</strong> are:</li>
@@ -1065,7 +1067,7 @@ function CylinderIndices(
 
                         <div style="font-size: 1.8rem;text-align: start;margin-top: 7rem;">
                             <ul style="width: 100%;">
-                                <li>Lets us <strong style="color: #06d6a0;">linearly traverse the surface of a cylinder.</strong></li>
+                                <li>Lets us <strong style="color: #06d6a0;">simply traverse the surface of a cylinder.</strong></li>
                                 <div style="display: flex;justify-content: space-between;align-items: center;width: 100%;">
                                     <div>
                                         <li class="fragment">The <strong style="color: #06d6a0;">cylindrical coordinates</strong> are:</li>
@@ -1295,8 +1297,8 @@ function TorusIndices(
 
                         <div style="font-size: 2rem;text-align: start;margin-top: 3rem;">
                             <ul>
-                                <li><strong style="color: #f95d6f;">Too complex</strong> for generating a simple torus.</li>
-                                <li>We can accomplish the same result using <strong style="color: #06d6a0;">spherical coordinates.</strong></li>
+                                <li class="fragment"><strong style="color: #f95d6f;">Too complex</strong> for generating a simple torus.</li>
+                                <li class="fragment">We can accomplish the same result using <strong style="color: #06d6a0;">spherical coordinates.</strong></li>
                             </ul>
                         </div>
 
@@ -1319,7 +1321,7 @@ function TorusIndices(
 
                         <div style="margin-top: 2rem;display: flex;justify-content: space-around;">
                             <img src="/assets/images/torodial-coordinate-system.gif" width="500" style="filter: invert(1);" alt="">
-                            <img src="/assets/images/spherical-torus.gif" width="500" style="filter: invert(1);" alt="">
+                            <img src="/assets/images/spherical-torus.gif" width="500" style="filter: invert(1);border-radius: 8px;" alt="">
                         </div>
                     </div>
                 </section>
