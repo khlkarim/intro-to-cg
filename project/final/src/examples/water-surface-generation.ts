@@ -56,7 +56,7 @@ export function waterSurfaceGeneration(canvas: HTMLCanvasElement) {
  * Creates a mesh representing the water surface.
  */ 
 function createWaterSurface() {
-    const geometry = new THREE.PlaneGeometry(100, 100, 2000, 2000);
+    const geometry = new THREE.PlaneGeometry(50, 50, 500, 500);
     const material = createWaterMaterial();
 
     const surface = new THREE.Mesh(geometry, material);
