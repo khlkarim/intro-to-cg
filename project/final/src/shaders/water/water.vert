@@ -144,7 +144,6 @@ vec3 SumOfSines(vec2 pos) {
         sum += Sin(pos, wave);
         amplitudeSum += wave.amplitude;
 
-        // scale amplitude and frequency for next layer
         wave.amplitude *= amplitudeMulti;
         wave.frequency *= frequencyMulti;
     }
@@ -171,7 +170,7 @@ vec3 SumOfSinesNormal(vec2 pos) {
         wave.direction = randomDir(i);
         wave.origin = randomOrigin(i);
 
-        normal += SinNormal(pos, wave);
+        normal += wave.amplitude * SinNormal(pos, wave);
         amplitudeSum += wave.amplitude;
 
         wave.amplitude *= amplitudeMulti;

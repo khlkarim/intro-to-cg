@@ -15,7 +15,7 @@ precision lowp samplerCube;
 // ================================================================
 
 // Direction of incoming light in world space
-uniform vec3 uLightDir;
+uniform vec3 uLightPos;
 
 // Position of the camera in world space (for view direction & reflections)
 uniform vec3 cameraPosition;
@@ -45,7 +45,7 @@ void main() {
     // Normalize inputs
     // ----------------------------
     vec3 normal = normalize(vNormal);                          // Ensure unit normal
-    vec3 lightDir = normalize(uLightDir);                      // Incoming light direction
+    vec3 lightDir = normalize(-uLightPos);                      // Incoming light direction
     vec3 viewDir = normalize(cameraPosition - vPosition);      // Camera-to-fragment direction
 
     // ----------------------------
@@ -57,13 +57,13 @@ void main() {
     // ----------------------------
     // Diffuse lighting (Lambertian reflection)
     // ----------------------------
-    float diff = max(dot(normal, -lightDir), 0.0);
+    float diff = max(dot(normal, lightDir), 0.0);
     vec3 diffuse = 2.0 * diff * waterColor;   // Multiplied by 2.0 for stronger effect
 
     // ----------------------------
-    // Specular highlights (Blinn/Phong-like)
+    // Specular highlights
     // ----------------------------
-    vec3 reflectDir = reflect(-lightDir, normal);   // Reflection of light vector
+    vec3 reflectDir = reflect(lightDir, normal);   // Reflection of light vector
     float shininess = 100.0;                        // Surface glossiness
     float spec = pow(max(dot(viewDir, reflectDir), 0.0), shininess);
 
@@ -74,6 +74,6 @@ void main() {
     // ----------------------------
     vec3 result = ambient + diffuse + specular;
 
-    // Output fragment color (fully opaque)
+    // Output fragment color
     gl_FragColor = vec4(result, spec+0.5);
 }

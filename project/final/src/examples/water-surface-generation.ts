@@ -56,7 +56,7 @@ export function waterSurfaceGeneration(canvas: HTMLCanvasElement) {
  * Creates a mesh representing the water surface.
  */ 
 function createWaterSurface() {
-    const geometry = new THREE.PlaneGeometry(100, 100, 1000, 1000);
+    const geometry = new THREE.PlaneGeometry(100, 100, 2000, 2000);
     const material = createWaterMaterial();
 
     const surface = new THREE.Mesh(geometry, material);
@@ -90,7 +90,7 @@ function getUniforms() {
     } = getWaterSurfaceGenerationConfig();
 
     return {
-        uLightDir: { value: new THREE.Vector3(200, 200, 700) },
+        uLightPos: { value: new THREE.Vector3(200, 200, 700) },
         uTime: { value: performance.now() / 1000 },
         uSpeed: { value: speed },
         uNbIterations: { value: nbIterations },

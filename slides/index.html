@@ -1546,17 +1546,19 @@ function TorusIndices(
 
                         <div style="text-align: start;margin-left: 3rem;">
                             <ul style="font-size: 2rem;margin-top: 2.5rem;">
-                                <li>Gets executed on every <strong style="color: #6fc5ff;">face</strong>.</li>
-                                <li><strong style="color: #06d6a0;">Input:</strong> <strong style="color: #6fc5ff;">2D vectors</strong> defined relative to the <strong style="color: #6fc5ff;">center of the screen</strong>.</li>
-                                <li><strong style="color: #06d6a0;">Ouput:</strong> A <strong  style="color: #6fc5ff;">grid of pixels</strong> where each is colored if its center falls in the face.</li>
+                                <li>Gets executed on every <strong style="color: #6fc5ff;">face. (in parallel)</strong></li>
+                                <div class="fragment">
+                                    <li><strong style="color: #06d6a0;">Input:</strong> <strong style="color: #6fc5ff;">2D vectors</strong> defined relative to the <strong style="color: #6fc5ff;">center of the screen</strong>.</li>
+                                    <li><strong style="color: #06d6a0;">Ouput:</strong> A <strong  style="color: #6fc5ff;">grid of pixels</strong> where each is colored if its center falls in the face.</li>
+                                </div>
                             </ul>
                         </div>
 
-                        <div style="text-align: start; margin-left: 5rem;margin-top: 3rem;">
+                        <div class="fragment" style="text-align: start; margin-left: 5rem;margin-top: 3rem;">
                             <h4 style="text-transform: capitalize;">Example:</h4>
                             <div style="display: flex;justify-content: space-around;">
                                 <img style="border-radius: 8px;filter: invert(1);" src="/assets/images/rasterization-1.png" alt="">
-                                <img class="fragment" style="border-radius: 8px;filter: invert(1);" src="/assets/images/rasterization-2.png" alt="">
+                                <img style="border-radius: 8px;filter: invert(1);" src="/assets/images/rasterization-2.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -2495,10 +2497,10 @@ vec3 SinNormal(vec2 pos, Wave w) {
     float t = w.speed * uTime;
     float s = dot(pos - w.origin, normalize(w.direction));
 
-    vec3 dZdX = vec3(1, 0, w.amplitude * w.frequency * w.direction.x * cos(w.frequency * s + t));
-    vec3 dZdY = vec3(0, 1, w.amplitude * w.frequency * w.direction.y * cos(w.frequency * s + t));
+    vec3 dOMdX = vec3(1, 0, w.amplitude * w.frequency * w.direction.x * cos(w.frequency * s + t));
+    vec3 dOMdY = vec3(0, 1, w.amplitude * w.frequency * w.direction.y * cos(w.frequency * s + t));
     
-    return normalize(cross(dZdX, dZdY));
+    return normalize(cross(dOMdX, dOMdY));
 }
 
 // ================================================================
@@ -2524,7 +2526,7 @@ vec3 SumOfSinesNormal(vec2 pos) {
         wave.direction = randomDir(i);
         wave.origin = randomOrigin(i);
 
-        normal += SinNormal(pos, wave);
+        normal += wave.amplitude * SinNormal(pos, wave);
         amplitudeSum += wave.amplitude;
 
         wave.amplitude *= amplitudeMulti;
