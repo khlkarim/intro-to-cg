@@ -1,3 +1,6 @@
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/Addons.js';
+import { createCamera, createOverlay, createRenderer, createScene, loadSkybox } from '../helpers/three';
 import { getWaterSurfaceGenerationConfig, onWaterSurfaceGenerationConfigChanged } from '../helpers/input';
 
 import wave1VertexShader from '../shaders/waves/wave-1.vert';
@@ -32,10 +35,5 @@ function createWaterMaterial() {}
  * Returns the uniforms for the water shader.
  */
 function getUniforms() {
-    const { 
-        speed, 
-        nbIterations, 
-        amplitudeMultiplier, 
-        frequencyMultiplier 
-    } = getWaterSurfaceGenerationConfig();
+    return getWaterSurfaceGenerationConfig();
 }

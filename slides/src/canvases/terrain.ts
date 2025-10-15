@@ -13,7 +13,7 @@ export function terrain(canvas: HTMLCanvasElement) {
         0.1,
         100
     );
-    camera.position.set(0.2, 0.5, -1.8);
+    camera.position.set(0, 3.5, 0);
 
     const controls = new OrbitControls(camera, renderer.domElement);
 

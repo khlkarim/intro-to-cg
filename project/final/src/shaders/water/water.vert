@@ -8,27 +8,24 @@ uniform float uTime;
 // Controls the phase speed of waves
 uniform float uSpeed;
 
-// Number of fractal iterations to compute in FBM (<= MAX_ITR_FBM)
+// Number of waves to sum up (<= MAX_ITR)
 uniform int uNbIterations;
 
-// Scaling factor for amplitude across FBM octaves
+// Scaling factor for amplitude across wave layers
 uniform float uAmplitudeMultiplier;
 
-// Scaling factor for frequency across FBM octaves
+// Scaling factor for frequency across wave layers
 uniform float uFrequencyMultiplier;
 
-// Standard transformation matrices provided by the rendering engine
+// Standard transformation matrices provided by Three.js
 uniform mat4 viewMatrix;         // Camera view transform
 uniform mat4 modelMatrix;        // Model-to-world transform
-uniform mat3 normalMatrix;       // Model-to-world transform for normals
-uniform mat4 modelViewMatrix;    // Model + View transform
 uniform mat4 projectionMatrix;   // Projection transform (e.g. perspective)
 
 // ================================================================
 // Attributes (per-vertex inputs from geometry)
 // ================================================================
 
-attribute vec3 normal;    // Vertex normal (object space)
 attribute vec3 position;  // Vertex position (object space)
 
 // ================================================================
@@ -42,18 +39,19 @@ varying vec3 vPosition;   // Interpolated position (world space, displaced)
 // Constants
 // ================================================================
 
-const int MAX_ITR_FBM = 32; // Hard upper limit of FBM iterations
+const int MAX_ITR = 32; // Hard upper limit of FBM iterations
 
 // ================================================================
 // Data Structures
 // ================================================================
 
-// Represents a single wave
+// Represents a single sine wave component
 struct Wave {
+    vec2 origin;     // Origin of wave propagation (in 2D plane)
     vec2 direction;  // Propagation direction (normalized)
     float amplitude; // Wave height
     float frequency; // Wave frequency (spatial scale)
-    float phase;     // Wave phase offset (time scaling)
+    float speed;     // Wave speed (time scaling)
 };
 
 // ================================================================
@@ -64,12 +62,10 @@ struct Wave {
  * Compute sinusoidal displacement of a wave direction at a given position.
  */
 float Sin(vec2 pos, Wave w) {
-    float t = uTime * w.phase;
-    float x = dot(pos - vec2(100.0, 100.0), normalize(w.direction));
+    float t = w.speed * uTime;
+    float s = dot(pos - w.origin, normalize(w.direction));
 
-    x += w.amplitude * w.frequency * sin(w.frequency * x + t);
-    
-    return w.amplitude * sin(w.frequency * x + t);
+    return w.amplitude * sin(w.frequency * s + t);
 }
 
 /**
@@ -77,18 +73,13 @@ float Sin(vec2 pos, Wave w) {
  * Approximates slope using partial derivatives of the sinusoidal displacement.
  */
 vec3 SinNormal(vec2 pos, Wave w) {
-    float A = w.amplitude;
-    float k = w.frequency;
-    float t = uTime * w.phase;
+    float t = w.speed * uTime;
+    float s = dot(pos - w.origin, normalize(w.direction));
 
-    float arg = dot(pos, normalize(w.direction)) * k + t;
-    vec2 dir = normalize(w.direction);
-
-    // Partial derivatives of heightfield wrt x and y
-    float dZdX = A * k * cos(arg) * dir.x;
-    float dZdY = A * k * cos(arg) * dir.y;
-
-    return normalize(vec3(-dZdX, -dZdY, 1.0));
+    vec3 dZdX = vec3(1, 0, w.amplitude * w.frequency * w.direction.x * cos(w.frequency * s + t));
+    vec3 dZdY = vec3(0, 1, w.amplitude * w.frequency * w.direction.y * cos(w.frequency * s + t));
+    
+    return normalize(cross(dZdX, dZdY));
 }
 
 /**
@@ -102,6 +93,18 @@ vec2 randomDir(int i) {
 }
 
 /**
+ * Deterministically generate a pseudo-random 2D origin
+ * to spatially distribute waves.
+ */
+vec2 randomOrigin(int i) {
+    // A simple hash-like deterministic offset pattern
+    return vec2(
+        fract(sin(float(i) * 12.9898) * 43758.5453),
+        fract(sin(float(i) * 78.233) * 12345.6789)
+    ) * 200.0 - 100.0; // Spread origins roughly in [-100, 100] range
+}
+
+/**
  * Initialize a default wave with fixed amplitude and frequency,
  * and dynamic phase controlled by uSpeed.
  */
@@ -110,16 +113,16 @@ Wave initWave() {
     wave.direction = randomDir(-1);
     wave.amplitude = 1.0;
     wave.frequency = 0.3;
-    wave.phase = uSpeed;
+    wave.speed = uSpeed;
     return wave;
 }
 
 // ================================================================
-// Fractal Brownian Motion (FBM) based displacement
+// Sum of Sines Displacement
 // ================================================================
 
 /**
- * Compute the displaced position of a vertex using FBM of sinusoidal waves.
+ * Compute the displaced position of a vertex using a sum of sine waves.
  * - Repeatedly adds waves with scaled amplitude and frequency.
  * - Returns displaced (x, y, z) position in object space.
  */
@@ -132,15 +135,16 @@ vec3 SumOfSines(vec2 pos) {
     float sum = 0.0;
     float amplitudeSum = 0.0;
 
-    for (int i = 0; i < MAX_ITR_FBM; i++) {
-        if(i >= uNbIterations) break;
+    for (int i = 0; i < MAX_ITR; i++) {
+        if (i >= uNbIterations) break;
 
         wave.direction = randomDir(i);
+        wave.origin = randomOrigin(i);
 
         sum += Sin(pos, wave);
         amplitudeSum += wave.amplitude;
 
-        // scale amplitude and frequency for next octave
+        // scale amplitude and frequency for next layer
         wave.amplitude *= amplitudeMulti;
         wave.frequency *= frequencyMulti;
     }
@@ -149,8 +153,8 @@ vec3 SumOfSines(vec2 pos) {
 }
 
 /**
- * Compute the displaced surface normal using FBM of sinusoidal waves.
- * - Averages normals across octaves.
+ * Compute the displaced surface normal using a sum of sine waves.
+ * - Averages normals across layers.
  */
 vec3 SumOfSinesNormal(vec2 pos) {
     Wave wave = initWave();
@@ -161,10 +165,11 @@ vec3 SumOfSinesNormal(vec2 pos) {
     vec3 normal = vec3(0.0);
     float amplitudeSum = 0.0;
 
-    for (int i = 0; i < MAX_ITR_FBM; i++) {
-        if(i >= uNbIterations) break;
+    for (int i = 0; i < MAX_ITR; i++) {
+        if (i >= uNbIterations) break;
 
         wave.direction = randomDir(i);
+        wave.origin = randomOrigin(i);
 
         normal += SinNormal(pos, wave);
         amplitudeSum += wave.amplitude;

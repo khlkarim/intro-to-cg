@@ -45,14 +45,14 @@
                             <ul>
                                 <li style="margin-bottom: 1rem;">Started in the <strong style="color: #06d6a0;">1960s</strong> with major breakthroughs:</li>
                                 <ul>
-                                    <li style="color: #6fc5ff;"><a target="_blank" href="https://www.wikiwand.com/en/articles/Whirlwind_I" style="color: #6fc5ff;font-weight: 600;">Whirlwind I - 1951</a></li>
+                                    <li class="fragment" style="color: #6fc5ff;"><a target="_blank" href="https://www.wikiwand.com/en/articles/Whirlwind_I" style="color: #6fc5ff;font-weight: 600;">Whirlwind I - 1951</a></li>
                                 </ul>
                             </ul>
                         </div>
 
                         <div style="display: flex;justify-content: space-around;font-size: 2rem;">
-                            <div style="display: flex;align-items: center;">
-                                <img src="/assets/images/whirlwind.gif" width="480" height="320" style="border-radius: 8px;"/>
+                            <div class="fragment" style="display: flex;align-items: center;">
+                                <img class="fragment" src="/assets/images/whirlwind.gif" width="480" height="320" style="border-radius: 8px;"/>
                                 <ul>
                                     <li>The first <strong style="color: #f95d6f;">bit parallel</strong> computer.</li>
                                     <li>One of the first <strong style="color: #f95d6f;">real-time digital computers.</strong></li>
@@ -79,7 +79,7 @@
                         </div>
 
                         <div style="display: flex;justify-content: space-around;">
-                            <div style="display: flex;align-items: center;font-size: 2rem;">
+                            <div class="fragment" style="display: flex;align-items: center;font-size: 2rem;">
                                 <img src="/assets/images/sketchpad.png" height="300px" style="border-radius: 8px;" alt="">
                                 <ul>
                                     <li>One of the first <strong style="color: #f95d6f;">CAD</strong> programs.</li>
@@ -199,16 +199,15 @@
                                         <ul style="color: white;">
                                             <li>What is a mesh?</li>
                                             <li>How to represent a mesh in code?</li>
-                                            <li>Defining standard meshes.</li>
+                                            <li>Three.js</li>
                                         </ul>
                                     </li>
                                     <li class="fragment" 
                                         style="font-size: 2rem; margin: 1rem 0; padding: 1rem 1.5rem;">
                                         <strong>Water surface generation</strong> 
                                         <ul style="color: white;">
-                                            <li>The Rendering Pipeline.</li>
+                                            <li>The Standard Rendering Pipeline.</li>
                                             <li>Shaders and GPU programming.</li>
-                                            <li>Lighting Models.</li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -423,18 +422,17 @@
 
                 <section data-auto-animate>
                     <div style=" display: flex; flex-direction: column; justify-content: space-between;">
-                        <h2 style="text-transform: capitalize;"><a target="_blank" href="https://threejs.org/docs/" style="color: #6fc5ff;">Three.js</a></h2>
+                        <h2 style="text-transform: capitalize;"><a target="_blank" target="_blank" href="https://threejs.org/docs/" style="color: #6fc5ff;">Three.js</a></h2>
                     </div>
                 </section>
 
                 <section style="height: 100%;" data-auto-animate>
                     <div style="height: 100%; display: flex; flex-direction: column;gap: 5rem;">
-                        <h2 style="text-transform: capitalize;"><a target="_blank" href="https://threejs.org/docs/" style="color: #6fc5ff;">Three.js</a></h2>
+                        <h2 style="text-transform: capitalize;"><a target="_blank" target="_blank" href="https://threejs.org/docs/" style="color: #6fc5ff;">Three.js</a></h2>
 
                         <div style="text-align: start;">
                             <ul style="font-size: 2rem;">
                                 <li>A <strong style="color: #6fc5ff;">JavaScript library</strong> for creating 3D graphics.</li>
-                                <li>Renders to a HTML <strong style="color: #06d6a0;">canvas element.</strong></li>
                                 <div class="fragment">
                                     <li>The library is <strong style="color: #06d6a0;">organized into packages.</strong></li>
                                     <li>Each package has a set <strong style="color: #06d6a0;">responsibilities.</strong></li>
@@ -443,34 +441,34 @@
                         </div>
 
                         <div class="fragment">
-                            <h4 style="text-transform: none;text-align: start;padding-left: 3rem;margin-bottom: 3rem;">The main components:</h4>
+                            <h4 style="text-transform: none;text-align: start;padding-left: 3rem;margin-bottom: 3rem;">The main packages:</h4>
     
                             <div style="display: flex;margin-bottom: 5rem;text-align: center; justify-content: space-around;">
-                                <div style="border: 1px solid #6fc5ff;border-radius: 8px;padding: 24px;background-color: #6fc5ff22;">
+                                <div class="fragment" style="border: 1px solid #6fc5ff;border-radius: 8px;padding: 24px;background-color: #6fc5ff22;">
                                     <h4>Scenes</h4>
                                     <hr>
-                                    <p style="font-size: 1.7rem;">Scene</p>
+                                    <p style="font-size: 1.7rem;"><a style="text-decoration: none;color: white;text-transform: none;" target="_blank" href="https://threejs.org/docs/#api/en/scenes/Scene">Scene</a></p>
                                 </div>
     
-                                <div style="border: 1px solid #6fc5ff;border-radius: 8px;padding: 24px;background-color: #6fc5ff22;">
+                                <div class="fragment" style="border: 1px solid #6fc5ff;border-radius: 8px;padding: 24px;background-color: #6fc5ff22;">
                                     <h4>Cameras</h4>
                                     <hr>
-                                    <p style="font-size: 1.7rem;margin: 0;padding: 0;">PrespectiveCamera</p>
+                                    <p style="font-size: 1.7rem;margin: 0;padding: 0;"><a style="text-decoration: none;color: white;text-transform: none;" target="_blank" href="https://threejs.org/docs/#api/en/cameras/PerspectiveCamera">PrespectiveCamera</a></p>
                                     <p style="font-size: 1.7rem;margin: 0;padding: 0;">OrthographicCamera</p>
                                 </div>
     
-                                <div style="border: 1px solid #6fc5ff;border-radius: 8px;padding: 24px;background-color: #6fc5ff22;">
+                                <div class="fragment" style="border: 1px solid #6fc5ff;border-radius: 8px;padding: 24px;background-color: #6fc5ff22;">
                                     <h4>Renderers</h4>
                                     <hr>
-                                    <p style="font-size: 1.7rem;">WebGLRenderer</p>
+                                    <p style="font-size: 1.7rem;"><a style="text-decoration: none;color: white;text-transform: none;" target="_blank" href="https://threejs.org/docs/#api/en/renderers/WebGLRenderer">WebGLRenderer</a></p>
                                 </div>
 
-                                <div style="border: 1px solid #6fc5ff;border-radius: 8px;padding: 24px;background-color: #6fc5ff22;">
+                                <div class="fragment" style="border: 1px solid #6fc5ff;border-radius: 8px;padding: 24px;background-color: #6fc5ff22;">
                                     <h4>Core</h4>
                                     <hr>
                                     <ul style="font-size: 1.7rem;list-style: none;margin: 0;padding: 0;">
-                                        <li>BufferAttribute</li>
-                                        <li>BufferGeometry</li>
+                                        <li><a style="text-decoration: none;color: white;text-transform: none;" target="_blank" href="https://threejs.org/docs/#api/en/core/BufferAttribute">BufferAttribute</a></li>
+                                        <li><a style="text-decoration: none;color: white;text-transform: none;" target="_blank" href="https://threejs.org/docs/#api/en/core/BufferGeometry">BufferGeometry</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -480,12 +478,11 @@
 
                 <section style="height: 100%;" data-auto-animate>
                     <div style="height: 100%; display: flex; flex-direction: column;gap: 2rem;">
-                        <h2 style="text-transform: capitalize;"><a target="_blank" href="https://threejs.org/" style="color: #6fc5ff;">Three.js</a></h2>
+                        <h2 style="text-transform: capitalize;"><a target="_blank" target="_blank" href="https://threejs.org/" style="color: #6fc5ff;">Three.js</a></h2>
 
                         <div style="text-align: start;">
                             <ul style="font-size: 2rem;">
                                 <li>A <strong style="color: #6fc5ff;">JavaScript library</strong> for creating 3D graphics.</li>
-                                <li>Renders to a HTML <strong style="color: #06d6a0;">canvas element.</strong></li>
                                 <li>The library is <strong style="color: #06d6a0;">organized into packages.</strong></li>
                                 <li>Each package has a set <strong style="color: #06d6a0;">responsibilities.</strong></li>
                             </ul>
@@ -1445,22 +1442,26 @@ function TorusIndices(
 
                         <div style="text-align: start;margin-top: 5rem;">
                             <ul style="font-size: 2rem;">
-                                <li class="fragment" style="color: #6fc5ff;"><strong>Data Visualization:</strong></li>
-                                <ul>
-                                    <li class="fragment" style="color: #06d6a0;"><strong>Function plotting:</strong> <strong style="color: white;">Desmos 3D...</strong></li>
-                                    <li class="fragment" style="color: #06d6a0;"><strong>Signal visualization:</strong> <strong style="color: white;">3D Music Visualizer</strong></li>
-                                </ul>
-
-                                <li class="fragment" style="color: #6fc5ff;margin-top: 3rem;"><strong>Terrain Generation:</strong></li>
-                                <div style="display: flex;gap: 5rem;">
+                                <div class="fragment">
+                                    <li style="color: #6fc5ff;"><strong>Data Visualization:</strong></li>
                                     <ul>
-                                        <li class="fragment" style="color: #06d6a0;"><strong>Procedural landscapes</strong> <span style="color: white;">in games and simulations:</span></li>
-                                        <ul>
-                                            <li style="list-style-type:square;" class="fragment">Mountains in <strong>Death Stranding.</strong></li>
-                                        </ul>
+                                        <li style="color: #06d6a0;"><strong>Function plotting:</strong> <strong style="color: white;">Desmos 3D</strong></li>
+                                        <li style="color: #06d6a0;"><strong>Signal visualization:</strong> <strong style="color: white;">3D Music Visualizer</strong></li>
                                     </ul>
-                                    <div>
-                                        <canvas class="terrain-canvas" style="border-radius: 8px;"></canvas>
+                                </div>
+                                
+                                <div class="fragment">
+                                    <li style="color: #6fc5ff;margin-top: 3rem;"><strong>Terrain Generation:</strong></li>
+                                    <div style="display: flex;gap: 5rem;">
+                                        <ul>
+                                            <li style="color: #06d6a0;"><strong>Procedural landscapes</strong> <span style="color: white;">in games and simulations:</span></li>
+                                            <ul>
+                                                <li style="list-style-type:square;">Mountains in <strong>Death Stranding.</strong></li>
+                                            </ul>
+                                        </ul>
+                                        <div>
+                                            <canvas class="terrain-canvas" style="border-radius: 8px;"></canvas>
+                                        </div>
                                     </div>
                                 </div>
                             </ul>
@@ -1581,11 +1582,11 @@ function TorusIndices(
                         <div class="fragment" style="display: flex; gap: 1.5rem; justify-content: center; align-items: center; margin: 2rem 0;">
                             <div class="box grey" style="padding: 24px;font-size: 1.7rem;background: #333; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); color: #fff; display: flex; align-items: center; justify-content: center;">Mesh</div>
                             <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32" fill="#e3e3e3"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
-                            <div class="box pink" style="padding: 24px;font-size: 1.7rem;background: #ff6f91; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);"><strong class="fragment">Vertex Shading</strong></div>
+                            <div class="box pink" style="padding: 24px;font-size: 1.7rem;background: #ff6f91; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);"><strong class="fragment">Vertex Shader</strong></div>
                             <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32" fill="#e3e3e3"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
                             <div class="box blue" style="padding: 24px;font-size: 1.7rem;background: #02966e; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);"><strong>Rasterization</strong></div>
                             <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32" fill="#e3e3e3"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
-                            <div class="box green" style="padding: 24px;font-size: 1.7rem;background: #4d96ff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);"><strong class="fragment">Pixel Shading</strong></div>
+                            <div class="box green" style="padding: 24px;font-size: 1.7rem;background: #4d96ff; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);"><strong class="fragment">Pixel Shader</strong></div>
                             <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32" fill="#e3e3e3"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
                             <canvas class="rotating-cube" width="300" height="250"></canvas>
                         </div>
@@ -1882,10 +1883,7 @@ function TorusIndices(
                             <div style="flex: 2;font-size: 2.3rem;">
                                 <ul>
                                     <li>
-                                        Specialized <strong style="color: #f95d6f;">hardware for parallel computation:</strong>
-                                        <ul class="fragment" style="padding-left: 7rem;">
-                                            <li>A lot of cores</li>
-                                        </ul>
+                                        Specialized <strong style="color: #f95d6f;">hardware for parallel computation.</strong>
                                     </li>
                                     <li class="fragment" style="margin-top: 2rem;">
                                         <strong style="color: #f95d6f;">User programmable</strong> processing:
@@ -1939,18 +1937,18 @@ function TorusIndices(
 uniform float uTime; // Uniforms are global parameters provided by the host application.
 attribute vec3 position; // Attributes are the vertex attributes specified by the geometry.
 varying vec3 vPosition; // Varyings are values computed in the vertex shader and passed to the pixel shader.
-
+    
 // Standard transformation matrices provided by Three.js
 uniform mat4 modelMatrix;        // Model-to-world transform: object.matrixWorld
 uniform mat4 viewMatrix;         // Camera view transform: camera.matrixWorldInverse
 uniform mat4 projectionMatrix;   // Projection transform: camera.projectionMatrix
-
+    
 void main() {
     vPosition = position;
-
-    float x = 2 * 3.14 * uTime;
+    
+    float x = 2.0 * 3.14 * uTime;
     vPosition.z = sin(x);
-
+    
     gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(vPosition, 1.0);
 }
                                 </code>
@@ -1960,130 +1958,16 @@ void main() {
                             <pre>
                                 <code data-line-numbers="|3-5|7-10|8-9" style="background: black;border-radius: 8px;font-size: 1.3rem;">// shaders/waves/default.frag
 
-uniform float uTime;
-attribute vec3 position;
-varying vec3 vPosition;
-
+uniform float uTime; // All uniforms are accessible in the fragment shader.
+// attribute vec3 position; Attributes are accessible in the vertex shader only.
+varying vec3 vPosition; // Varyings are interpolated from the values giving by the vertices on each face.
+    
 void main() {
-    vec3 color = vPosition;
+    vec3 color = vPosition;    
     gl_FragColor = vec4(color, 1.0);
 }
                                 </code>
                             </pre>
-                        </div>
-                    </div>
-                </section>
-
-                <section style="height: 100%;">
-                    <div style="height: 100%;">
-                        <h2 style="text-transform: none;">Wave - 1</h2>
-                        <div style="display: flex;font-size: 2rem;justify-content: space-around;align-items: center;margin-top: 8rem;">
-                            <div style="flex:1">
-                                <img src="/assets/images/wave-1.png" style="border-radius: 8px;" width="600px" alt="">
-                            </div>
-                            <ul style="flex: 1;text-align: start;">
-                                <li style="color: #6fc5ff;"><strong>Sinusoidal wave:</strong></li>
-                                <ul style="margin-top: 1rem;">
-                                    <li style="color: #06d6a0;"><strong>Amplitude:</strong> <span style="color: white;">1.0</span></li>
-                                    <li style="color: #06d6a0;"><strong>Frequency:</strong></li>
-                                    <ul>
-                                        <li>Along the <strong style="color: #06d6a0;">x axes:</strong> <span>1.0</span></li>
-                                        <li>Along the <strong style="color: #06d6a0;">y axes:</strong> <span>1.0</span></li>
-                                    </ul>
-                                </ul>
-                                <li class="fragment" style="margin-top: 2rem;">Make the wave <strong style="color: #6fc5ff;">progress through time.</strong></li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <section style="height: 100%;">
-                    <div style="height: 100%;">
-                        <h2 style="text-transform: none;">Wave - 2</h2>
-                        <div style="display: flex;font-size: 2rem;justify-content: space-around;align-items: center;margin-top: 8rem;">
-                            <div style="flex:1">
-                                <img src="/assets/images/wave-2.png" style="border-radius: 8px;" width="600px" alt="">
-                            </div>
-                            <ul style="flex: 1;text-align: start;">
-                                <li style="color: #6fc5ff;"><strong>Sinusoidal wave:</strong></li>
-                                <ul style="margin-top: 1rem;">
-                                    <li style="color: #06d6a0;"><strong>Origin:</strong> <span style="color: white;">(0.0, 0.0)</span></li>
-                                    <li style="color: #06d6a0;"><strong>Amplitude:</strong> <span style="color: white;">1.0</span></li>
-                                    <li style="color: #06d6a0;"><strong>Frequency:</strong></li>
-                                    <ul>
-                                        <li>Through <strong style="color: #06d6a0;">space:</strong> <span>3.0</span></li>
-                                        <li>Through <strong style="color: #06d6a0;">time:</strong> <span>3.0</span></li>
-                                    </ul>
-                                </ul>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <section style="height: 100%;">
-                    <div style="height: 100%;">
-                        <h2 style="text-transform: none;">Wave - 3</h2>
-                        <div style="display: flex;font-size: 2rem;justify-content: space-around;align-items: center;margin-top: 6rem;">
-                            <div style="flex:1">
-                                <img src="/assets/images/wave-3.png" style="border-radius: 8px;" width="600px" alt="">
-                            </div>
-                            <ul style="flex: 1;text-align: start;">
-                                <li style="color: #6fc5ff;"><strong>2 Sinusoidal waves:</strong></li>
-                                <ul>
-                                    <li style="margin-top: 1rem;">The first wave:</li>
-                                    <ul>
-                                        <li style="color: #06d6a0;"><strong>Direction:</strong> <span style="color: white;">(0.8, 1.0)</span></li>
-                                        <li style="color: #06d6a0;"><strong>Amplitude:</strong> <span style="color: white;">0.3</span></li>
-                                        <li style="color: #06d6a0;"><strong>Frequency:</strong></li>
-                                        <ul>
-                                            <li>Through <strong style="color: #06d6a0;">time:</strong> <span>-1.0</span></li>
-                                        </ul>
-                                    </ul>
-                                    <li style="margin-top: 1rem;">The second wave:</li>
-                                    <ul>
-                                        <li style="color: #06d6a0;"><strong>Direction:</strong> <span style="color: white;">(2.0, 0.8)</span></li>
-                                        <li style="color: #06d6a0;"><strong>Amplitude:</strong> <span style="color: white;">0.2</span></li>
-                                        <li style="color: #06d6a0;"><strong>Frequency:</strong></li>
-                                        <ul>
-                                            <li>Through <strong style="color: #06d6a0;">time:</strong> <span>-2.0</span></li>
-                                        </ul>
-                                    </ul>
-                                </ul>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <section style="height: 100%;">
-                    <div style="height: 100%;">
-                        <h2 style="text-transform: none;">Water Waves</h2>
-                        <div style="display: flex;font-size: 1.6rem;justify-content: space-around;align-items: center;margin-top: 6rem;">
-                            <div>
-                                <img src="/assets/images/water-mesh.png" style="border-radius: 8px;" width="600px" alt="">
-                            </div>
-                            <ul style="flex: 1;text-align: start;">
-                                <li style="color: #6fc5ff;"><strong>\( N \) Sinusoidal waves:</strong></li>
-                                <ul>
-                                    <li style="margin-top: 1rem;">The initial wave:</li>
-                                    <ul>
-                                        <li style="color: #06d6a0;"><strong>Direction:</strong> <span style="color: white;">(0.8, 1.0)</span></li>
-                                        <li style="color: #06d6a0;"><strong>Amplitude:</strong> <span style="color: white;">0.3</span></li>
-                                        <li style="color: #06d6a0;"><strong>Frequency:</strong></li>
-                                        <ul>
-                                            <li>Through <strong style="color: #06d6a0;">time:</strong> <span>\( 2 \cdot \pi \cdot \text{uSpeed} \)</span></li>
-                                        </ul>
-                                    </ul>
-                                    <li style="margin-top: 1rem;">For each wave:</li>
-                                    <ul>
-                                        <li style="color: #06d6a0;"><strong>Direction:</strong> <span style="color: white;">randomly generated</span></li>
-                                        <li style="color: #06d6a0;"><strong>Amplitude:</strong> <span style="color: white;">\( \text{PrevAmplitude} \cdot \text{uAmplitudeMultiplier} \)</span></li>
-                                        <li style="color: #06d6a0;"><strong>Frequency:</strong></li>
-                                        <ul>
-                                            <li>Through <strong style="color: #06d6a0;">time:</strong> <strong>\( \text{PrevFrequency} \cdot \text{uFrequencyMultiplier} \)</strong></li>
-                                        </ul>
-                                    </ul>
-                                </ul>
-                            </ul>
                         </div>
                     </div>
                 </section>
@@ -2222,6 +2106,457 @@ void main() {
                     </div>
                 </section>
 
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Wave - 1</h2>
+                        <div style="display: flex;font-size: 2rem;justify-content: space-around;align-items: center;margin-top: 8rem;">
+                            <div style="flex:1">
+                                <img src="/assets/images/wave-1.png" style="border-radius: 8px;" width="600px" alt="">
+                            </div>
+                            <ul style="flex: 1;text-align: start;">
+                                <li style="color: #6fc5ff;"><strong>Sinusoidal wave:</strong></li>
+                                <ul style="margin-top: 1rem;">
+                                    <li style="color: #06d6a0;"><strong>Amplitude:</strong> <span style="color: white;">1.0</span></li>
+                                    <li style="color: #06d6a0;"><strong>Frequency:</strong></li>
+                                    <ul>
+                                        <li>Along the <strong style="color: #06d6a0;">x axes:</strong> <span>1.0</span></li>
+                                        <li>Along the <strong style="color: #06d6a0;">y axes:</strong> <span>1.0</span></li>
+                                    </ul>
+                                </ul>
+                                <li class="fragment" style="margin-top: 2rem;">Make the wave <strong style="color: #6fc5ff;">progress through time.</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Wave - 2</h2>
+                        <div style="display: flex;font-size: 2rem;justify-content: space-around;align-items: center;margin-top: 8rem;">
+                            <div style="flex:1">
+                                <img src="/assets/images/wave-2.png" style="border-radius: 8px;" width="600px" alt="">
+                            </div>
+                            <ul style="flex: 1;text-align: start;">
+                                <li style="color: #6fc5ff;"><strong>Sinusoidal wave:</strong></li>
+                                <ul style="margin-top: 1rem;">
+                                    <li style="color: #06d6a0;"><strong>Origin:</strong> <span style="color: white;">(0.0, 0.0)</span></li>
+                                    <li style="color: #06d6a0;"><strong>Amplitude:</strong> <span style="color: white;">1.0</span></li>
+                                    <li style="color: #06d6a0;"><strong>Frequency:</strong></li>
+                                    <ul>
+                                        <li>Through <strong style="color: #06d6a0;">space:</strong> <span>3.0</span></li>
+                                        <li>Through <strong style="color: #06d6a0;">time:</strong> <span>3.0</span></li>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Wave - 3</h2>
+                        <div style="display: flex;font-size: 2rem;justify-content: space-around;align-items: center;margin-top: 6rem;">
+                            <div style="flex:1">
+                                <img src="/assets/images/wave-3.png" style="border-radius: 8px;" width="600px" alt="">
+                            </div>
+                            <ul style="flex: 1;text-align: start;">
+                                <li style="color: #6fc5ff;"><strong>2 Sinusoidal waves:</strong></li>
+                                <ul>
+                                    <li style="margin-top: 1rem;">The first wave:</li>
+                                    <ul>
+                                        <li style="color: #06d6a0;"><strong>Direction:</strong> <span style="color: white;">(0.8, 1.0)</span></li>
+                                        <li style="color: #06d6a0;"><strong>Amplitude:</strong> <span style="color: white;">0.3</span></li>
+                                        <li style="color: #06d6a0;"><strong>Frequency:</strong></li>
+                                        <ul>
+                                            <li>Through <strong style="color: #06d6a0;">time:</strong> <span>-1.0</span></li>
+                                        </ul>
+                                    </ul>
+                                    <li style="margin-top: 1rem;">The second wave:</li>
+                                    <ul>
+                                        <li style="color: #06d6a0;"><strong>Direction:</strong> <span style="color: white;">(2.0, 0.8)</span></li>
+                                        <li style="color: #06d6a0;"><strong>Amplitude:</strong> <span style="color: white;">0.2</span></li>
+                                        <li style="color: #06d6a0;"><strong>Frequency:</strong></li>
+                                        <ul>
+                                            <li>Through <strong style="color: #06d6a0;">time:</strong> <span>-2.0</span></li>
+                                        </ul>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Water Waves</h2>
+                        <div style="display: flex;font-size: 1.8rem;justify-content: space-around;align-items: center;margin-top: 6rem;">
+                            <div>
+                                <img src="/assets/images/water-mesh.png" style="border-radius: 8px;" width="600px" alt="">
+                            </div>
+                            <ul style="flex: 1;text-align: start;">
+                                <li style="color: #6fc5ff;"><strong>\( N \) Sinusoidal waves:</strong></li>
+                                <ul>
+                                    <li style="margin-top: 1rem;">The initial wave:</li>
+                                    <ul>
+                                        <li style="color: #06d6a0;"><strong>Direction:</strong> <span style="color: white;">(0.8, 1.0)</span></li>
+                                        <li style="color: #06d6a0;"><strong>Amplitude:</strong> <span style="color: white;">0.3</span></li>
+                                        <li style="color: #06d6a0;"><strong>Frequency:</strong></li>
+                                        <ul>
+                                            <li>Through <strong style="color: #06d6a0;">time:</strong> <span>\( \text{uSpeed} \)</span></li>
+                                        </ul>
+                                    </ul>
+                                    <li style="margin-top: 1rem;">For each wave:</li>
+                                    <ul>
+                                        <li style="color: #06d6a0;"><strong>Direction:</strong> <span style="color: white;">randomly generated</span></li>
+                                        <li style="color: #06d6a0;"><strong>Amplitude:</strong> <span style="color: white;font-size: 1.4rem;">\( \text{PrevAmplitude} \cdot \text{uAmplitudeMultiplier} \)</span></li>
+                                        <li style="color: #06d6a0;"><strong>Frequency:</strong> <span style="color: white;font-size: 1.4rem;">\( \text{PrevFrequency} \cdot \text{uFrequencyMultiplier} \)</span></li>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;display: flex;flex-direction: column;justify-content: space-around;">
+                            <pre style="height: 80%;">
+                                <code data-line-numbers="|5-12|18-21|62-67|23-31|33-43|45-56|73-83|74-75|77-79|81-82" style="background: black;border-radius:8px;font-size: 1.2rem;">// ================================================================
+// Data Structures
+// ================================================================
+
+// Represents a single sine wave component
+struct Wave {
+    vec2 origin;     // Origin of wave propagation (in 2D plane)
+    vec2 direction;  // Propagation direction (normalized)
+    float amplitude; // Wave height
+    float frequency; // Wave frequency (spatial scale)
+    float speed;     // Wave speed (time scaling)
+};
+
+// ================================================================
+// Utility Functions
+// ================================================================
+
+/**
+ * Compute sinusoidal displacement of a wave direction at a given position.
+ */
+float Sin(vec2 pos, Wave w) {}
+
+/**
+ * Deterministically generate a pseudo-random 2D unit direction
+ * based on the integer index i.
+ * Golden angle is used to distribute directions.
+ */
+vec2 randomDir(int i) {
+    float angle = float(i) * 2.399963229728653; // ~golden angle in radians
+    return vec2(cos(angle), sin(angle));
+}
+
+/**
+ * Deterministically generate a pseudo-random 2D origin
+ * to spatially distribute waves.
+ */
+vec2 randomOrigin(int i) {
+    // A simple hash-like deterministic offset pattern
+    return vec2(
+        fract(sin(float(i) * 12.9898) * 43758.5453),
+        fract(sin(float(i) * 78.233) * 12345.6789)
+    ) * 200.0 - 100.0; // Spread origins roughly in [-100, 100] range
+}
+
+/**
+ * Initialize a default wave with fixed amplitude and frequency,
+ * and dynamic phase controlled by uSpeed.
+ */
+Wave initWave() {
+    Wave wave;
+    wave.direction = randomDir(-1);
+    wave.amplitude = 1.0;
+    wave.frequency = 0.3;
+    wave.speed = uSpeed;
+    return wave;
+}
+
+// ================================================================
+// Sum of Sines Displacement
+// ================================================================
+
+/**
+ * Compute the displaced position of a vertex using a sum of sine waves.
+ * - Repeatedly adds waves with scaled amplitude and frequency.
+ * - Returns displaced (x, y, z) position in object space.
+ */
+vec3 SumOfSines(vec2 pos) {}
+
+// ================================================================
+// Vertex Shader Entry Point
+// ================================================================
+
+void main() {
+    // Compute displaced position in object space
+    vec3 displaced = SumOfSines(position.xy);
+
+    // Transform displaced vertex into world space
+    vec4 worldPos = modelMatrix * vec4(displaced, 1.0);
+    vPosition = worldPos.xyz;
+
+    // Final clip-space position
+    gl_Position = projectionMatrix * viewMatrix * worldPos;
+}
+                                </code>
+                            </pre>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;display: flex;flex-direction: column;justify-content: space-around;">
+                            <pre style="height: 80%;">
+                                <code data-line-numbers="|18-26|32-60|38|40-44|46-47|49-50|52-53|55-57|60|" style="background: black;border-radius:8px;font-size: 1.2rem;">// ================================================================
+// Data Structures
+// ================================================================
+
+// Represents a single sine wave component
+struct Wave {
+    vec2 origin;     // Origin of wave propagation (in 2D plane)
+    vec2 direction;  // Propagation direction (normalized)
+    float amplitude; // Wave height
+    float frequency; // Wave frequency (spatial scale)
+    float speed;     // Wave speed (time scaling)
+};
+
+// ================================================================
+// Utility Functions
+// ================================================================
+
+/**
+ * Compute sinusoidal displacement of a wave direction at a given position.
+ */
+float Sin(vec2 pos, Wave w) {
+    float t = w.speed * uTime;
+    float s = dot(pos - w.origin, normalize(w.direction));
+
+    return w.amplitude * sin(w.frequency * s + t);
+}
+
+// ================================================================
+// Sum of Sines Displacement
+// ================================================================
+
+/**
+ * Compute the displaced position of a vertex using a sum of sine waves.
+ * - Repeatedly adds waves with scaled amplitude and frequency.
+ * - Returns displaced (x, y, z) position in object space.
+ */
+vec3 SumOfSines(vec2 pos) {
+    Wave wave = initWave();
+
+    float amplitudeMulti = uAmplitudeMultiplier;
+    float frequencyMulti = uFrequencyMultiplier;
+
+    float sum = 0.0;
+    float amplitudeSum = 0.0;
+
+    for (int i = 0; i < MAX_ITR; i++) {
+        if (i >= uNbIterations) break;
+
+        wave.direction = randomDir(i);
+        wave.origin = randomOrigin(i);
+
+        sum += Sin(pos, wave);
+        amplitudeSum += wave.amplitude;
+
+        // scale amplitude and frequency for next layer
+        wave.amplitude *= amplitudeMulti;
+        wave.frequency *= frequencyMulti;
+    }
+
+    return vec3(pos.xy, sum / amplitudeSum);
+}
+
+// ================================================================
+// Vertex Shader Entry Point
+// ================================================================
+
+void main() {
+    // Compute displaced position in object space
+    vec3 displaced = SumOfSines(position.xy);
+
+    // Transform displaced vertex into world space
+    vec4 worldPos = modelMatrix * vec4(displaced, 1.0);
+    vPosition = worldPos.xyz;
+
+    // Final clip-space position
+    gl_Position = projectionMatrix * viewMatrix * worldPos;
+}
+                                </code>
+                            </pre>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;">
+                        <h2 style="text-transform: none;">Surface Normals</h2>
+
+                        <div style="text-align: start;font-size: 2rem;margin-top: 2rem;">
+                            <ul>
+                                <li class="fragment"><strong style="color: #06d6a0;">Each wave</strong> has its own <strong style="color: #6fc5ff;">normal vector.</strong></li>
+                                <div class="fragment">
+                                    <li><strong style="color: #06d6a0;">The surface normal</strong> is the <strong style="color: #6fc5ff;">weighted average</strong> of these normals.</li>
+                                    <li><strong style="color: #06d6a0;">The weight of each normal</strong> is the correspond <strong style="color: #6fc5ff;">wave's amplitude:</strong></li>
+                                </div> 
+                            </ul>
+                            <div style="display: flex;align-items: center;">
+                                <ul>
+                                    <div class="fragment">
+                                        \begin{equation}
+                                        \vec{N} = \frac{\sum_{i=0}^{n} a_i \cdot \vec{n_i}}{\sum_{i=0}^{n} a_i}
+                                        \end{equation}
+                                    </div>
+                                    <div class="fragment">
+                                        <li>Computing <strong style="color: #06d6a0;">the normal for each wave:</strong></li>
+                                        <div class="fragment">
+                                            \begin{equation}
+                                            \vec{n}_i = \vec{t}_i \times \vec{b}_i
+                                            \end{equation}
+                                        </div>
+                                    </div>
+                                    <div class="fragment">
+                                        <li>Where:</li>
+                                        <ul>
+                                            <li class="fragment">\( \vec{t}_i: \) a <strong style="color: #f95d6f;">tangent vector</strong> to the surface: <span class="fragment">\( \vec{t}_i = \frac{\partial \vec{OM}}{\partial x} \)</span></li>
+                                            <li class="fragment">\( \vec{b}_i: \) another <strong style="color: #f95d6f;">tangent vector</strong> distinct from \( \vec{t}_i \): <span class="fragment" style="margin-left: 1rem;">\( \vec{b}_i = \frac{\partial \vec{OM}}{\partial y} \)</span></li>
+                                        </ul>
+                                    </div>
+                                </ul>
+                                <img src="/assets/images/surface-normal.png" width="400px" style="border-radius: 8px;filter: invert(1)" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;display: flex;flex-direction: column;justify-content: space-around;">
+                            <pre style="height: 80%;">
+                                <code data-line-numbers="|5-9|15-19|33-34|" style="background: black;border-radius:8px;font-size: 1.2rem;">// ================================================================
+// Utility Functions
+// ================================================================
+
+/**
+ * Compute the surface normal induced by a wave at a given position.
+ * Approximates slope using partial derivatives of the sinusoidal displacement.
+ */
+vec3 SinNormal(vec2 pos, Wave w) {}
+
+// ================================================================
+// Sum of Sines Displacement
+// ================================================================
+
+/**
+ * Compute the displaced surface normal using a sum of sine waves.
+ * - Averages normals across layers.
+ */
+vec3 SumOfSinesNormal(vec2 pos) {}
+
+// ================================================================
+// Vertex Shader Entry Point
+// ================================================================
+
+void main() {
+    // Compute displaced position in object space
+    vec3 displaced = SumOfSines(position.xy);
+
+    // Transform displaced vertex into world space
+    vec4 worldPos = modelMatrix * vec4(displaced, 1.0);
+    vPosition = worldPos.xyz;
+
+    // Compute displaced normal in world space
+    vNormal = (modelMatrix * vec4(SumOfSinesNormal(position.xy), 0.0)).xyz;
+
+    // Final clip-space position
+    gl_Position = projectionMatrix * viewMatrix * worldPos;
+}
+                                </code>
+                            </pre>
+                    </div>
+                </section>
+
+                <section style="height: 100%;">
+                    <div style="height: 100%;display: flex;flex-direction: column;justify-content: space-around;">
+                            <pre style="height: 80%;">
+                                <code data-line-numbers="|5-17|10-11|13-14|16|23-50|28|30-34|36-37|39-40|42-43|45-46|49|64-65|" style="background: black;border-radius:8px;font-size: 1.2rem;">// ================================================================
+// Utility Functions
+// ================================================================
+
+/**
+ * Compute the surface normal induced by a wave at a given position.
+ * Approximates slope using partial derivatives of the sinusoidal displacement.
+ */
+vec3 SinNormal(vec2 pos, Wave w) {
+    float t = w.speed * uTime;
+    float s = dot(pos - w.origin, normalize(w.direction));
+
+    vec3 dZdX = vec3(1, 0, w.amplitude * w.frequency * w.direction.x * cos(w.frequency * s + t));
+    vec3 dZdY = vec3(0, 1, w.amplitude * w.frequency * w.direction.y * cos(w.frequency * s + t));
+    
+    return normalize(cross(dZdX, dZdY));
+}
+
+// ================================================================
+// Sum of Sines Displacement
+// ================================================================
+
+/**
+ * Compute the displaced surface normal using a sum of sine waves.
+ * - Averages normals across layers.
+ */
+vec3 SumOfSinesNormal(vec2 pos) {
+    Wave wave = initWave();
+
+    float amplitudeMulti = uAmplitudeMultiplier;
+    float frequencyMulti = uFrequencyMultiplier;
+
+    vec3 normal = vec3(0.0);
+    float amplitudeSum = 0.0;
+
+    for (int i = 0; i < MAX_ITR; i++) {
+        if (i >= uNbIterations) break;
+
+        wave.direction = randomDir(i);
+        wave.origin = randomOrigin(i);
+
+        normal += SinNormal(pos, wave);
+        amplitudeSum += wave.amplitude;
+
+        wave.amplitude *= amplitudeMulti;
+        wave.frequency *= frequencyMulti;
+    }
+
+    return normalize(normal / amplitudeSum);
+}
+
+// ================================================================
+// Vertex Shader Entry Point
+// ================================================================
+
+void main() {
+    // Compute displaced position in object space
+    vec3 displaced = SumOfSines(position.xy);
+
+    // Transform displaced vertex into world space
+    vec4 worldPos = modelMatrix * vec4(displaced, 1.0);
+    vPosition = worldPos.xyz;
+
+    // Compute displaced normal in world space
+    vNormal = (modelMatrix * vec4(SumOfSinesNormal(position.xy), 0.0)).xyz;
+
+    // Final clip-space position
+    gl_Position = projectionMatrix * viewMatrix * worldPos;
+}
+                                </code>
+                            </pre>
+                    </div>
+                </section>
+
                 <section data-auto-animate>
                     <div>
                         <h2 style="text-transform: capitalize;">Pixel Shader</h2>
@@ -2229,7 +2564,7 @@ void main() {
                 </section>
 
                 <section style="height: 100%;" data-auto-animate>
-                    <div style="height: 100%; display: flex; flex-direction: column;gap: 5rem;">
+                    <div style="height: 100%; display: flex; flex-direction: column;gap: 3rem;">
                         <h2 style="text-transform: capitalize;">Pixel Shader</h2>
 
                         <div style="text-align: start;padding-left: 5rem;font-size: 2.3rem;">
@@ -2240,8 +2575,63 @@ void main() {
                         </div>
 
                         <div class="fragment">
-                            <div style="display: flex;justify-content: center;align-items: center;">
+                            <div style="display: flex; justify-content: center; align-items: center; flex-direction: row-reverse;">
+                                <div class="fragment">
                                     <img src="/assets/images/lighting.png" height="300px" style="border-radius: 8px;filter: invert(1);" alt="">
+                                </div>
+                                <div class="fragment">
+<pre>
+                                <code data-line-numbers="|1-11|13-21|23-31|38-42|46-47" style="background: black;border-radius:8px;font-size: 1.2rem;">// ================================================================
+// Precision Qualifiers
+// ================================================================
+// These specify the precision level for different GLSL types.
+// - highp: highest precision (used for calculations requiring accuracy)
+// - lowp: lower precision (sufficient for textures, cheaper to compute)
+
+precision highp int;
+precision highp float;
+precision lowp sampler2D;
+precision lowp samplerCube;
+
+// ================================================================
+// Uniforms (global parameters provided by the host application)
+// ================================================================
+
+// Direction of incoming light in world space
+uniform vec3 uLightDir;
+
+// Position of the camera in world space (for view direction & reflections)
+uniform vec3 cameraPosition;
+
+// ================================================================
+// Varyings (interpolated per-fragment inputs from the vertex shader)
+// ================================================================
+
+// Surface normal at this fragment (world space, displaced by vertex shader)
+varying vec3 vNormal;
+
+// Fragment position in world space
+varying vec3 vPosition;
+
+// ================================================================
+// Fragment Shader Entry Point
+// ================================================================
+
+void main() {
+    // ----------------------------
+    // Base colors
+    // ----------------------------
+    vec3 lightColor = vec3(1.0);                     // White light
+    vec3 waterColor = vec3(0.333, 0.561, 0.706);     // #558fb4 bluish water tint
+
+    vec3 result = vec3(1.0);
+
+    // Output fragment color
+    gl_FragColor = vec4(result, 1.0);
+}
+                                </code>
+                            </pre>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -2414,6 +2804,81 @@ void main() {
                     </div>
                 </section>
 
+                <section style="height: 100%;">
+                    <div style="height: 100%;display: flex;flex-direction: column;justify-content: space-around;">
+                            <pre style="height: 80%;">
+                                <code data-line-numbers="|44-49|51-58|54|55-56|58|60-63" style="background: black;border-radius:8px;font-size: 1.2rem;">// ================================================================
+// Precision Qualifiers
+// ================================================================
+// These specify the precision level for different GLSL types.
+// - highp: highest precision (used for calculations requiring accuracy)
+// - lowp: lower precision (sufficient for textures, cheaper to compute)
+
+precision highp int;
+precision highp float;
+precision lowp sampler2D;
+precision lowp samplerCube;
+
+// ================================================================
+// Uniforms (global parameters provided by the host application)
+// ================================================================
+
+// Direction of incoming light in world space
+uniform vec3 uLightDir;
+
+// Position of the camera in world space (for view direction & reflections)
+uniform vec3 cameraPosition;
+
+// ================================================================
+// Varyings (interpolated per-fragment inputs from the vertex shader)
+// ================================================================
+
+// Surface normal at this fragment (world space, displaced by vertex shader)
+varying vec3 vNormal;
+
+// Fragment position in world space
+varying vec3 vPosition;
+
+// ================================================================
+// Fragment Shader Entry Point
+// ================================================================
+
+void main() {
+    // ----------------------------
+    // Base colors
+    // ----------------------------
+    vec3 lightColor = vec3(1.0);                     // White light
+    vec3 waterColor = vec3(0.333, 0.561, 0.706);     // #558fb4 bluish water tint
+
+    // ----------------------------
+    // Normalize inputs
+    // ----------------------------
+    vec3 normal = normalize(vNormal);                          // Ensure unit normal
+    vec3 lightDir = normalize(uLightDir);                      // Incoming light direction
+    vec3 viewDir = normalize(cameraPosition - vPosition);      // Camera-to-fragment direction
+
+    // ----------------------------
+    // Specular highlights (Blinn/Phong-like)
+    // ----------------------------
+    vec3 reflectDir = reflect(-lightDir, normal);   // Reflection of light vector
+    float shininess = 100.0;                        // Surface glossiness
+    float spec = pow(max(dot(viewDir, reflectDir), 0.0), shininess);
+
+    vec3 specular =  spec * lightColor;
+
+    // ----------------------------
+    // Final color contribution
+    // ----------------------------
+    vec3 result = specular;
+
+    // Output fragment color
+    gl_FragColor = vec4(result, spec+0.5);
+}
+                                </code>
+                            </pre>
+                    </div>
+                </section>
+
                 <section style="height: 100%;" data-auto-animate>
                     <div style="height: 100%;">
                         <h2 style="text-transform: none;">Diffuse Reflectance</h2>
@@ -2520,6 +2985,87 @@ void main() {
                     </div>
                 </section>
 
+                <section style="height: 100%;">
+                    <div style="height: 100%;display: flex;flex-direction: column;justify-content: space-around;">
+                            <pre style="height: 80%;">
+                                <code data-line-numbers="|60-64|66-69" style="background: black;border-radius:8px;font-size: 1.2rem;">// ================================================================
+// Precision Qualifiers
+// ================================================================
+// These specify the precision level for different GLSL types.
+// - highp: highest precision (used for calculations requiring accuracy)
+// - lowp: lower precision (sufficient for textures, cheaper to compute)
+
+precision highp int;
+precision highp float;
+precision lowp sampler2D;
+precision lowp samplerCube;
+
+// ================================================================
+// Uniforms (global parameters provided by the host application)
+// ================================================================
+
+// Direction of incoming light in world space
+uniform vec3 uLightDir;
+
+// Position of the camera in world space (for view direction & reflections)
+uniform vec3 cameraPosition;
+
+// ================================================================
+// Varyings (interpolated per-fragment inputs from the vertex shader)
+// ================================================================
+
+// Surface normal at this fragment (world space, displaced by vertex shader)
+varying vec3 vNormal;
+
+// Fragment position in world space
+varying vec3 vPosition;
+
+// ================================================================
+// Fragment Shader Entry Point
+// ================================================================
+
+void main() {
+    // ----------------------------
+    // Base colors
+    // ----------------------------
+    vec3 lightColor = vec3(1.0);                     // White light
+    vec3 waterColor = vec3(0.333, 0.561, 0.706);     // #558fb4 bluish water tint
+
+    // ----------------------------
+    // Normalize inputs
+    // ----------------------------
+    vec3 normal = normalize(vNormal);                          // Ensure unit normal
+    vec3 lightDir = normalize(uLightDir);                      // Incoming light direction
+    vec3 viewDir = normalize(cameraPosition - vPosition);      // Camera-to-fragment direction
+
+    // ----------------------------
+    // Specular highlights (Blinn/Phong-like)
+    // ----------------------------
+    vec3 reflectDir = reflect(-lightDir, normal);   // Reflection of light vector
+    float shininess = 100.0;                        // Surface glossiness
+    float spec = pow(max(dot(viewDir, reflectDir), 0.0), shininess);
+
+    vec3 specular =  spec * lightColor;
+
+    // ----------------------------
+    // Diffuse lighting (Lambertian reflection)
+    // ----------------------------
+    float diff = max(dot(normal, -lightDir), 0.0);
+    vec3 diffuse = 2.0 * diff * waterColor;   // Multiplied by 2.0 for stronger effect
+
+    // ----------------------------
+    // Final color contribution
+    // ----------------------------
+    vec3 result = specular + diffuse;
+
+    // Output fragment color
+    gl_FragColor = vec4(result, spec+0.5);
+}
+                                </code>
+                            </pre>
+                    </div>
+                </section>
+
                 <section style="height: 100%;" data-auto-animate>
                     <div style="height: 100%;">
                         <h2 style="text-transform: none;">Ambient Reflectance</h2>
@@ -2594,6 +3140,93 @@ void main() {
                             </p>
                             <img src="/assets/images/ambient-reflectence.png" height="200px" style="border-radius: 8px;filter: invert(1);margin-top: 4rem;" alt="">
                         </div>
+                    </div>
+                </section>
+
+                                <section style="height: 100%;">
+                    <div style="height: 100%;display: flex;flex-direction: column;justify-content: space-around;">
+                            <pre style="height: 80%;">
+                                <code data-line-numbers="|66-70|72-75" style="background: black;border-radius:8px;font-size: 1.2rem;">// ================================================================
+// Precision Qualifiers
+// ================================================================
+// These specify the precision level for different GLSL types.
+// - highp: highest precision (used for calculations requiring accuracy)
+// - lowp: lower precision (sufficient for textures, cheaper to compute)
+
+precision highp int;
+precision highp float;
+precision lowp sampler2D;
+precision lowp samplerCube;
+
+// ================================================================
+// Uniforms (global parameters provided by the host application)
+// ================================================================
+
+// Direction of incoming light in world space
+uniform vec3 uLightDir;
+
+// Position of the camera in world space (for view direction & reflections)
+uniform vec3 cameraPosition;
+
+// ================================================================
+// Varyings (interpolated per-fragment inputs from the vertex shader)
+// ================================================================
+
+// Surface normal at this fragment (world space, displaced by vertex shader)
+varying vec3 vNormal;
+
+// Fragment position in world space
+varying vec3 vPosition;
+
+// ================================================================
+// Fragment Shader Entry Point
+// ================================================================
+
+void main() {
+    // ----------------------------
+    // Base colors
+    // ----------------------------
+    vec3 lightColor = vec3(1.0);                     // White light
+    vec3 waterColor = vec3(0.333, 0.561, 0.706);     // #558fb4 bluish water tint
+
+    // ----------------------------
+    // Normalize inputs
+    // ----------------------------
+    vec3 normal = normalize(vNormal);                          // Ensure unit normal
+    vec3 lightDir = normalize(uLightDir);                      // Incoming light direction
+    vec3 viewDir = normalize(cameraPosition - vPosition);      // Camera-to-fragment direction
+
+    // ----------------------------
+    // Specular highlights (Blinn/Phong-like)
+    // ----------------------------
+    vec3 reflectDir = reflect(-lightDir, normal);   // Reflection of light vector
+    float shininess = 100.0;                        // Surface glossiness
+    float spec = pow(max(dot(viewDir, reflectDir), 0.0), shininess);
+    
+    vec3 specular =  spec * lightColor;
+    
+    // ----------------------------
+    // Diffuse lighting (Lambertian reflection)
+    // ----------------------------
+    float diff = max(dot(normal, -lightDir), 0.0);
+    vec3 diffuse = 2.0 * diff * waterColor;   // Multiplied by 2.0 for stronger effect
+
+    // ----------------------------
+    // Ambient lighting (constant low-level light)
+    // ----------------------------
+    float ambientStrength = 0.3;
+    vec3 ambient = ambientStrength * waterColor;
+
+    // ----------------------------
+    // Final color contribution
+    // ----------------------------
+    vec3 result = specular + diffuse + ambient;
+
+    // Output fragment color (fully opaque)
+    gl_FragColor = vec4(result, spec+0.5);
+}
+                                </code>
+                            </pre>
                     </div>
                 </section>
 

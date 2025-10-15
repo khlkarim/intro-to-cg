@@ -13,6 +13,7 @@ export function createRenderer(canvas: HTMLCanvasElement): THREE.WebGLRenderer {
     const width = 960;
     const height = 600;
     renderer.setSize(width, height);
+    renderer.setPixelRatio(window.devicePixelRatio);
 
     return renderer;
 }

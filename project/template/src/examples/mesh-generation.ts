@@ -1,3 +1,6 @@
+import * as THREE from 'three'
+import { OrbitControls } from 'three/examples/jsm/Addons.js';
+import { createCamera, createOverlay, createRenderer, createScene } from '../helpers/three';
 import { getMeshGenerationConfig, onMeshGenerationConfigChange } from '../helpers/input';
 
 /**
@@ -81,7 +84,10 @@ function getIndices()
  *
  * @returns {Float32Array} A flat array containing the 3D positions of the cube's 8 vertices.
  */
-function CubeVertices() {}
+function CubeVertices() {
+    const vertices: number[] = [];
+    return new Float32Array(vertices);
+}
 
 /**
  * Generates the triangle indices that define the cube’s 12 triangles (2 per face).
@@ -90,7 +96,9 @@ function CubeVertices() {}
  * 
  * @returns {number[]} An array of vertex indices describing the cube’s faces as triangles.
  */
-function CubeIndices() {}
+function CubeIndices() {
+    return [];
+}
 
 /**
  * Generates the vertex positions for a plane mesh centered at the origin.
@@ -110,7 +118,10 @@ function PlaneVertices(
     height: number = 1,
     widthSegments: number = 10,
     heightSegments: number = 10
-) {}
+) {
+    const vertices: number[] = [];
+    return new Float32Array(vertices);
+}
 
 /**
  * Generates the triangle indices that define the faces of the plane mesh.
@@ -139,7 +150,9 @@ function PlaneVertices(
 function PlaneIndices(
     widthSegments: number = 10,
     heightSegments: number = 10
-) {}
+) {
+    return [];
+}
 
 /**
  * Generates vertex positions for a sphere mesh centered at the origin.
@@ -159,7 +172,10 @@ function SphereVertices(
     radius: number = 1, 
     rings: number = 8, 
     segments: number = 16,
-) {}
+) {
+    const vertices: number[] = [];
+    return new Float32Array(vertices);
+}
 
 /**
  * Generates triangle indices for the sphere mesh.
@@ -178,7 +194,9 @@ function SphereVertices(
 function SphereIndices(
     rings: number = 8, 
     segments: number = 16
-) {}
+) {
+    return [];
+}
 
 /**
  * Generates vertex positions for a cylinder mesh centered at the origin.
@@ -202,7 +220,10 @@ function CylinderVertices(
     height: number = 1,
     rings: number = 10,
     segments: number = 10
-) {}
+) {
+    const vertices: number[] = [];
+    return new Float32Array(vertices);
+}
 
 /**
  * Generates triangle indices for the cylinder mesh.
@@ -222,7 +243,9 @@ function CylinderVertices(
 function CylinderIndices(
     rings: number = 10,
     segments: number = 10
-) {}
+) {
+    return [];
+}
 
 /**
  * Generates the vertex positions for a torus mesh.
@@ -242,7 +265,10 @@ function TorusVertices(
     minorRadius: number = 1,
     radialSegments: number = 10,
     tubularSegments: number = 10
-) {}
+) {
+    const vertices: number[] = [];
+    return new Float32Array(vertices);
+}
 
 /**
  * Generates triangle indices defining the faces of a torus mesh.
@@ -255,4 +281,6 @@ function TorusVertices(
 function TorusIndices(
     radialSegments: number = 10,
     tubularSegments: number = 10
-) {}
+) {
+    return [];
+}
