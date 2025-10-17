@@ -14,7 +14,7 @@ precision lowp samplerCube;
 // Uniforms (global parameters provided by the host application)
 // ================================================================
 
-// Direction of incoming light in world space
+// Position of the light source in world space
 uniform vec3 uLightPos;
 
 // Position of the camera in world space (for view direction & reflections)
