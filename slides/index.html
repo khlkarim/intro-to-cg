@@ -1127,7 +1127,7 @@ function CylinderVertices(
     const vertexPositions: number[] = [];
 
     // Top center vertex (north cap)
-    vertexPositions.push(0, 0, height / 2);
+    vertexPositions.push(0, 0, -height / 2);
 
     const heightStep = height/(rings-1);
     const phiStep = 2 * Math.PI / segments;
@@ -1148,7 +1148,7 @@ function CylinderVertices(
     }
 
     // Bottom center vertex (south cap)
-    vertexPositions.push(0, 0, -height / 2);
+    vertexPositions.push(0, 0, height / 2);
 
     return new Float32Array(vertexPositions);
 }
@@ -1298,7 +1298,7 @@ function TorusIndices(
                         <div style="font-size: 2rem;text-align: start;margin-top: 3rem;">
                             <ul>
                                 <li class="fragment"><strong style="color: #f95d6f;">Too complex</strong> for generating a simple torus.</li>
-                                <li class="fragment">We can accomplish the same result using <strong style="color: #06d6a0;">spherical coordinates.</strong></li>
+                                <li class="fragment">We can accomplish the same result by extending <strong style="color: #06d6a0;">spherical coordinates.</strong></li>
                             </ul>
                         </div>
 
@@ -1315,7 +1315,7 @@ function TorusIndices(
                         <div style="font-size: 2rem;text-align: start;margin-top: 3rem;">
                             <ul>
                                 <li><strong style="color: #f95d6f;">Too complex</strong> for generating a simple torus.</li>
-                                <li>We can accomplish the same result using <strong style="color: #06d6a0;">spherical coordinates.</strong></li>
+                                <li>We can accomplish the same result by extending <strong style="color: #06d6a0;">spherical coordinates.</strong></li>
                             </ul>
                         </div>
 
